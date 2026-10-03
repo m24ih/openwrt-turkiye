@@ -19,7 +19,7 @@ def generate_html(devices: List[Dict[str, Any]] = None) -> Path:
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>OpenWrt Türkiye — Ağ Cihazları Kataloğu & Fiyat Takibi</title>
-  <meta name="description" content="Türkiye piyasasında (Epey & Akakçe) satışta olan OpenWrt destekli router, modem ve menzil genişleticilerin donanım özellikleri, fotoğrafları ve güncel fiyat kataloğu.">
+  <meta name="description" content="Türkiye piyasasında (Epey & Akakçe) satışta olan OpenWrt destekli router, modem ve menzil genişleticilerin donanım özellikleri, fotoğrafları, donanım revizyon uyarıları ve kurulum kılavuzu.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -50,8 +50,11 @@ def generate_html(devices: List[Dict[str, Any]] = None) -> Path:
       
       --warning: #f59e0b;
       --warning-subtle: rgba(245, 158, 11, 0.1);
+      --warning-border: rgba(245, 158, 11, 0.3);
+      
       --danger: #ef4444;
       --danger-subtle: rgba(239, 68, 68, 0.1);
+      --danger-border: rgba(239, 68, 68, 0.3);
       
       --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, monospace;
@@ -241,7 +244,7 @@ def generate_html(devices: List[Dict[str, Any]] = None) -> Path:
     .hero-desc {{
       font-size: 0.9375rem;
       color: var(--text-muted);
-      max-width: 720px;
+      max-width: 780px;
       line-height: 1.5;
     }}
 
@@ -354,7 +357,7 @@ def generate_html(devices: List[Dict[str, Any]] = None) -> Path:
 
     .search-input-wrap {{
       flex: 1;
-      min-width: 280px;
+      min-width: 260px;
       position: relative;
       display: flex;
       align-items: center;
@@ -635,7 +638,7 @@ def generate_html(devices: List[Dict[str, Any]] = None) -> Path:
     .card-market-name {{
       font-size: 0.8125rem;
       color: var(--text-muted);
-      margin-bottom: 0.85rem;
+      margin-bottom: 0.75rem;
       display: -webkit-box;
       -webkit-line-clamp: 2;
       -webkit-box-orient: vertical;
@@ -648,8 +651,8 @@ def generate_html(devices: List[Dict[str, Any]] = None) -> Path:
       display: flex;
       align-items: baseline;
       justify-content: space-between;
-      margin-bottom: 1rem;
-      padding-bottom: 0.75rem;
+      margin-bottom: 0.85rem;
+      padding-bottom: 0.65rem;
       border-bottom: 1px solid var(--border);
     }}
 
@@ -675,7 +678,7 @@ def generate_html(devices: List[Dict[str, Any]] = None) -> Path:
       border: 1px solid var(--border);
       border-radius: var(--radius-md);
       padding: 0.65rem 0.75rem;
-      margin-bottom: 1rem;
+      margin-bottom: 0.75rem;
     }}
 
     .spec-cell {{
@@ -700,6 +703,75 @@ def generate_html(devices: List[Dict[str, Any]] = None) -> Path:
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
+    }}
+
+    /* Install Method & Revision Badges */
+    .card-badges-row {{
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+      margin-bottom: 1rem;
+    }}
+
+    .install-method-badge {{
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-family: var(--font-mono);
+      font-size: 0.6875rem;
+      font-weight: 500;
+      padding: 0.25rem 0.55rem;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border);
+      width: fit-content;
+    }}
+
+    .install-method-badge.success {{
+      background: var(--success-subtle);
+      border-color: var(--success-border);
+      color: var(--success);
+    }}
+
+    .install-method-badge.warning {{
+      background: var(--warning-subtle);
+      border-color: var(--warning-border);
+      color: var(--warning);
+    }}
+
+    .install-method-badge.info {{
+      background: var(--accent-subtle);
+      border-color: var(--accent-border);
+      color: var(--accent);
+    }}
+
+    .install-method-badge.danger {{
+      background: var(--danger-subtle);
+      border-color: var(--danger-border);
+      color: var(--danger);
+    }}
+
+    .install-method-badge.default {{
+      background: var(--surface-2);
+      border-color: var(--border);
+      color: var(--text-muted);
+    }}
+
+    .revision-box {{
+      font-family: var(--font-mono);
+      font-size: 0.6875rem;
+      padding: 0.3rem 0.6rem;
+      border-radius: var(--radius-sm);
+      background: rgba(245, 158, 11, 0.07);
+      border: 1px solid rgba(245, 158, 11, 0.25);
+      color: var(--warning);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      line-height: 1.35;
+    }}
+
+    .revision-box b {{
+      color: #fef08a;
     }}
 
     .card-footer-actions {{
@@ -818,7 +890,7 @@ def generate_html(devices: List[Dict[str, Any]] = None) -> Path:
     /* Detail Modal */
     dialog {{
       margin: auto;
-      max-width: 620px;
+      max-width: 640px;
       width: 90%;
       background: var(--surface-1);
       color: var(--text);
@@ -877,6 +949,17 @@ def generate_html(devices: List[Dict[str, Any]] = None) -> Path:
       max-width: 100%;
       max-height: 100%;
       object-fit: contain;
+    }}
+
+    .modal-warning-box {{
+      background: rgba(245, 158, 11, 0.08);
+      border: 1px solid rgba(245, 158, 11, 0.25);
+      border-radius: var(--radius-md);
+      padding: 0.75rem;
+      font-size: 0.8125rem;
+      color: var(--warning);
+      margin-bottom: 1rem;
+      line-height: 1.45;
     }}
 
     .modal-grid {{
@@ -1020,7 +1103,7 @@ def generate_html(devices: List[Dict[str, Any]] = None) -> Path:
     <section class="hero">
       <div class="hero-eyebrow">Haftalık Otomatik Pazar & ToH Senkronizasyonu</div>
       <h1 class="hero-heading">Türkiye'de Satışta Olan OpenWrt Cihazları</h1>
-      <p class="hero-desc">OpenWrt resmi donanım veritabanı (ToH) ile Epey ve Akakçe Türkiye piyasası çapraz eşleştirmesi. Satın alınabilir router modelleri, donanım mimarileri ve piyasa fiyatları.</p>
+      <p class="hero-desc">OpenWrt resmi donanım veritabanı (ToH) ile Epey ve Akakçe Türkiye piyasası çapraz eşleştirmesi. Satın alınabilir router modelleri, donanım mimarileri, revizyon uyarıları ve kurulum yöntemleri.</p>
 
       <div class="metrics-grid">
         <div class="metric-card">
@@ -1047,12 +1130,12 @@ def generate_html(devices: List[Dict[str, Any]] = None) -> Path:
 
       <div class="featured-bar">
         <span class="featured-label">Öne Çıkanlar</span>
-        <span class="featured-tag" onclick="quickFilter('WR3000')">Cudy WR3000 <code>AX3000</code></span>
-        <span class="featured-tag" onclick="quickFilter('AX3000T')">Xiaomi AX3000T <code>Filogic 820</code></span>
-        <span class="featured-tag" onclick="quickFilter('4A Gigabit')">Xiaomi 4A Gigabit <code>MT7621A</code></span>
+        <span class="featured-tag" onclick="quickFilter('WR3000')">Cudy WR3000 <code>Kolay Web Flash</code></span>
+        <span class="featured-tag" onclick="quickFilter('AX3000T')">Xiaomi AX3000T <code>Sadece RD23/RD03</code></span>
+        <span class="featured-tag" onclick="quickFilter('4A Gigabit')">Xiaomi 4A Gigabit <code>Exploit ile</code></span>
         <span class="featured-tag" onclick="quickFilter('X6')">Cudy X6 <code>AX1800</code></span>
         <span class="featured-tag" onclick="quickFilter('hEX S')">MikroTik hEX S <code>Kablolu</code></span>
-        <span class="featured-tag" onclick="quickFilter('Beryl')">GL.iNet Beryl AX <code>MT7981B</code></span>
+        <span class="featured-tag" onclick="quickFilter('Beryl')">GL.iNet Beryl AX <code>Kolay Web Flash</code></span>
       </div>
     </section>
 
@@ -1063,9 +1146,17 @@ def generate_html(devices: List[Dict[str, Any]] = None) -> Path:
             <circle cx="11" cy="11" r="8"></circle>
             <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
           </svg>
-          <input type="text" id="searchInput" class="search-input" placeholder="Marka, model veya işlemci ara (örn. MT7981, Filogic, WR3000)...">
+          <input type="text" id="searchInput" class="search-input" placeholder="Marka, model, işlemci veya revizyon ara (örn. MT7981, v2, WR3000)...">
           <span class="kbd-shortcut">/</span>
         </div>
+
+        <select id="methodFilter" class="filter-select">
+          <option value="ALL">Kurulum: Tümü</option>
+          <option value="EASY">Kolay Web Arayüzü</option>
+          <option value="EXPLOIT">Yazılım Açığı (Exploit / SSH)</option>
+          <option value="TFTP">TFTP / Ağ Kurtarma</option>
+          <option value="SERIAL">Seri Port (UART)</option>
+        </select>
 
         <select id="wifiFilter" class="filter-select">
           <option value="ALL">Wi-Fi Standartı: Tümü</option>
@@ -1143,11 +1234,12 @@ def generate_html(devices: List[Dict[str, Any]] = None) -> Path:
           <tr>
             <th onclick="sortTable('brand')">Cihaz</th>
             <th onclick="sortTable('price')">Fiyat</th>
+            <th>Kurulum Yöntemi</th>
+            <th>Revizyon</th>
             <th onclick="sortTable('supported_rel')">Sürüm</th>
             <th onclick="sortTable('cpu')">İşlemci (SoC)</th>
             <th onclick="sortTable('ram_mb')">RAM</th>
             <th onclick="sortTable('flash_mb')">Flash</th>
-            <th>Ethernet</th>
             <th>Bağlantılar</th>
           </tr>
         </thead>
@@ -1172,6 +1264,10 @@ def generate_html(devices: List[Dict[str, Any]] = None) -> Path:
 
     <div class="modal-photo-wrap" id="modalPhotoWrap">
       <img id="modalPhoto" src="" alt="" loading="lazy">
+    </div>
+
+    <div id="modalWarningWrap" style="display: none;">
+      <div class="modal-warning-box" id="modalWarningText"></div>
     </div>
 
     <div class="modal-grid" id="modalDetails"></div>
@@ -1208,6 +1304,77 @@ def generate_html(devices: List[Dict[str, Any]] = None) -> Path:
       const fStr = (d.flash_mb || '').replace(/[^0-9]/g, '');
       d.flashNum = fStr ? parseInt(fStr, 10) : 0;
     }});
+
+    function getInstallMethodInfo(d) {{
+      const brand = (d.brand || '').toLowerCase();
+      const model = (d.model || '').toLowerCase();
+      const methods = d.install_methods || [];
+      const mStr = (Array.isArray(methods) ? methods.join(' ') : String(methods)).toLowerCase();
+      const comments = String(d.comments || '').toLowerCase();
+
+      // Xiaomi / Redmi exploit / script uyarısı
+      if (brand.includes('xiaomi') || brand.includes('redmi')) {{
+        if (!brand.includes('cudy')) {{
+          return {{
+            key: 'EXPLOIT',
+            label: 'Yazılım Açığı (Exploit / SSH)',
+            type: 'warning',
+            desc: 'Stok arayüz üçüncü parti yazılıma kilitlidir; Python exploit (OpenWRTInvasion/XMir) veya SSH enjeksiyonu gerektirir.'
+          }};
+        }}
+      }}
+
+      if (mStr.includes('serial') || mStr.includes('uart') || comments.includes('serial recovery')) {{
+        return {{
+          key: 'SERIAL',
+          label: 'Seri Port (UART / Lehim)',
+          type: 'danger',
+          desc: 'Cihaz kasasının açılarak UART/seri kablo bağlanmasını gerektirebilir.'
+        }};
+      }}
+
+      if (mStr.includes('gui oem') || mStr.includes('gui generic') || mStr.includes('gl.inet') || mStr.includes('d-link recovery gui')) {{
+        return {{
+          key: 'EASY',
+          label: 'Kolay Web Arayüzü',
+          type: 'success',
+          desc: 'Orijinal web yönetim panelinden dosya seçilerek doğrudan firmware yüklenebilir.'
+        }};
+      }}
+
+      if (mStr.includes('tftp') || mStr.includes('recovery') || mStr.includes('restoration') || mStr.includes('cfe')) {{
+        return {{
+          key: 'TFTP',
+          label: 'TFTP / Ağ Kurtarma',
+          type: 'info',
+          desc: 'Ağ kablosu ve bilgisayarda TFTP sunucusu açılarak bootloader aşamasında firmware yüklenir.'
+        }};
+      }}
+
+      return {{
+        key: 'OTHER',
+        label: 'Standart / Wiki Takibi',
+        type: 'default',
+        desc: 'Resmi OpenWrt Wiki sayfasındaki cihaza özel kurulum adımlarını takip ediniz.'
+      }};
+    }}
+
+    function formatVersion(v) {{
+      if (!v) return null;
+      if (Array.isArray(v)) {{
+        if (v.length === 1) return v[0];
+        if (v.length <= 3) return v.join(', ');
+        const first = v[0];
+        if (first.startsWith('v')) {{
+          const major = first.substring(0, 2);
+          if (v.every(x => x.startsWith(major))) {{
+            return `${{major}}.x (${{v.length}} alt revizyon)`;
+          }}
+        }}
+        return `${{v[0]}}, ${{v[1]}} (+${{v.length - 2}} rev.)`;
+      }}
+      return String(v);
+    }}
 
     function init() {{
       renderStats();
@@ -1265,12 +1432,14 @@ def generate_html(devices: List[Dict[str, Any]] = None) -> Path:
     function quickFilter(term) {{
       document.getElementById('searchInput').value = term;
       document.getElementById('statusFilter').value = 'ALL';
+      document.getElementById('methodFilter').value = 'ALL';
       setBrand('ALL');
       applyFilters();
     }}
 
     function setupEventListeners() {{
       document.getElementById('searchInput').addEventListener('input', applyFilters);
+      document.getElementById('methodFilter').addEventListener('change', applyFilters);
       document.getElementById('wifiFilter').addEventListener('change', applyFilters);
       document.getElementById('statusFilter').addEventListener('change', applyFilters);
       document.getElementById('ramFilter').addEventListener('change', applyFilters);
@@ -1313,22 +1482,28 @@ def generate_html(devices: List[Dict[str, Any]] = None) -> Path:
 
     function exportCsv() {{
       if (!filteredList.length) return;
-      const headers = ['Marka', 'Model', 'Piyasa Adi', 'Fiyat', 'Fotoğraf', 'OpenWrt Surumu', 'CPU', 'RAM (MB)', 'Flash (MB)', 'Hedef Mimari', 'Epey Linki', 'Akakce Linki', 'OpenWrt ToH'];
-      const rows = filteredList.map(d => [
-        '"' + (d.brand || '') + '"',
-        '"' + (d.model || '') + '"',
-        '"' + (d.market_title || '') + '"',
-        '"' + (d.price || '') + '"',
-        '"' + (d.image_url || '') + '"',
-        '"' + (d.supported_rel || '') + '"',
-        '"' + (d.cpu || '') + '"',
-        '"' + (d.ram_mb || '') + '"',
-        '"' + (d.flash_mb || '') + '"',
-        '"' + (d.target || '') + '"',
-        '"' + (d.epey_url || '') + '"',
-        '"' + (d.akakce_search_url || '') + '"',
-        '"' + (d.device_page || '') + '"'
-      ]);
+      const headers = ['Marka', 'Model', 'Piyasa Adi', 'Fiyat', 'Revizyon', 'Kurulum Yontemi', 'Fotoğraf', 'OpenWrt Surumu', 'CPU', 'RAM (MB)', 'Flash (MB)', 'Hedef Mimari', 'Epey Linki', 'Akakce Linki', 'OpenWrt ToH'];
+      const rows = filteredList.map(d => {{
+        const mInfo = getInstallMethodInfo(d);
+        const vStr = formatVersion(d.version) || '';
+        return [
+          '"' + (d.brand || '') + '"',
+          '"' + (d.model || '') + '"',
+          '"' + (d.market_title || '') + '"',
+          '"' + (d.price || '') + '"',
+          '"' + vStr + '"',
+          '"' + mInfo.label + '"',
+          '"' + (d.image_url || '') + '"',
+          '"' + (d.supported_rel || '') + '"',
+          '"' + (d.cpu || '') + '"',
+          '"' + (d.ram_mb || '') + '"',
+          '"' + (d.flash_mb || '') + '"',
+          '"' + (d.target || '') + '"',
+          '"' + (d.epey_url || '') + '"',
+          '"' + (d.akakce_search_url || '') + '"',
+          '"' + (d.device_page || '') + '"'
+        ];
+      }});
       const csvContent = '\\uFEFF' + [headers.join(','), ...rows.map(r => r.join(','))].join('\\n');
       const blob = new Blob([csvContent], {{ type: 'text/csv;charset=utf-8;' }});
       const url = URL.createObjectURL(blob);
@@ -1340,6 +1515,7 @@ def generate_html(devices: List[Dict[str, Any]] = None) -> Path:
 
     function applyFilters() {{
       const q = document.getElementById('searchInput').value.toLowerCase().trim();
+      const method = document.getElementById('methodFilter').value;
       const wifi = document.getElementById('wifiFilter').value;
       const status = document.getElementById('statusFilter').value;
       const minRam = parseInt(document.getElementById('ramFilter').value, 10);
@@ -1348,8 +1524,13 @@ def generate_html(devices: List[Dict[str, Any]] = None) -> Path:
 
       filteredList = RAW_DEVICES.filter(d => {{
         if (currentBrand !== 'ALL' && d.brand !== currentBrand) return false;
+        
+        const mInfo = getInstallMethodInfo(d);
+        if (method !== 'ALL' && mInfo.key !== method) return false;
+
         if (q) {{
-          const haystack = `${{d.brand}} ${{d.model}} ${{d.market_title}} ${{d.cpu}} ${{d.target}} ${{d.supported_rel}}`.toLowerCase();
+          const vStr = formatVersion(d.version) || '';
+          const haystack = `${{d.brand}} ${{d.model}} ${{d.market_title}} ${{d.cpu}} ${{d.target}} ${{d.supported_rel}} ${{vStr}} ${{mInfo.label}}`.toLowerCase();
           if (!haystack.includes(q)) return false;
         }}
         if (status === 'ACTIVE' && (d.supported_rel === 'EOL' || d.supported_rel === '-')) return false;
@@ -1377,7 +1558,14 @@ def generate_html(devices: List[Dict[str, Any]] = None) -> Path:
         return true;
       }});
 
+      // Sıralama Mantığı: Fiyatı Listelenmeyenler HER ZAMAN listenin en altına gider!
       filteredList.sort((a, b) => {{
+        const aHasPrice = a.price && a.price.includes('TL');
+        const bHasPrice = b.price && b.price.includes('TL');
+
+        if (aHasPrice && !bHasPrice) return -1;
+        if (!aHasPrice && bHasPrice) return 1;
+
         if (sort === 'PRICE_ASC') return a.priceNum - b.priceNum;
         if (sort === 'PRICE_DESC') return b.priceNum - a.priceNum;
         if (sort === 'NAME_ASC') return (a.model || '').localeCompare(b.model || '');
@@ -1432,6 +1620,9 @@ def generate_html(devices: List[Dict[str, Any]] = None) -> Path:
           : '';
         const fallbackStyle = hasImg ? 'style="display:none;"' : '';
 
+        const mInfo = getInstallMethodInfo(d);
+        const versionStr = formatVersion(d.version);
+
         html += `
           <div class="device-card">
             <div>
@@ -1481,6 +1672,29 @@ def generate_html(devices: List[Dict[str, Any]] = None) -> Path:
                   <span class="spec-val">${{d.devicetype || 'Router'}}</span>
                 </div>
               </div>
+
+              <div class="card-badges-row">
+                <span class="install-method-badge ${{mInfo.type}}" title="${{mInfo.desc}}">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    ${{mInfo.type === 'success' ? '<polyline points="20 6 9 17 4 12"></polyline>' : 
+                      mInfo.type === 'warning' ? '<path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line>' :
+                      mInfo.type === 'danger' ? '<circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line>' :
+                      '<circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline>'}}
+                  </svg>
+                  <span>${{mInfo.label}}</span>
+                </span>
+
+                ${{versionStr ? `
+                  <div class="revision-box" title="Bu modelin yalnızca belirtilen donanım revizyonu OpenWrt ile uyumludur. Satın alırken kutu arkasındaki versiyon numarasını kontrol ediniz.">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <line x1="12" y1="8" x2="12" y2="12"></line>
+                      <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                    </svg>
+                    <span>Revizyon: <b>${{versionStr}}</b></span>
+                  </div>
+                ` : ''}}
+              </div>
             </div>
 
             <div>
@@ -1504,7 +1718,7 @@ def generate_html(devices: List[Dict[str, Any]] = None) -> Path:
     function renderTable() {{
       const tbody = document.getElementById('tableBody');
       if (!filteredList.length) {{
-        tbody.innerHTML = `<tr><td colspan="8" style="text-align:center; padding: 3rem; color: var(--text-subtle);">Kriterlere uygun cihaz bulunamadı</td></tr>`;
+        tbody.innerHTML = `<tr><td colspan="9" style="text-align:center; padding: 3rem; color: var(--text-subtle);">Kriterlere uygun cihaz bulunamadı</td></tr>`;
         return;
       }}
 
@@ -1516,6 +1730,8 @@ def generate_html(devices: List[Dict[str, Any]] = None) -> Path:
           ? `<img src="${{d.image_url}}" alt="" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">`
           : '';
         const fallbackStyle = hasImg ? 'style="display:none;"' : '';
+        const mInfo = getInstallMethodInfo(d);
+        const versionStr = formatVersion(d.version) || '-';
 
         html += `
           <tr>
@@ -1531,16 +1747,21 @@ def generate_html(devices: List[Dict[str, Any]] = None) -> Path:
                 </div>
                 <div>
                   <div style="font-weight: 600; color: var(--text);">${{d.brand}} ${{d.model}}</div>
-                  <div style="font-size: 0.75rem; color: var(--text-subtle); max-width: 260px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${{d.market_title}}</div>
+                  <div style="font-size: 0.75rem; color: var(--text-subtle); max-width: 240px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${{d.market_title}}</div>
                 </div>
               </div>
             </td>
             <td style="font-family: var(--font-mono); font-weight: 600; white-space: nowrap;">${{priceDisplay}}</td>
+            <td>
+              <span class="install-method-badge ${{mInfo.type}}" style="font-size: 0.65rem; padding: 0.15rem 0.4rem;" title="${{mInfo.desc}}">
+                ${{mInfo.label}}
+              </span>
+            </td>
+            <td style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--warning); white-space: nowrap;">${{versionStr}}</td>
             <td>${{getReleasePill(d.supported_rel)}}</td>
             <td style="font-family: var(--font-mono); font-size: 0.75rem;">${{d.cpu || '-'}}</td>
             <td style="font-family: var(--font-mono); font-size: 0.75rem;">${{d.ram_mb || '?'}} MB</td>
             <td style="font-family: var(--font-mono); font-size: 0.75rem;">${{d.flash_mb || '?'}} MB</td>
-            <td style="font-family: var(--font-mono); font-size: 0.75rem;">${{d.ethernet_1g || '-'}}</td>
             <td style="white-space: nowrap;">
               <div style="display: flex; gap: 0.35rem;">
                 ${{d.epey_url ? `<a href="${{d.epey_url}}" target="_blank" class="btn btn-sm">Epey</a>` : ''}}
@@ -1570,8 +1791,29 @@ def generate_html(devices: List[Dict[str, Any]] = None) -> Path:
         photoWrap.style.display = 'none';
       }}
 
+      const mInfo = getInstallMethodInfo(d);
+      const versionStr = formatVersion(d.version);
+
+      const warningWrap = document.getElementById('modalWarningWrap');
+      const warningText = document.getElementById('modalWarningText');
+      let warnings = [];
+      if (versionStr) {{
+        warnings.push(`⚠️ <b>Donanım Revizyonu:</b> Bu cihazın sadece <b>${{versionStr}}</b> revizyonu desteklenmektedir. Satın alırken kutunun altındaki versiyon etiketini teyit ediniz.`);
+      }}
+      if (mInfo.type === 'warning' || mInfo.type === 'danger') {{
+        warnings.push(`⚡ <b>Kurulum Yöntemi:</b> ${{mInfo.label}} — ${{mInfo.desc}}`);
+      }}
+      if (warnings.length > 0) {{
+        warningText.innerHTML = warnings.join('<br><br>');
+        warningWrap.style.display = 'block';
+      }} else {{
+        warningWrap.style.display = 'none';
+      }}
+
       const details = [
         ['Pazar Fiyatı', d.price || 'Fiyat Belirtilmemiş'],
+        ['Kurulum Yöntemi', mInfo.label],
+        ['Donanım Revizyonu', versionStr || 'Tüm Revizyonlar'],
         ['OpenWrt Sürümü', d.supported_rel || '-'],
         ['İşlemci (SoC)', d.cpu || '-'],
         ['Hedef Mimari', d.target || '-'],
