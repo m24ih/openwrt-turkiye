@@ -11,7 +11,7 @@ import http.server
 import socketserver
 from pathlib import Path
 
-from src.config import PROJECT_ROOT, OUTPUT_FILTERED_JSON, OUTPUT_HTML
+from src.config import PROJECT_ROOT, OUTPUT_FILTERED_JSON, OUTPUT_HTML, MARKET_LOCAL_FILE
 from src.openwrt import fetch_latest_toh, load_local_toh
 from src.crawlers import crawl_epey, crawl_akakce
 from src.matcher import match_and_enrich
@@ -34,9 +34,37 @@ def cmd_update(args):
     all_market = epey_items + akakce_items
     print(f"\n[Market] Toplam {len(all_market)} pazar kaydı toplandı.")
     
+    # Safeguard 1: Datacenter IP / Cloudflare engeli durumunda veriyi sıfırlama!
+    if len(all_market) < 50:
+        print("\n⚠️ [UYARI] Canlı pazar taramasından yetersiz veri döndü (Cloudflare/IP engeli).")
+        if MARKET_LOCAL_FILE.exists():
+            print(f"📁 Mevcut pazar önbelleği kullanılıyor: {MARKET_LOCAL_FILE}")
+            with open(MARKET_LOCAL_FILE, "r", encoding="utf-8") as f:
+                all_market = json.load(f)
+            print(f"[Market] Önbellekten {len(all_market)} ürün yüklendi.")
+        elif OUTPUT_FILTERED_JSON.exists():
+            print(f"📁 Önceki filtrelenmiş veritabanı korunuyor: {OUTPUT_FILTERED_JSON}")
+            generate_html()
+            print("✅ Mevcut katalog korunarak site başarıyla derlendi.")
+            return
+        else:
+            print("❌ Hata: Hem pazar taraması boş döndü hem de yerel önbellek bulunamadı!")
+            return
+    else:
+        # Pazar verilerini önbelleğe kaydet
+        with open(MARKET_LOCAL_FILE, "w", encoding="utf-8") as f:
+            json.dump(all_market, f, ensure_ascii=False, indent=2)
+        print(f"💾 Güncel pazar ürünleri önbelleğe kaydedildi: {MARKET_LOCAL_FILE}")
+        
     # 3. Akıllı Eşleştirme & Zenginleştirme
     matched = match_and_enrich(all_market, owrt_items)
     
+    # Safeguard 2: Eğer eşleşme sayısı beklenmedik şekilde çok düşükse eski veritabanını koru
+    if len(matched) < 20 and OUTPUT_FILTERED_JSON.exists():
+        print(f"\n⚠️ [UYARI] Eşleşen cihaz sayısı beklenmedik şekilde çok düşük ({len(matched)}). Veri kaybını önlemek için önceki veritabanı korunuyor.")
+        generate_html()
+        return
+
     # 4. Web Arayüzünü Yeniden Derleme
     generate_html(matched)
     
@@ -64,6 +92,14 @@ def cmd_update_prices(args):
     akakce_items = crawl_akakce()
     all_market = epey_items + akakce_items
     
+    if len(all_market) < 50 and MARKET_LOCAL_FILE.exists():
+        print("⚠️ Canlı tarama yetersiz kaldı, yerel önbellek kullanılıyor...")
+        with open(MARKET_LOCAL_FILE, "r", encoding="utf-8") as f:
+            all_market = json.load(f)
+    elif len(all_market) >= 50:
+        with open(MARKET_LOCAL_FILE, "w", encoding="utf-8") as f:
+            json.dump(all_market, f, ensure_ascii=False, indent=2)
+            
     matched = match_and_enrich(all_market, owrt_items)
     generate_html(matched)
     print(f"Fiyatlar ve eşleşen {len(matched)} model güncellendi.")
