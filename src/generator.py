@@ -2,7 +2,7 @@ import json
 import shutil
 from pathlib import Path
 from typing import List, Dict, Any
-from src.config import OUTPUT_FILTERED_JSON, OUTPUT_HTML, WEB_HTML
+from src.config import PROJECT_ROOT, WEB_DIR, OUTPUT_FILTERED_JSON, OUTPUT_HTML, WEB_HTML
 
 def generate_html(devices: List[Dict[str, Any]] = None) -> Path:
     if devices is None:
@@ -20,6 +20,9 @@ def generate_html(devices: List[Dict[str, Any]] = None) -> Path:
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>OpenWrt Türkiye — Ağ Cihazları Kataloğu & Fiyat Takibi</title>
   <meta name="description" content="Türkiye piyasasında (Epey & Akakçe) satışta olan OpenWrt destekli router, modem ve menzil genişleticilerin donanım özellikleri, fotoğrafları, donanım revizyon uyarıları ve kurulum kılavuzu.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="alternate icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -1046,12 +1049,7 @@ def generate_html(devices: List[Dict[str, Any]] = None) -> Path:
     <div class="header-container">
       <div class="brand-wrap">
         <a href="#" class="brand-title">
-          <svg class="brand-logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
-            <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
-            <line x1="6" y1="6" x2="6.01" y2="6"></line>
-            <line x1="6" y1="18" x2="6.01" y2="18"></line>
-          </svg>
+          <img src="favicon.svg" alt="OpenWrt" class="brand-logo-icon" width="28" height="28">
           OpenWrt Türkiye
         </a>
         <span class="badge-status">v24.x · v25.x Kataloğu</span>
@@ -1877,5 +1875,9 @@ def generate_html(devices: List[Dict[str, Any]] = None) -> Path:
         f.write(html_content)
         
     shutil.copyfile(OUTPUT_HTML, WEB_HTML)
+    for fname in ["favicon.svg", "favicon.ico", "apple-touch-icon.png"]:
+        src_file = PROJECT_ROOT / fname
+        if src_file.exists():
+            shutil.copyfile(src_file, WEB_DIR / fname)
     print(f"[Generator] Successfully generated web dashboard at {OUTPUT_HTML} and {WEB_HTML}")
     return OUTPUT_HTML
