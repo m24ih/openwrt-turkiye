@@ -1,9 +1,9 @@
 # 🌐 OpenWrt Türkiye — Ağ Cihazları Kataloğu & Fiyat Takipçisi
 
-[![Canlı Site](https://img.shields.io/badge/Canlı%20Site-openwrt.melihak.me-6366f1?style=flat-square&logo=cloudflare)](https://openwrt.melihak.me)
-[![OpenWrt Version](https://img.shields.io/badge/OpenWrt-v25%20%7C%20v24-00a6e0?style=flat-square&logo=openwrt)](https://openwrt.org)
-[![Weekly Update](https://img.shields.io/badge/Update-Weekly%20Automated-10b981?style=flat-square&logo=githubactions)](https://github.com/m24ih/openwrt-turkiye/actions)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](LICENSE)
+[![Canlı Web Sitesi](https://img.shields.io/badge/CANLI%20S%C4%B0TE-openwrt.melihak.me-6366f1?style=for-the-badge&logo=cloudflare&logoColor=white)](https://openwrt.melihak.me)
+[![OpenWrt Version](https://img.shields.io/badge/OpenWrt-v25%20%7C%20v24-00a6e0?style=for-the-badge&logo=openwrt&logoColor=white)](https://openwrt.org)
+[![Weekly Update](https://img.shields.io/badge/Weekly%20Update-Automated-10b981?style=for-the-badge&logo=githubactions&logoColor=white)](https://github.com/m24ih/openwrt-turkiye/actions)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](LICENSE)
 
 Türkiye e-ticaret piyasasında (**Epey** ve **Akakçe**) aktif olarak satışta olan, resmi **OpenWrt** destekli router, modem, menzil genişletici ve ağ donanımlarının **otomatik olarak takip edildiği, donanım revizyon uyarıları ve kurulum yöntemleriyle zenginleştirildiği, güncel piyasa fiyatlarıyla listelendiği** açık kaynaklı bir katalog ve otomasyon platformudur.
 
