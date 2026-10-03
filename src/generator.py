@@ -54,6 +54,10 @@ def generate_html(devices: List[Dict[str, Any]] = None) -> Path:
       --warning: #f59e0b;
       --warning-subtle: rgba(245, 158, 11, 0.1);
       --warning-border: rgba(245, 158, 11, 0.3);
+      --revision-bg: rgba(245, 158, 11, 0.08);
+      --revision-border: rgba(245, 158, 11, 0.28);
+      --revision-text: #fbbf24;
+      --revision-bold: #fef08a;
       
       --danger: #ef4444;
       --danger-subtle: rgba(239, 68, 68, 0.1);
@@ -90,6 +94,23 @@ def generate_html(devices: List[Dict[str, Any]] = None) -> Path:
       --accent-hover: #4338ca;
       --accent-subtle: rgba(79, 70, 229, 0.08);
       --accent-border: rgba(79, 70, 229, 0.25);
+
+      --success: #059669;
+      --success-subtle: rgba(5, 150, 105, 0.08);
+      --success-border: rgba(5, 150, 105, 0.25);
+
+      --warning: #b45309;
+      --warning-subtle: rgba(217, 119, 6, 0.08);
+      --warning-border: rgba(217, 119, 6, 0.25);
+
+      --danger: #dc2626;
+      --danger-subtle: rgba(220, 38, 38, 0.08);
+      --danger-border: rgba(220, 38, 38, 0.25);
+
+      --revision-bg: #fffbeb;
+      --revision-border: rgba(217, 119, 6, 0.28);
+      --revision-text: #92400e;
+      --revision-bold: #78350f;
       
       --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
       --shadow-md: 0 4px 16px -2px rgba(0, 0, 0, 0.08);
@@ -762,19 +783,20 @@ def generate_html(devices: List[Dict[str, Any]] = None) -> Path:
     .revision-box {{
       font-family: var(--font-mono);
       font-size: 0.6875rem;
-      padding: 0.3rem 0.6rem;
+      padding: 0.35rem 0.65rem;
       border-radius: var(--radius-sm);
-      background: rgba(245, 158, 11, 0.07);
-      border: 1px solid rgba(245, 158, 11, 0.25);
-      color: var(--warning);
+      background: var(--revision-bg);
+      border: 1px solid var(--revision-border);
+      color: var(--revision-text);
       display: flex;
       align-items: center;
-      gap: 0.4rem;
+      gap: 0.45rem;
       line-height: 1.35;
     }}
 
     .revision-box b {{
-      color: #fef08a;
+      color: var(--revision-bold);
+      font-weight: 700;
     }}
 
     .card-footer-actions {{
@@ -955,14 +977,19 @@ def generate_html(devices: List[Dict[str, Any]] = None) -> Path:
     }}
 
     .modal-warning-box {{
-      background: rgba(245, 158, 11, 0.08);
-      border: 1px solid rgba(245, 158, 11, 0.25);
+      background: var(--revision-bg);
+      border: 1px solid var(--revision-border);
       border-radius: var(--radius-md);
-      padding: 0.75rem;
+      padding: 0.85rem;
       font-size: 0.8125rem;
-      color: var(--warning);
+      color: var(--revision-text);
       margin-bottom: 1rem;
-      line-height: 1.45;
+      line-height: 1.5;
+    }}
+
+    .modal-warning-box b {{
+      color: var(--revision-bold);
+      font-weight: 700;
     }}
 
     .modal-grid {{
@@ -1763,7 +1790,7 @@ def generate_html(devices: List[Dict[str, Any]] = None) -> Path:
                 ${{mInfo.label}}
               </span>
             </td>
-            <td style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--warning); white-space: nowrap;">${{versionStr}}</td>
+            <td style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--revision-text); font-weight: 600; white-space: nowrap;">${{versionStr}}</td>
             <td>${{getReleasePill(d.supported_rel)}}</td>
             <td style="font-family: var(--font-mono); font-size: 0.75rem;">${{d.cpu || '-'}}</td>
             <td style="font-family: var(--font-mono); font-size: 0.75rem;">${{d.ram_mb || '?'}} MB</td>
