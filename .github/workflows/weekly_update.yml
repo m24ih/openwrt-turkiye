@@ -1,0 +1,64 @@
+name: Haftalık OpenWrt & Fiyat Güncellemesi
+
+on:
+  schedule:
+    # Her Pazartesi saat 03:00 UTC'de (Türkiye saati 06:00) çalışır
+    - cron: '0 3 * * 1'
+  workflow_dispatch: # Manuel çalıştırma butonu
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  update-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Depoyu Klonla
+        uses: actions/checkout@v4
+
+      - name: Python Kurulumu (3.11)
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Bağımlılıkları Yükle
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: OpenWrt ToH ve Fiyatları Güncelle
+        run: |
+          python main.py update
+
+      - name: Değişiklikleri Commit Et ve Pushla
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action Bot"
+          
+          if [[ -n $(git status -s) ]]; then
+            git add data/ index.html web/
+            git commit -m "chore(data): weekly update OpenWrt ToH and market prices [skip ci]"
+            git push
+          else
+            echo "Değişiklik tespit edilmedi, commit atlanıyor."
+          fi
+
+      - name: GitHub Pages için Yapılandır
+        uses: actions/configure-pages@v5
+
+      - name: Statik Web Dosyalarını Yükle
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+
+      - name: GitHub Pages Canlıya Al
+        id: deployment
+        uses: actions/deploy-pages@v4

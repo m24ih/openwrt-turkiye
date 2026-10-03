@@ -1,0 +1,1092 @@
+import json
+import shutil
+from pathlib import Path
+from typing import List, Dict, Any
+from src.config import OUTPUT_FILTERED_JSON, OUTPUT_HTML, WEB_HTML
+
+def generate_html(devices: List[Dict[str, Any]] = None) -> Path:
+    if devices is None:
+        if not OUTPUT_FILTERED_JSON.exists():
+            raise FileNotFoundError(f"{OUTPUT_FILTERED_JSON} does not exist. Run update first.")
+        with open(OUTPUT_FILTERED_JSON, "r", encoding="utf-8") as f:
+            devices = json.load(f)
+
+    json_data_str = json.dumps(devices, ensure_ascii=False)
+    
+    html_content = f"""<!DOCTYPE html>
+<html lang="tr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OpenWrt Türkiye - Destekli Router & Ağ Cihazları Kataloğu</title>
+  <meta name="description" content="Türkiye piyasasında (Epey & Akakçe) satışta olan OpenWrt destekli router, modem ve menzil genişleticilerin güncel fiyat ve teknik özellik listesi.">
+  <style>
+    :root {{
+      --bg: #0b0f19;
+      --card-bg: #131b2e;
+      --card-hover: #1b2640;
+      --border: #23304b;
+      --text: #f1f5f9;
+      --text-muted: #94a3b8;
+      --primary: #00a6e0;
+      --primary-hover: #38bdf8;
+      --accent-green: #10b981;
+      --accent-amber: #f59e0b;
+      --accent-purple: #a855f7;
+      --accent-red: #ef4444;
+      --badge-bg: rgba(0, 166, 224, 0.12);
+      --input-bg: #0f172a;
+      --table-stripe: rgba(255, 255, 255, 0.02);
+      --shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+      --font: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }}
+
+    [data-theme="light"] {{
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --card-hover: #f1f5f9;
+      --border: #e2e8f0;
+      --text: #0f172a;
+      --text-muted: #64748b;
+      --primary: #0284c7;
+      --primary-hover: #0369a1;
+      --badge-bg: rgba(2, 132, 199, 0.1);
+      --input-bg: #ffffff;
+      --table-stripe: #f8fafc;
+      --shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    }}
+
+    * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+    body {{
+      font-family: var(--font);
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }}
+
+    a {{ color: var(--primary); text-decoration: none; transition: color 0.15s; }}
+    a:hover {{ color: var(--primary-hover); text-decoration: underline; }}
+
+    header {{
+      background: var(--card-bg);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(12px);
+    }}
+
+    .header-inner {{
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 0.85rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }}
+
+    .brand-logo {{
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text);
+      text-decoration: none;
+    }}
+
+    .brand-logo svg {{ width: 32px; height: 32px; fill: var(--primary); }}
+
+    .badge-pill {{
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.2rem 0.6rem;
+      border-radius: 9999px;
+      background: var(--badge-bg);
+      color: var(--primary);
+      border: 1px solid rgba(0, 166, 224, 0.25);
+    }}
+
+    .header-actions {{ display: flex; align-items: center; gap: 0.75rem; }}
+
+    .btn {{
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      padding: 0.45rem 0.85rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: var(--card-bg);
+      color: var(--text);
+      cursor: pointer;
+      transition: all 0.15s ease;
+      text-decoration: none;
+    }}
+
+    .btn:hover {{ background: var(--card-hover); border-color: var(--primary); text-decoration: none; }}
+    .btn-primary {{ background: var(--primary); color: #fff; border-color: var(--primary); }}
+    .btn-primary:hover {{ background: var(--primary-hover); color: #fff; }}
+    .btn-sm {{ padding: 0.3rem 0.6rem; font-size: 0.75rem; }}
+
+    main {{
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 1.5rem;
+      flex: 1;
+      width: 100%;
+    }}
+
+    .hero-section {{ margin-bottom: 2rem; }}
+    .hero-title {{
+      font-size: 1.85rem;
+      font-weight: 800;
+      margin-bottom: 0.4rem;
+      background: linear-gradient(90deg, var(--text) 0%, var(--primary) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }}
+
+    .hero-subtitle {{ color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.25rem; }}
+
+    .stats-grid {{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }}
+
+    .stat-card {{
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      padding: 1rem 1.25rem;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+    }}
+
+    .stat-card .label {{ font-size: 0.8rem; color: var(--text-muted); font-weight: 500; margin-bottom: 0.25rem; }}
+    .stat-card .value {{ font-size: 1.6rem; font-weight: 800; color: var(--text); }}
+    .stat-card .subtext {{ font-size: 0.75rem; color: var(--accent-green); font-weight: 600; }}
+
+    .highlights-bar {{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      align-items: center;
+      margin-bottom: 1.75rem;
+      padding: 0.85rem 1rem;
+      background: rgba(0, 166, 224, 0.05);
+      border: 1px solid rgba(0, 166, 224, 0.18);
+      border-radius: 10px;
+    }}
+
+    .highlights-title {{
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--primary);
+    }}
+
+    .highlight-chip {{
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      padding: 0.3rem 0.7rem;
+      border-radius: 9999px;
+      font-size: 0.8rem;
+      color: var(--text);
+      cursor: pointer;
+      transition: all 0.15s;
+    }}
+
+    .highlight-chip:hover {{ border-color: var(--primary); background: var(--card-hover); }}
+
+    .filter-panel {{
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.25rem;
+      margin-bottom: 1.5rem;
+      box-shadow: var(--shadow);
+    }}
+
+    .filter-row-top {{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+      margin-bottom: 1rem;
+    }}
+
+    .search-box {{ flex: 1; min-width: 260px; position: relative; }}
+    .search-box input {{
+      width: 100%;
+      padding: 0.65rem 1rem 0.65rem 2.4rem;
+      background: var(--input-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      color: var(--text);
+      font-size: 0.9rem;
+      outline: none;
+      transition: border-color 0.15s;
+    }}
+    .search-box input:focus {{ border-color: var(--primary); }}
+
+    .search-icon {{
+      position: absolute;
+      left: 0.8rem;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 16px;
+      height: 16px;
+      color: var(--text-muted);
+      pointer-events: none;
+    }}
+
+    .filter-group {{ display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; }}
+    .filter-select {{
+      background: var(--input-bg);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 0.55rem 0.85rem;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      outline: none;
+      cursor: pointer;
+    }}
+
+    .brand-chips-container {{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.85rem;
+      padding-top: 0.85rem;
+      border-top: 1px solid var(--border);
+    }}
+
+    .chip-btn {{
+      background: var(--input-bg);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      padding: 0.25rem 0.65rem;
+      border-radius: 9999px;
+      font-size: 0.8rem;
+      cursor: pointer;
+      transition: all 0.15s;
+      user-select: none;
+    }}
+
+    .chip-btn:hover {{ color: var(--text); border-color: var(--primary); }}
+    .chip-btn.active {{
+      background: var(--primary);
+      color: #ffffff;
+      border-color: var(--primary);
+      font-weight: 600;
+    }}
+
+    .results-bar {{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+      padding: 0 0.25rem;
+    }}
+
+    .results-count {{ font-size: 0.9rem; color: var(--text-muted); }}
+    .results-count b {{ color: var(--text); }}
+
+    .view-toggle {{
+      display: flex;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+    }}
+
+    .view-btn {{
+      background: var(--card-bg);
+      border: none;
+      color: var(--text-muted);
+      padding: 0.4rem 0.75rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.8rem;
+    }}
+
+    .view-btn.active {{ background: var(--primary); color: #fff; }}
+
+    .device-grid {{
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 1.25rem;
+    }}
+
+    .device-card {{
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+      box-shadow: var(--shadow);
+      position: relative;
+    }}
+
+    .device-card:hover {{
+      transform: translateY(-2px);
+      border-color: var(--primary);
+      box-shadow: 0 8px 30px rgba(0, 166, 224, 0.15);
+    }}
+
+    .card-header {{
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 0.5rem;
+      margin-bottom: 0.75rem;
+    }}
+
+    .card-brand-badge {{
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.2rem 0.5rem;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.06);
+      color: var(--text);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }}
+
+    .status-badge {{
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 0.2rem 0.55rem;
+      border-radius: 9999px;
+      white-space: nowrap;
+    }}
+
+    .status-badge.active {{
+      background: rgba(16, 185, 129, 0.15);
+      color: var(--accent-green);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }}
+
+    .status-badge.eol {{
+      background: rgba(239, 68, 68, 0.15);
+      color: var(--accent-red);
+      border: 1px solid rgba(239, 68, 68, 0.3);
+    }}
+
+    .status-badge.snapshot {{
+      background: rgba(245, 158, 11, 0.15);
+      color: var(--accent-amber);
+      border: 1px solid rgba(245, 158, 11, 0.3);
+    }}
+
+    .card-title {{
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 0.2rem;
+      line-height: 1.3;
+    }}
+
+    .card-market-title {{
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-bottom: 0.85rem;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }}
+
+    .card-price {{
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--accent-green);
+      margin-bottom: 1rem;
+    }}
+
+    .specs-list {{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5rem;
+      background: rgba(0, 0, 0, 0.15);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      font-size: 0.75rem;
+    }}
+
+    .spec-item {{ display: flex; flex-direction: column; }}
+    .spec-label {{
+      color: var(--text-muted);
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }}
+
+    .spec-val {{
+      font-weight: 600;
+      color: var(--text);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }}
+
+    .card-actions {{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5rem;
+      margin-top: auto;
+    }}
+
+    .card-actions .btn {{ width: 100%; text-align: center; padding: 0.4rem 0.2rem; font-size: 0.78rem; }}
+
+    .card-bottom-links {{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 0.75rem;
+      padding-top: 0.75rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.75rem;
+    }}
+
+    .table-container {{
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow-x: auto;
+      box-shadow: var(--shadow);
+    }}
+
+    table {{ width: 100%; border-collapse: collapse; font-size: 0.85rem; text-align: left; }}
+    th {{
+      background: rgba(0, 0, 0, 0.2);
+      padding: 0.85rem 1rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      border-bottom: 1px solid var(--border);
+      cursor: pointer;
+      user-select: none;
+      white-space: nowrap;
+    }}
+
+    th:hover {{ color: var(--text); }}
+    td {{ padding: 0.85rem 1rem; border-bottom: 1px solid var(--border); vertical-align: middle; }}
+    tr:nth-child(even) {{ background: var(--table-stripe); }}
+    tr:hover {{ background: var(--card-hover); }}
+
+    dialog {{
+      margin: auto;
+      max-width: 650px;
+      width: 90%;
+      background: var(--card-bg);
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.5rem;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+    }}
+
+    dialog::backdrop {{
+      background: rgba(0, 0, 0, 0.75);
+      backdrop-filter: blur(4px);
+    }}
+
+    .modal-header {{
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 1.25rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.75rem;
+    }}
+
+    .modal-title {{ font-size: 1.4rem; font-weight: 800; }}
+    .modal-close {{ background: none; border: none; color: var(--text-muted); font-size: 1.5rem; cursor: pointer; line-height: 1; }}
+    .modal-close:hover {{ color: var(--text); }}
+
+    .modal-grid {{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      font-size: 0.85rem;
+    }}
+
+    .modal-field {{ display: flex; flex-direction: column; }}
+    .modal-field-label {{ color: var(--text-muted); font-size: 0.75rem; text-transform: uppercase; margin-bottom: 0.2rem; }}
+    .modal-field-val {{ font-weight: 600; word-break: break-all; }}
+    .modal-links {{ display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1rem; }}
+
+    footer {{
+      margin-top: auto;
+      background: var(--card-bg);
+      border-top: 1px solid var(--border);
+      padding: 1.5rem;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }}
+
+    @media (max-width: 768px) {{
+      .header-inner {{ flex-direction: column; align-items: flex-start; }}
+      .header-actions {{ width: 100%; justify-content: space-between; }}
+      .stats-grid {{ grid-template-columns: 1fr 1fr; }}
+      .card-actions {{ grid-template-columns: 1fr; }}
+    }}
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <div style="display: flex; align-items: center; gap: 0.75rem;">
+        <a href="#" class="brand-logo">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+          </svg>
+          OpenWrt Türkiye
+        </a>
+        <span class="badge-pill">Otomatik Haftalık Güncelleme</span>
+      </div>
+
+      <div class="header-actions">
+        <button id="themeToggle" class="btn btn-sm" title="Tema Değiştir">🌓 Tema</button>
+        <button id="exportBtn" class="btn btn-sm" title="Filtrelenen Veriyi İndir">📥 JSON İndir</button>
+        <button id="exportCsvBtn" class="btn btn-sm" title="CSV Olarak İndir">📊 CSV İndir</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-section">
+      <h1 class="hero-title">Türkiye'de Satışta Olan OpenWrt Cihazları</h1>
+      <p class="hero-subtitle">OpenWrt resmi Table of Hardware (ToH) verileri ile Epey & Akakçe Türkiye piyasası çapraz eşleştirmesi</p>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="label">Eşleşen Cihaz Sayısı</div>
+          <div class="value" id="statTotal">-</div>
+          <div class="subtext">Türkiye pazarında mevcut</div>
+        </div>
+        <div class="stat-card">
+          <div class="label">Aktif Desteklenen (Non-EOL)</div>
+          <div class="value" id="statActive" style="color: var(--accent-green);">-</div>
+          <div class="subtext">OpenWrt 24.x / 25.x</div>
+        </div>
+        <div class="stat-card">
+          <div class="label">Wi-Fi 6 (802.11ax) Cihazlar</div>
+          <div class="value" id="statWifi6" style="color: var(--primary);">-</div>
+          <div class="subtext">Yeni nesil yüksek hız</div>
+        </div>
+        <div class="stat-card">
+          <div class="label">Fiyatı Olan Cihazlar</div>
+          <div class="value" id="statPriced" style="color: var(--accent-amber);">-</div>
+          <div class="subtext">Anlık piyasa fiyatlı</div>
+        </div>
+      </div>
+
+      <div class="highlights-bar">
+        <span class="highlights-title">⚡ Editörün Seçimleri:</span>
+        <span class="highlight-chip" onclick="quickFilter('WR3000')">🌟 Cudy WR3000 (En Kolay Kurulum AX3000)</span>
+        <span class="highlight-chip" onclick="quickFilter('AX3000T')">🚀 Xiaomi AX3000T (F/P Canavarı)</span>
+        <span class="highlight-chip" onclick="quickFilter('4A Gigabit')">💰 Xiaomi 4A Gigabit (En Uygun Gigabit)</span>
+        <span class="highlight-chip" onclick="quickFilter('X6')">📶 Cudy X6 (Bütçe Wi-Fi 6)</span>
+        <span class="highlight-chip" onclick="quickFilter('hEX S')">🛡️ MikroTik hEX S (Kablolu Gateway)</span>
+        <span class="highlight-chip" onclick="quickFilter('Beryl')">✈️ GL.iNet Beryl (Seyahat/VPN)</span>
+      </div>
+    </section>
+
+    <section class="filter-panel">
+      <div class="filter-row-top">
+        <div class="search-box">
+          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="text" id="searchInput" placeholder="Marka, model, işlemci (örn. MT7981, MT7621, Filogic, C6, AX3000)...">
+        </div>
+
+        <div class="filter-group">
+          <select id="wifiFilter" class="filter-select">
+            <option value="ALL">Wi-Fi Standartı: Tümü</option>
+            <option value="WIFI6">Wi-Fi 6 (AX)</option>
+            <option value="WIFI5">Wi-Fi 5 (AC)</option>
+            <option value="WIFI4">Wi-Fi 4 (N)</option>
+            <option value="ETHERNET">Kablolu (Wi-Fi Yok)</option>
+          </select>
+
+          <select id="statusFilter" class="filter-select">
+            <option value="ALL">Durum: Tümü</option>
+            <option value="ACTIVE" selected>Sadece Aktif (EOL Hariç)</option>
+            <option value="25">En Güncel (OpenWrt 25.x)</option>
+            <option value="24">OpenWrt 24.x</option>
+            <option value="EOL">Sadece EOL</option>
+          </select>
+
+          <select id="ramFilter" class="filter-select">
+            <option value="0">RAM: Tümü</option>
+            <option value="128">≥ 128 MB RAM</option>
+            <option value="256">≥ 256 MB RAM</option>
+            <option value="512">≥ 512 MB RAM</option>
+          </select>
+
+          <select id="flashFilter" class="filter-select">
+            <option value="0">Flash: Tümü</option>
+            <option value="16">≥ 16 MB Flash</option>
+            <option value="32">≥ 32 MB Flash</option>
+            <option value="128">≥ 128 MB Flash</option>
+          </select>
+
+          <select id="sortSelect" class="filter-select">
+            <option value="PRICE_ASC">Fiyat: Artan (En Ucuz)</option>
+            <option value="PRICE_DESC">Fiyat: Azalan (En Pahalı)</option>
+            <option value="NAME_ASC">Model: A-Z</option>
+            <option value="RAM_DESC">RAM: En Yüksek</option>
+            <option value="REL_DESC">En Yeni Sürüm</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="brand-chips-container" id="brandChips"></div>
+    </section>
+
+    <div class="results-bar">
+      <div class="results-count" id="resultsCount">Yükleniyor...</div>
+      <div class="view-toggle">
+        <button class="view-btn active" id="btnViewGrid" onclick="setViewMode('grid')">🗂️ Kart</button>
+        <button class="view-btn" id="btnViewTable" onclick="setViewMode('table')">📋 Tablo</button>
+      </div>
+    </div>
+
+    <div id="gridContainer" class="device-grid"></div>
+
+    <div id="tableContainer" class="table-container" style="display: none;">
+      <table>
+        <thead>
+          <tr>
+            <th onclick="sortTable('brand')">Marka & Model</th>
+            <th onclick="sortTable('price')">Fiyat</th>
+            <th onclick="sortTable('supported_rel')">OpenWrt Sürümü</th>
+            <th onclick="sortTable('cpu')">İşlemci (CPU)</th>
+            <th onclick="sortTable('ram_mb')">RAM</th>
+            <th onclick="sortTable('flash_mb')">Flash</th>
+            <th>Ethernet</th>
+            <th>Mağaza / ToH Linkleri</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+      </table>
+    </div>
+  </main>
+
+  <dialog id="detailModal">
+    <div class="modal-header">
+      <div>
+        <div style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase;" id="modalBrand">Brand</div>
+        <div class="modal-title" id="modalTitle">Model</div>
+      </div>
+      <button class="modal-close" onclick="closeModal()">&times;</button>
+    </div>
+
+    <div class="modal-grid" id="modalDetails"></div>
+
+    <div style="margin-top: 1rem;">
+      <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; margin-bottom: 0.4rem;">Topluluk Notu / Açıklama:</div>
+      <div id="modalComments" style="font-size: 0.85rem; background: rgba(0,0,0,0.2); padding: 0.75rem; border-radius: 8px; border: 1px solid var(--border);"></div>
+    </div>
+
+    <div class="modal-links" id="modalLinks"></div>
+  </dialog>
+
+  <footer>
+    <p>OpenWrt Türkiye Kataloğu — Veri Kaynağı: OpenWrt ToH, Epey.com & Akakce.com</p>
+    <p style="margin-top: 0.4rem; font-size: 0.75rem;">Otomatik Haftalık Güncelleme — Antigravity ile oluşturulmuştur.</p>
+  </footer>
+
+  <script>
+    const RAW_DEVICES = {json_data_str};
+    let currentBrand = 'ALL';
+    let currentView = 'grid';
+    let filteredList = [];
+
+    RAW_DEVICES.forEach(d => {{
+      const numStr = (d.price || '').replace(/[^0-9]/g, '');
+      d.priceNum = numStr ? parseInt(numStr, 10) : 99999999;
+      d.ramNum = d.ram_mb ? parseInt(d.ram_mb, 10) : 0;
+      const fStr = (d.flash_mb || '').replace(/[^0-9]/g, '');
+      d.flashNum = fStr ? parseInt(fStr, 10) : 0;
+    }});
+
+    function init() {{
+      renderStats();
+      renderBrandChips();
+      setupEventListeners();
+      applyFilters();
+    }}
+
+    function renderStats() {{
+      const total = RAW_DEVICES.length;
+      const active = RAW_DEVICES.filter(d => d.supported_rel !== 'EOL' && d.supported_rel !== '-').length;
+      const wifi6 = RAW_DEVICES.filter(d => {{
+        const cpu = (d.cpu || '').toUpperCase();
+        const model = (d.model || '').toUpperCase();
+        const title = (d.market_title || '').toUpperCase();
+        return model.includes('AX') || title.includes('AX') || cpu.includes('7981') || cpu.includes('7986') || cpu.includes('IPQ50') || cpu.includes('IPQ807');
+      }}).length;
+      const priced = RAW_DEVICES.filter(d => d.price && d.price.includes('TL')).length;
+
+      document.getElementById('statTotal').innerText = total;
+      document.getElementById('statActive').innerText = active;
+      document.getElementById('statWifi6').innerText = wifi6;
+      document.getElementById('statPriced').innerText = priced;
+    }}
+
+    function renderBrandChips() {{
+      const brandCounts = {{}};
+      RAW_DEVICES.forEach(d => {{
+        const b = d.brand || 'Diğer';
+        brandCounts[b] = (brandCounts[b] || 0) + 1;
+      }});
+
+      const sortedBrands = Object.entries(brandCounts).sort((a, b) => b[1] - a[1]);
+      const container = document.getElementById('brandChips');
+      
+      let html = `<button class="chip-btn active" onclick="setBrand('ALL')">Tüm Markalar (${{RAW_DEVICES.length}})</button>`;
+      sortedBrands.forEach(([brand, count]) => {{
+        html += `<button class="chip-btn" id="chip-${{brand.replace(/[^a-zA-Z0-9]/g, '')}}" onclick="setBrand('${{brand}}')">${{brand}} (${{count}})</button>`;
+      }});
+      container.innerHTML = html;
+    }}
+
+    function setBrand(brand) {{
+      currentBrand = brand;
+      document.querySelectorAll('.chip-btn').forEach(btn => btn.classList.remove('active'));
+      if (brand === 'ALL') {{
+        document.querySelector('.chip-btn').classList.add('active');
+      }} else {{
+        const el = document.getElementById('chip-' + brand.replace(/[^a-zA-Z0-9]/g, ''));
+        if (el) el.classList.add('active');
+      }}
+      applyFilters();
+    }}
+
+    function quickFilter(term) {{
+      document.getElementById('searchInput').value = term;
+      document.getElementById('statusFilter').value = 'ALL';
+      setBrand('ALL');
+      applyFilters();
+    }}
+
+    function setupEventListeners() {{
+      document.getElementById('searchInput').addEventListener('input', applyFilters);
+      document.getElementById('wifiFilter').addEventListener('change', applyFilters);
+      document.getElementById('statusFilter').addEventListener('change', applyFilters);
+      document.getElementById('ramFilter').addEventListener('change', applyFilters);
+      document.getElementById('flashFilter').addEventListener('change', applyFilters);
+      document.getElementById('sortSelect').addEventListener('change', applyFilters);
+
+      document.getElementById('themeToggle').addEventListener('click', () => {{
+        const current = document.documentElement.getAttribute('data-theme');
+        const next = current === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', next);
+      }});
+
+      document.getElementById('exportBtn').addEventListener('click', () => {{
+        const blob = new Blob([JSON.stringify(filteredList, null, 2)], {{ type: 'application/json' }});
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'OpenWrt_Turkiye_Filtreli.json';
+        a.click();
+      }});
+
+      document.getElementById('exportCsvBtn').addEventListener('click', exportCsv);
+    }}
+
+    function exportCsv() {{
+      if (!filteredList.length) return;
+      const headers = ['Marka', 'Model', 'Piyasa Adi', 'Fiyat', 'OpenWrt Surumu', 'CPU', 'RAM (MB)', 'Flash (MB)', 'Hedef Mimari', 'Epey Linki', 'Akakce Linki', 'OpenWrt ToH'];
+      const rows = filteredList.map(d => [
+        '"' + (d.brand || '') + '"',
+        '"' + (d.model || '') + '"',
+        '"' + (d.market_title || '') + '"',
+        '"' + (d.price || '') + '"',
+        '"' + (d.supported_rel || '') + '"',
+        '"' + (d.cpu || '') + '"',
+        '"' + (d.ram_mb || '') + '"',
+        '"' + (d.flash_mb || '') + '"',
+        '"' + (d.target || '') + '"',
+        '"' + (d.epey_url || '') + '"',
+        '"' + (d.akakce_search_url || '') + '"',
+        '"' + (d.device_page || '') + '"'
+      ]);
+      const csvContent = '\\uFEFF' + [headers.join(','), ...rows.map(r => r.join(','))].join('\\n');
+      const blob = new Blob([csvContent], {{ type: 'text/csv;charset=utf-8;' }});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'OpenWrt_Turkiye_Listesi.csv';
+      a.click();
+    }}
+
+    function applyFilters() {{
+      const q = document.getElementById('searchInput').value.toLowerCase().trim();
+      const wifi = document.getElementById('wifiFilter').value;
+      const status = document.getElementById('statusFilter').value;
+      const minRam = parseInt(document.getElementById('ramFilter').value, 10);
+      const minFlash = parseInt(document.getElementById('flashFilter').value, 10);
+      const sort = document.getElementById('sortSelect').value;
+
+      filteredList = RAW_DEVICES.filter(d => {{
+        if (currentBrand !== 'ALL' && d.brand !== currentBrand) return false;
+        if (q) {{
+          const haystack = `${{d.brand}} ${{d.model}} ${{d.market_title}} ${{d.cpu}} ${{d.target}} ${{d.supported_rel}}`.toLowerCase();
+          if (!haystack.includes(q)) return false;
+        }}
+        if (status === 'ACTIVE' && (d.supported_rel === 'EOL' || d.supported_rel === '-')) return false;
+        if (status === '25' && !(d.supported_rel || '').startsWith('25.')) return false;
+        if (status === '24' && !(d.supported_rel || '').startsWith('24.')) return false;
+        if (status === 'EOL' && d.supported_rel !== 'EOL') return false;
+
+        if (minRam > 0 && d.ramNum < minRam) return false;
+        if (minFlash > 0 && d.flashNum < minFlash) return false;
+
+        if (wifi !== 'ALL') {{
+          const model = (d.model || '').toUpperCase();
+          const title = (d.market_title || '').toUpperCase();
+          const cpu = (d.cpu || '').toUpperCase();
+          const isAx = model.includes('AX') || title.includes('AX') || cpu.includes('7981') || cpu.includes('7986') || cpu.includes('IPQ50') || cpu.includes('IPQ807') || model.includes('BE') || title.includes('BE');
+          const isAc = model.includes('AC') || title.includes('AC') || cpu.includes('7621') || cpu.includes('7628') || cpu.includes('QCA95') || model.includes('C6') || model.includes('C7') || model.includes('WR1300');
+          const isN = model.includes('N') || title.includes('N') || cpu.includes('7240') || cpu.includes('9342');
+          
+          if (wifi === 'WIFI6' && !isAx) return false;
+          if (wifi === 'WIFI5' && !isAc) return false;
+          if (wifi === 'WIFI4' && !isN) return false;
+          if (wifi === 'ETHERNET' && (isAx || isAc || isN)) return false;
+        }}
+
+        return true;
+      }});
+
+      filteredList.sort((a, b) => {{
+        if (sort === 'PRICE_ASC') return a.priceNum - b.priceNum;
+        if (sort === 'PRICE_DESC') return b.priceNum - a.priceNum;
+        if (sort === 'NAME_ASC') return (a.model || '').localeCompare(b.model || '');
+        if (sort === 'RAM_DESC') return b.ramNum - a.ramNum;
+        if (sort === 'REL_DESC') return (b.supported_rel || '').localeCompare(a.supported_rel || '');
+        return 0;
+      }});
+
+      document.getElementById('resultsCount').innerHTML = `Bulunan Sonuç: <b>${{filteredList.length}}</b> cihaz`;
+
+      if (currentView === 'grid') renderGrid();
+      else renderTable();
+    }}
+
+    function setViewMode(mode) {{
+      currentView = mode;
+      document.getElementById('btnViewGrid').classList.toggle('active', mode === 'grid');
+      document.getElementById('btnViewTable').classList.toggle('active', mode === 'table');
+      document.getElementById('gridContainer').style.display = mode === 'grid' ? 'grid' : 'none';
+      document.getElementById('tableContainer').style.display = mode === 'table' ? 'block' : 'none';
+      if (mode === 'grid') renderGrid();
+      else renderTable();
+    }}
+
+    function getStatusBadge(rel) {{
+      if (!rel || rel === '-') return `<span class="status-badge">Bilinmiyor</span>`;
+      if (rel === 'EOL') return `<span class="status-badge eol">EOL (Destek Bitti)</span>`;
+      if (rel === 'snapshot') return `<span class="status-badge snapshot">Snapshot</span>`;
+      return `<span class="status-badge active">v${{rel}} Aktif</span>`;
+    }}
+
+    function renderGrid() {{
+      const container = document.getElementById('gridContainer');
+      if (!filteredList.length) {{
+        container.innerHTML = `<div style="grid-column: 1/-1; text-align: center; padding: 3rem; color: var(--text-muted);">
+          <h3>Kriterlere uygun cihaz bulunamadı</h3>
+          <p style="margin-top: 0.5rem;">Arama terimini veya filtreleri değiştirerek tekrar deneyebilirsiniz.</p>
+        </div>`;
+        return;
+      }}
+
+      let html = '';
+      filteredList.forEach((d, idx) => {{
+        const priceDisplay = d.price && d.price.includes('TL') ? d.price : 'Fiyat Belirtilmemiş';
+        html += `
+          <div class="device-card">
+            <div>
+              <div class="card-header">
+                <span class="card-brand-badge">${{d.brand || 'Ağ Cihazı'}}</span>
+                ${{getStatusBadge(d.supported_rel)}}
+              </div>
+              <div class="card-title">${{d.model || d.market_title}}</div>
+              <div class="card-market-title" title="${{d.market_title}}">${{d.market_title}}</div>
+              <div class="card-price">${{priceDisplay}}</div>
+
+              <div class="specs-list">
+                <div class="spec-item">
+                  <span class="spec-label">İşlemci (CPU)</span>
+                  <span class="spec-val" title="${{d.cpu || '-'}}">${{d.cpu || '-'}}</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-label">RAM / Flash</span>
+                  <span class="spec-val">${{d.ram_mb || '?'}}MB / ${{d.flash_mb || '?'}}MB</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-label">Ethernet 1G</span>
+                  <span class="spec-val">${{d.ethernet_1g || '-'}}</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-label">Hedef Mimari</span>
+                  <span class="spec-val" title="${{d.target || '-'}}">${{d.target || '-'}}</span>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div class="card-actions">
+                ${{d.epey_url ? `<a href="${{d.epey_url}}" target="_blank" class="btn btn-sm">🛒 Epey İncele</a>` : ''}}
+                ${{d.akakce_search_url ? `<a href="${{d.akakce_search_url}}" target="_blank" class="btn btn-sm">🔍 Akakçe Fiyat</a>` : ''}}
+              </div>
+              <div class="card-bottom-links">
+                ${{d.device_page ? `<a href="${{d.device_page}}" target="_blank">📘 OpenWrt ToH ↗</a>` : '<span>-</span>'}}
+                <button class="btn btn-sm" onclick="showDetails(${{idx}})" style="padding: 0.15rem 0.5rem; font-size: 0.72rem;">ℹ️ Detaylar</button>
+              </div>
+            </div>
+          </div>
+        `;
+      }});
+      container.innerHTML = html;
+    }}
+
+    function renderTable() {{
+      const tbody = document.getElementById('tableBody');
+      if (!filteredList.length) {{
+        tbody.innerHTML = `<tr><td colspan="8" style="text-align:center; padding: 2rem; color: var(--text-muted);">Kriterlere uygun cihaz bulunamadı</td></tr>`;
+        return;
+      }}
+
+      let html = '';
+      filteredList.forEach((d, idx) => {{
+        const priceDisplay = d.price && d.price.includes('TL') ? d.price : '-';
+        html += `
+          <tr>
+            <td>
+              <div style="font-weight: 700;">${{d.brand}} ${{d.model}}</div>
+              <div style="font-size: 0.75rem; color: var(--text-muted);">${{d.market_title}}</div>
+            </td>
+            <td style="font-weight: 700; color: var(--accent-green); white-space: nowrap;">${{priceDisplay}}</td>
+            <td>${{getStatusBadge(d.supported_rel)}}</td>
+            <td style="font-size: 0.8rem;">${{d.cpu || '-'}}</td>
+            <td>${{d.ram_mb || '?'}} MB</td>
+            <td>${{d.flash_mb || '?'}} MB</td>
+            <td>1G: ${{d.ethernet_1g || '-'}} ${{d.ethernet_2_5g && d.ethernet_2_5g !== '-' ? `| 2.5G: ${{d.ethernet_2_5g}}` : ''}}</td>
+            <td style="white-space: nowrap;">
+              <div style="display: flex; gap: 0.35rem;">
+                ${{d.epey_url ? `<a href="${{d.epey_url}}" target="_blank" class="btn btn-sm">Epey</a>` : ''}}
+                ${{d.akakce_search_url ? `<a href="${{d.akakce_search_url}}" target="_blank" class="btn btn-sm">Akakçe</a>` : ''}}
+                <button class="btn btn-sm" onclick="showDetails(${{idx}})">Detay</button>
+              </div>
+            </td>
+          </tr>
+        `;
+      }});
+      tbody.innerHTML = html;
+    }}
+
+    function showDetails(idx) {{
+      const d = filteredList[idx];
+      if (!d) return;
+
+      document.getElementById('modalBrand').innerText = d.brand || '';
+      document.getElementById('modalTitle').innerText = `${{d.model || ''}} (${{d.market_title || ''}})`;
+
+      const details = [
+        ['Piyasa Fiyatı', d.price || 'Fiyat Yok'],
+        ['OpenWrt Sürümü', d.supported_rel || '-'],
+        ['İşlemci (CPU)', d.cpu || '-'],
+        ['RAM Boyutu', `${{d.ram_mb || '-'}} MB`],
+        ['Flash Boyutu', `${{d.flash_mb || '-'}} MB`],
+        ['Hedef Mimari', d.target || '-'],
+        ['Paket Mimarisi', d.packagearchitecture || '-'],
+        ['1G Ethernet Portları', d.ethernet_1g || '-'],
+        ['2.5G Ethernet Portları', d.ethernet_2_5g || '-'],
+        ['Wi-Fi 2.4 GHz', d.wlan24ghz || '-'],
+        ['Wi-Fi 5.0 GHz', d.wlan50ghz || '-'],
+        ['USB Portları', Array.isArray(d.usbports) ? d.usbports.join(', ') : (d.usbports || '-')],
+        ['Bootloader', d.bootloader || '-'],
+        ['Cihaz Tipi', d.devicetype || d.category || '-']
+      ];
+
+      let gridHtml = '';
+      details.forEach(([lbl, val]) => {{
+        gridHtml += `
+          <div class="modal-field">
+            <span class="modal-field-label">${{lbl}}</span>
+            <span class="modal-field-val">${{val}}</span>
+          </div>
+        `;
+      }});
+      document.getElementById('modalDetails').innerHTML = gridHtml;
+
+      document.getElementById('modalComments').innerText = d.comments || 'Özel bir kurulum notu bulunmuyor. Kurulum için OpenWrt cihaz sayfasındaki wiki yönergelerini takip ediniz.';
+
+      let linksHtml = '';
+      if (d.epey_url) linksHtml += `<a href="${{d.epey_url}}" target="_blank" class="btn btn-primary btn-sm">🛒 Epey Ürün Sayfası</a>`;
+      if (d.akakce_search_url) linksHtml += `<a href="${{d.akakce_search_url}}" target="_blank" class="btn btn-sm">🔍 Akakçe Fiyat Ara</a>`;
+      if (d.device_page) linksHtml += `<a href="${{d.device_page}}" target="_blank" class="btn btn-sm">📘 Resmi OpenWrt Wiki</a>`;
+      
+      const installUrl = Array.isArray(d.install_url) ? d.install_url[0] : d.install_url;
+      if (installUrl) linksHtml += `<a href="${{installUrl}}" target="_blank" class="btn btn-sm" style="background: rgba(16, 185, 129, 0.2); border-color: var(--accent-green); color: var(--accent-green);">⬇️ Factory Firmware İndir</a>`;
+
+      document.getElementById('modalLinks').innerHTML = linksHtml;
+      document.getElementById('detailModal').showModal();
+    }}
+
+    function closeModal() {{
+      document.getElementById('detailModal').close();
+    }}
+
+    document.getElementById('detailModal').addEventListener('click', (e) => {{
+      const dialog = document.getElementById('detailModal');
+      const rect = dialog.getBoundingClientRect();
+      const inDialog = (rect.top <= e.clientY && e.clientY <= rect.top + rect.height && rect.left <= e.clientX && e.clientX <= rect.left + rect.width);
+      if (!inDialog) {{
+        dialog.close();
+      }}
+    }});
+
+    init();
+  </script>
+</body>
+</html>
+"""
+
+    with open(OUTPUT_HTML, "w", encoding="utf-8") as f:
+        f.write(html_content)
+        
+    shutil.copyfile(OUTPUT_HTML, WEB_HTML)
+    print(f"[Generator] Successfully generated web dashboard at {OUTPUT_HTML} and {WEB_HTML}")
+    return OUTPUT_HTML

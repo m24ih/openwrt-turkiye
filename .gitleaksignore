@@ -1,0 +1,3 @@
+# OpenWrt hardware manufacturer Askey (false positive generic-api-key on "askey:askey_rt4230w_rev6")
+/home/melih/Projects/openwrt-turkiye/data/raw/openwrt_toh_all.json:generic-api-key:330727
+data/raw/openwrt_toh_all.json:generic-api-key:330727

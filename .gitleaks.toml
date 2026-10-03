@@ -1,0 +1,5 @@
+[allowlist]
+description = "Allowlist raw OpenWrt upstream hardware dump files"
+paths = [
+    '''data/raw/openwrt_toh_all\.json'''
+]
