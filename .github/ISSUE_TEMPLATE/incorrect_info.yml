@@ -1,0 +1,46 @@
+name: "📝 Hatalı Donanım veya Kurulum Bilgisi (Incorrect Info)"
+description: "Bir cihazın RAM, Flash, CPU, revizyon uyarısı veya kurulum yöntemi kategorisi hatalı/eksik"
+title: "[Hatalı Bilgi]: "
+labels: ["incorrect-info", "data"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### 🛠️ Donanım & Kurulum Bilgisi Düzeltme
+        Katalogdaki teknik verilerde (RAM, Flash, Kurulum Yöntemi, Revizyon Uyarısı vb.) bir tutarsızlık tespit ettiyseniz bildirebilirsiniz.
+  - type: input
+    id: device_name
+    attributes:
+      label: İlgili Router Modeli
+      placeholder: "Örn: Xiaomi AX3000T veya TP-Link TL-WR840N"
+    validations:
+      required: true
+  - type: dropdown
+    id: field_type
+    attributes:
+      label: Hatalı Alan
+      options:
+        - "Kurulum Yöntemi (Kolay Web / Exploit / TFTP / Seri Port)"
+        - "Donanım Revizyon Uyarısı (Eksik veya Hatalı Revizyon)"
+        - "RAM veya Flash Kapasitesi"
+        - "CPU / SoC Mimarisi veya Çekirdek Sayısı"
+        - "OpenWrt Desteklenen Sürüm (v24.x, v23.x vb.)"
+        - "Wi-Fi Standardı veya Ethernet Port Hızı"
+        - "Diğer"
+    validations:
+      required: true
+  - type: textarea
+    id: current_vs_expected
+    attributes:
+      label: Sitedeki Yanlış Bilgi ve Olması Gereken Doğru Bilgi
+      placeholder: "Sitede 128MB RAM yazıyor ancak bu cihazın Türkiye revizyonunda 256MB RAM bulunuyor..."
+    validations:
+      required: true
+  - type: input
+    id: source_ref
+    attributes:
+      label: Doğrulama Kaynağı
+      description: OpenWrt Wiki, Git commit, dmesg çıktısı veya üretici ürün sayfası linki.
+      placeholder: "https://openwrt.org/toh/..."
+    validations:
+      required: false

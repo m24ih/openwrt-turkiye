@@ -1,0 +1,64 @@
+name: "🔀 Hatalı Eşleşen Router (Router Mismatch)"
+description: "Türkiye pazarındaki ürün ile OpenWrt cihazı yanlış eşleşmiş (farklı donanım, desteklenmeyen revizyon vb.)"
+title: "[Hatalı Eşleşme]: "
+labels: ["mismatch", "data"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### 🔍 Hatalı Eşleşme Bildirimi
+        Epey/Akakçe pazar taraması ile OpenWrt Table of Hardware (ToH) eşleştirmesinde bir uyuşmazlık olduğunu düşünüyorsanız lütfen aşağıdaki formu doldurun.
+  - type: input
+    id: device_model
+    attributes:
+      label: Cihaz Markası ve Modeli
+      description: Sorun bildirmek istediğiniz router modelini yazın.
+      placeholder: "Örn: Xiaomi Mi Router 4A Gigabit veya TP-Link Archer C6"
+    validations:
+      required: true
+  - type: dropdown
+    id: mismatch_type
+    attributes:
+      label: Uyuşmazlık Türü
+      description: Bu cihazdaki eşleşme hatasının temel sebebi nedir?
+      options:
+        - "Desteklenmeyen Donanım Revizyonu (Örn: Sadece v1 destekli, piyasadaki v2/v3 çipseti farklı)"
+        - "İsim Benzerliği Ama Farklı Cihaz (Örn: 100Mbit ile Gigabit sürümü karışmış)"
+        - "Satıştaki Model OpenWrt Desteklemiyor (Pazar adı ile ToH yanlış eşleşmiş)"
+        - "Farklı Pazar Varyantı / Kilitli Bootloader (Türkiye/Avrupa sürümü kilitli)"
+        - "Fiyat / Mağaza Yanlış Ürüne Yönlendiriyor"
+        - "Diğer"
+    validations:
+      required: true
+  - type: input
+    id: market_url
+    attributes:
+      label: Epey / Akakçe veya Mağaza Linki
+      description: Türkiye'de satışta olan hatalı ürünün bağlantısı.
+      placeholder: "https://www.epey.com/... veya https://www.akakce.com/..."
+    validations:
+      required: false
+  - type: input
+    id: openwrt_toh_url
+    attributes:
+      label: OpenWrt ToH veya Wiki Sayfası
+      description: Sitede eşleşen veya gerçekte olması gereken OpenWrt sayfası.
+      placeholder: "https://openwrt.org/toh/..."
+    validations:
+      required: false
+  - type: textarea
+    id: mismatch_details
+    attributes:
+      label: Hata Detayları ve Doğru Bilgi
+      description: Yanlış eşleşmeyi açıklayın. Cihazın hangi çipseti kullandığını, neden OpenWrt yüklenemeyeceğini veya doğrusunun ne olması gerektiğini belirtin.
+      placeholder: "Örn: Türkiye'de şu an satılan v3 revizyonunda Realtek çipset var ve OpenWrt resmi desteği bulunmuyor..."
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Kaynak / Kanıt (Opsiyonel)
+      description: Destekleyici forum linkleri, FCC ID, donanım etiketi fotoğrafı veya OpenWrt commit linki.
+      placeholder: "https://forum.openwrt.org/t/... veya fotoğraf bağlantısı"
+    validations:
+      required: false

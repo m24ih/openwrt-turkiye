@@ -1,0 +1,37 @@
+name: "🐛 Web Sitesi Hatası (Bug Report)"
+description: "openwrt.melihak.me arayüzünde filtreleme, sıralama, arama, tema veya görsel bir hata bildirin"
+title: "[Hata]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### 🐞 Web Sitesi Hata Bildirimi
+        Web sitesinin arayüzünde veya işlevlerinde karşılaştığınız teknik bir arızayı bildirebilirsiniz.
+  - type: textarea
+    id: bug_description
+    attributes:
+      label: Karşılaşılan Hata
+      description: Sorunun ne olduğunu net bir şekilde açıklayın.
+      placeholder: "Filtreleme alanında 'Wi-Fi 6' seçildiğinde kartlar güncellenmiyor..."
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction_steps
+    attributes:
+      label: Hatayı Tekrarlama Adımları
+      description: Hatayı yeniden oluşturmak için izlenen adımlar.
+      placeholder: |
+        1. Siteye git 'https://openwrt.melihak.me'
+        2. Arama kutusuna 'Xiaomi' yaz
+        3. Sıralamayı 'Fiyat: Artan' yap
+        4. Hata tetikleniyor
+    validations:
+      required: true
+  - type: input
+    id: browser_env
+    attributes:
+      label: Tarayıcı ve İşletim Sistemi
+      placeholder: "Örn: Chrome 128 / Android 14 veya Firefox 130 / Linux"
+    validations:
+      required: false

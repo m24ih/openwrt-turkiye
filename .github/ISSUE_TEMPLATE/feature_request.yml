@@ -1,0 +1,24 @@
+name: "💡 Öneri veya Özellik İsteği (Feature Request)"
+description: "OpenWrt Türkiye projesi için yeni bir özellik, filtre veya veri alanı önerin"
+title: "[Öneri]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### 💡 Yeni Özellik / Geliştirme Önerisi
+        Sitenin kullanıcı deneyimini, veri zenginliğini veya filtreleme yeteneklerini artıracak fikirlerinizi paylaşabilirsiniz.
+  - type: textarea
+    id: feature_summary
+    attributes:
+      label: Önerilen Özellik / İyileştirme
+      placeholder: "Filtrelere 'USB Portu Var / Yok' seçeneği eklenebilir..."
+    validations:
+      required: true
+  - type: textarea
+    id: problem_solved
+    attributes:
+      label: Bu Özellik Hangi Sorunu Çözer?
+      placeholder: "OpenWrt üzerinde dosya paylaşımı (Samba) veya harici 4G modem kullanmak isteyenler doğrudan USB'li modelleri filtreleyebilir."
+    validations:
+      required: false

@@ -1,0 +1,11 @@
+blank_issues_enabled: true
+contact_links:
+  - name: OpenWrt Resmi Dokümantasyon
+    url: https://openwrt.org/docs/
+    about: OpenWrt kurulum, ilk adımlar ve yapılandırma rehberi
+  - name: OpenWrt Global Topluluk Forumu
+    url: https://forum.openwrt.org/
+    about: Global OpenWrt kullanıcı forumu ve cihaz tartışmaları
+  - name: OpenWrt Table of Hardware (ToH)
+    url: https://openwrt.org/toh/start
+    about: Resmi OpenWrt destekli donanım veri tabanı

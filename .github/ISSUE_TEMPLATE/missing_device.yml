@@ -1,0 +1,41 @@
+name: "➕ Eksik Router Bildirimi (Missing Device)"
+description: "Türkiye pazarında satışta olan ve OpenWrt desteği bulunan bir cihaz sitede listelenmiyor"
+title: "[Eksik Cihaz]: "
+labels: ["missing-device", "data"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### 📡 Eksik Router Önerisi
+        Türkiye pazarında satıldığını bildiğiniz ve OpenWrt resmi desteği (veya kararlı snapshot desteği) olan bir cihazı kataloğa ekletmek için bu formu doldurun.
+  - type: input
+    id: brand_model
+    attributes:
+      label: Cihaz Markası ve Modeli
+      placeholder: "Örn: Cudy WR3000 veya GL.iNet GL-MT3000"
+    validations:
+      required: true
+  - type: input
+    id: market_link
+    attributes:
+      label: Türkiye Satış / Fiyat Linki
+      description: Epey, Akakçe, Hepsiburada, Trendyol veya Amazon TR linki.
+      placeholder: "https://www.epey.com/... veya https://www.akakce.com/..."
+    validations:
+      required: true
+  - type: input
+    id: openwrt_link
+    attributes:
+      label: OpenWrt ToH / Wiki veya İndirme Sayfası
+      description: Cihazın OpenWrt resmi Table of Hardware bağlantısı.
+      placeholder: "https://openwrt.org/toh/..."
+    validations:
+      required: true
+  - type: textarea
+    id: supported_revisions
+    attributes:
+      label: Desteklenen Revizyonlar ve Donanım Notları
+      description: Hangi revizyonun (v1, v2, EU, TR vb.) desteklendiğini veya özel bir kurulum adımı gerekip gerekmediğini belirtin.
+      placeholder: "Örn: Türkiye pazarındaki v1 revizyonu doğrudan web arayüzünden factory.bin ile yüklenmektedir..."
+    validations:
+      required: false
