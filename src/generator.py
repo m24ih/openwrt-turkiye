@@ -19,7 +19,7 @@ def generate_html(devices: List[Dict[str, Any]] = None) -> Path:
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>OpenWrt Türkiye — Ağ Cihazları Kataloğu & Fiyat Takibi</title>
-  <meta name="description" content="Türkiye piyasasında (Epey & Akakçe) satışta olan OpenWrt destekli router, modem ve menzil genişleticilerin donanım özellikleri ve güncel fiyat kataloğu.">
+  <meta name="description" content="Türkiye piyasasında (Epey & Akakçe) satışta olan OpenWrt destekli router, modem ve menzil genişleticilerin donanım özellikleri, fotoğrafları ve güncel fiyat kataloğu.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -580,6 +580,49 @@ def generate_html(devices: List[Dict[str, Any]] = None) -> Path:
       color: var(--danger);
     }}
 
+    /* Router Photo Thumbnail in Card */
+    .card-thumb-wrap {{
+      width: 100%;
+      height: 140px;
+      background: #ffffff;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0.6rem 0 0.85rem;
+      overflow: hidden;
+      position: relative;
+      padding: 0.65rem;
+    }}
+
+    .card-thumb-img {{
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      transition: transform 0.2s ease;
+    }}
+
+    .device-card:hover .card-thumb-img {{
+      transform: scale(1.05);
+    }}
+
+    .card-thumb-fallback {{
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--surface-2);
+      color: var(--text-subtle);
+    }}
+
+    .card-thumb-fallback svg {{
+      width: 44px;
+      height: 44px;
+      opacity: 0.5;
+    }}
+
     .card-model {{
       font-size: 1.125rem;
       font-weight: 700;
@@ -736,6 +779,42 @@ def generate_html(devices: List[Dict[str, Any]] = None) -> Path:
       background: var(--surface-2);
     }}
 
+    .table-device-cell {{
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }}
+
+    .table-thumb {{
+      width: 40px;
+      height: 40px;
+      border-radius: var(--radius-sm);
+      background: #ffffff;
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      flex-shrink: 0;
+      padding: 2px;
+    }}
+
+    .table-thumb img {{
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }}
+
+    .table-thumb-fallback {{
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--surface-2);
+      color: var(--text-subtle);
+    }}
+
     /* Detail Modal */
     dialog {{
       margin: auto;
@@ -758,7 +837,7 @@ def generate_html(devices: List[Dict[str, Any]] = None) -> Path:
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
-      margin-bottom: 1.25rem;
+      margin-bottom: 1rem;
       padding-bottom: 0.75rem;
       border-bottom: 1px solid var(--border);
     }}
@@ -778,6 +857,26 @@ def generate_html(devices: List[Dict[str, Any]] = None) -> Path:
     .modal-close-btn:hover {{
       color: var(--text);
       background: var(--surface-2);
+    }}
+
+    .modal-photo-wrap {{
+      width: 100%;
+      height: 200px;
+      background: #ffffff;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.25rem;
+      overflow: hidden;
+      padding: 1rem;
+    }}
+
+    .modal-photo-wrap img {{
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
     }}
 
     .modal-grid {{
@@ -1042,7 +1141,7 @@ def generate_html(devices: List[Dict[str, Any]] = None) -> Path:
       <table>
         <thead>
           <tr>
-            <th onclick="sortTable('brand')">Marka & Model</th>
+            <th onclick="sortTable('brand')">Cihaz</th>
             <th onclick="sortTable('price')">Fiyat</th>
             <th onclick="sortTable('supported_rel')">Sürüm</th>
             <th onclick="sortTable('cpu')">İşlemci (SoC)</th>
@@ -1069,6 +1168,10 @@ def generate_html(devices: List[Dict[str, Any]] = None) -> Path:
           <line x1="6" y1="6" x2="18" y2="18"></line>
         </svg>
       </button>
+    </div>
+
+    <div class="modal-photo-wrap" id="modalPhotoWrap">
+      <img id="modalPhoto" src="" alt="" loading="lazy">
     </div>
 
     <div class="modal-grid" id="modalDetails"></div>
@@ -1174,7 +1277,6 @@ def generate_html(devices: List[Dict[str, Any]] = None) -> Path:
       document.getElementById('flashFilter').addEventListener('change', applyFilters);
       document.getElementById('sortSelect').addEventListener('change', applyFilters);
 
-      // Keyboard shortcut: '/' to focus search, 'Esc' to clear/close
       window.addEventListener('keydown', (e) => {{
         if (e.key === '/' && document.activeElement !== document.getElementById('searchInput')) {{
           e.preventDefault();
@@ -1211,12 +1313,13 @@ def generate_html(devices: List[Dict[str, Any]] = None) -> Path:
 
     function exportCsv() {{
       if (!filteredList.length) return;
-      const headers = ['Marka', 'Model', 'Piyasa Adi', 'Fiyat', 'OpenWrt Surumu', 'CPU', 'RAM (MB)', 'Flash (MB)', 'Hedef Mimari', 'Epey Linki', 'Akakce Linki', 'OpenWrt ToH'];
+      const headers = ['Marka', 'Model', 'Piyasa Adi', 'Fiyat', 'Fotoğraf', 'OpenWrt Surumu', 'CPU', 'RAM (MB)', 'Flash (MB)', 'Hedef Mimari', 'Epey Linki', 'Akakce Linki', 'OpenWrt ToH'];
       const rows = filteredList.map(d => [
         '"' + (d.brand || '') + '"',
         '"' + (d.model || '') + '"',
         '"' + (d.market_title || '') + '"',
         '"' + (d.price || '') + '"',
+        '"' + (d.image_url || '') + '"',
         '"' + (d.supported_rel || '') + '"',
         '"' + (d.cpu || '') + '"',
         '"' + (d.ram_mb || '') + '"',
@@ -1323,6 +1426,12 @@ def generate_html(devices: List[Dict[str, Any]] = None) -> Path:
           ? `<span class="price-value">${{d.price}}</span>` 
           : `<span class="price-none">Fiyat Listelenmiyor</span>`;
 
+        const hasImg = !!d.image_url;
+        const imgMarkup = hasImg 
+          ? `<img src="${{d.image_url}}" alt="${{d.model || d.market_title}}" class="card-thumb-img" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">`
+          : '';
+        const fallbackStyle = hasImg ? 'style="display:none;"' : '';
+
         html += `
           <div class="device-card">
             <div>
@@ -1331,6 +1440,21 @@ def generate_html(devices: List[Dict[str, Any]] = None) -> Path:
                 ${{getReleasePill(d.supported_rel)}}
               </div>
               
+              <div class="card-thumb-wrap">
+                ${{imgMarkup}}
+                <div class="card-thumb-fallback" ${{fallbackStyle}}>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <rect x="2" y="13" width="20" height="8" rx="2"></rect>
+                    <path d="M6 13V8a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v5"></path>
+                    <line x1="6" y1="17" x2="6.01" y2="17"></line>
+                    <line x1="10" y1="17" x2="10.01" y2="17"></line>
+                    <line x1="14" y1="17" x2="14.01" y2="17"></line>
+                    <line x1="18" y1="17" x2="18.01" y2="17"></line>
+                    <line x1="12" y1="6" x2="12" y2="3"></line>
+                  </svg>
+                </div>
+              </div>
+
               <div class="card-model">${{d.model || d.market_title}}</div>
               <div class="card-market-name" title="${{d.market_title}}">${{d.market_title}}</div>
 
@@ -1387,11 +1511,29 @@ def generate_html(devices: List[Dict[str, Any]] = None) -> Path:
       let html = '';
       filteredList.forEach((d, idx) => {{
         const priceDisplay = d.price && d.price.includes('TL') ? d.price : '-';
+        const hasImg = !!d.image_url;
+        const imgMarkup = hasImg 
+          ? `<img src="${{d.image_url}}" alt="" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">`
+          : '';
+        const fallbackStyle = hasImg ? 'style="display:none;"' : '';
+
         html += `
           <tr>
             <td>
-              <div style="font-weight: 600; color: var(--text);">${{d.brand}} ${{d.model}}</div>
-              <div style="font-size: 0.75rem; color: var(--text-subtle); max-width: 280px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${{d.market_title}}</div>
+              <div class="table-device-cell">
+                <div class="table-thumb">
+                  ${{imgMarkup}}
+                  <div class="table-thumb-fallback" ${{fallbackStyle}}>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20">
+                      <rect x="2" y="13" width="20" height="8" rx="2"></rect>
+                    </svg>
+                  </div>
+                </div>
+                <div>
+                  <div style="font-weight: 600; color: var(--text);">${{d.brand}} ${{d.model}}</div>
+                  <div style="font-size: 0.75rem; color: var(--text-subtle); max-width: 260px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${{d.market_title}}</div>
+                </div>
+              </div>
             </td>
             <td style="font-family: var(--font-mono); font-weight: 600; white-space: nowrap;">${{priceDisplay}}</td>
             <td>${{getReleasePill(d.supported_rel)}}</td>
@@ -1418,6 +1560,15 @@ def generate_html(devices: List[Dict[str, Any]] = None) -> Path:
 
       document.getElementById('modalBrand').innerText = d.brand || 'Cihaz';
       document.getElementById('modalTitle').innerText = `${{d.model || ''}} — ${{d.market_title || ''}}`;
+
+      const photoWrap = document.getElementById('modalPhotoWrap');
+      const photoImg = document.getElementById('modalPhoto');
+      if (d.image_url) {{
+        photoImg.src = d.image_url;
+        photoWrap.style.display = 'flex';
+      }} else {{
+        photoWrap.style.display = 'none';
+      }}
 
       const details = [
         ['Pazar Fiyatı', d.price || 'Fiyat Belirtilmemiş'],

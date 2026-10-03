@@ -41,11 +41,19 @@ def scrape_category(session: requests.Session, category: str, max_pages: int = 1
                 price_match = re.search(r"([\d\.,]+\s*TL)", c.text)
                 price_clean = price_match.group(1) if price_match else ""
                 
+                img_el = c.select_one("img")
+                img_url = ""
+                if img_el:
+                    img_url = img_el.get("src") or img_el.get("data-src") or img_el.get("data-original") or ""
+                    if img_url.startswith("//"):
+                        img_url = f"https:{img_url}"
+                
                 full_link = f"https://www.akakce.com{href}" if href.startswith("/") else href
                 products.append({
                     "name": title,
                     "link": full_link,
                     "price": price_clean,
+                    "image_url": img_url,
                     "source": "Akakce",
                     "category": category
                 })

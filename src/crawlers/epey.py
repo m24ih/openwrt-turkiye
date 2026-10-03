@@ -20,30 +20,43 @@ def scrape_category(session: requests.Session, category: str, max_pages: int = 2
                 break
                 
             soup = BeautifulSoup(resp.text, "html.parser")
-            names = []
-            for a in soup.select(".detay.cell a.urunadi"):
-                names.append((a.text.strip(), a.get("href", "")))
-                
-            prices = []
-            for li in soup.select("li.fiyat.cell"):
-                text = li.text.strip().replace("\n", " ")
-                if "Fiyat" in text and len(text) < 10:
+            rows = soup.select("ul.row")
+            page_items = 0
+            
+            for row in rows:
+                name_el = row.select_one(".detay.cell a.urunadi")
+                if not name_el:
                     continue
-                m = re.search(r"([\d\.,]+\s*TL)", text)
-                prices.append(m.group(1) if m else text)
+                name = name_el.text.strip()
+                link = name_el.get("href", "")
                 
-            if not names:
-                break
+                img_el = row.select_one(".resim.cell img")
+                img_url = ""
+                if img_el:
+                    img_url = img_el.get("src") or img_el.get("data-src") or img_el.get("data-original") or ""
+                    if img_url and "/k_" in img_url:
+                        img_url = img_url.replace("/k_", "/b_")
                 
-            for idx, (name, link) in enumerate(names):
-                price = prices[idx] if idx < len(prices) else ""
+                price_el = row.select_one("li.fiyat.cell")
+                price = ""
+                if price_el:
+                    text = price_el.text.strip().replace("\n", " ")
+                    if not ("Fiyat" in text and len(text) < 10):
+                        m = re.search(r"([\d\.,]+\s*TL)", text)
+                        price = m.group(1) if m else text
+                        
                 products.append({
                     "name": name,
                     "link": link,
                     "price": price,
+                    "image_url": img_url,
                     "source": "Epey",
                     "category": category
                 })
+                page_items += 1
+                
+            if page_items == 0:
+                break
                 
             time.sleep(0.3)
         except Exception as e:

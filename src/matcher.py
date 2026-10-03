@@ -151,6 +151,7 @@ def match_and_enrich(market_prods: List[Dict[str, Any]], owrt_all: List[Dict[str
             matched_results.append({
                 'market_title': p_name,
                 'price': p_price,
+                'image_url': prod.get('image_url') or '',
                 'epey_url': epey_url,
                 'akakce_search_url': akakce_item_url,
                 'brand': best_candidate.get('brand'),
