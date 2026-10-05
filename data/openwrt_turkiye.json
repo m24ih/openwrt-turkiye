@@ -1472,6 +1472,47 @@
     "switch": "MediaTek MT7628DAN"
   },
   {
+    "market_title": "TP-Link Festa F52",
+    "price": "1.949,00 TL",
+    "image_url": "https://resim.epey.com/964833/b_tp-link-festa-f52-1.jpg",
+    "epey_url": "https://www.epey.com/menzil-genisletici/tp-link-festa-f52.html",
+    "akakce_search_url": "https://www.akakce.com/arama/?q=TP-Link+Festa+F52-Outdoor",
+    "brand": "TP-Link",
+    "model": "Festa F52-Outdoor",
+    "version": [
+      "v1"
+    ],
+    "supported_rel": null,
+    "cpu": "Qualcomm Atheros QCA9563",
+    "ram_mb": "128",
+    "flash_mb": "16",
+    "target": "ath79/generic",
+    "ethernet_1g": "1",
+    "ethernet_2_5g": "-",
+    "wlan_hardware": [
+      "QCA9563 (2.4 GHz)",
+      "QCA9886 (5 GHz; reported in support PR)"
+    ],
+    "device_page": null,
+    "category": "menzil-genisletici",
+    "wlan24ghz": "b/g/n",
+    "wlan50ghz": "a/n/ac",
+    "wlan60ghz": "-",
+    "usbports": [
+      "-"
+    ],
+    "bootloader": "U-Boot",
+    "install_url": null,
+    "upgrade_url": null,
+    "install_methods": [
+      "GUI OEM"
+    ],
+    "comments": null,
+    "packagearchitecture": "mips_24kc",
+    "devicetype": "WiFi AP",
+    "switch": null
+  },
+  {
     "market_title": "Mercusys MR70X",
     "price": "1.999,00 TL",
     "image_url": "https://resim.epey.com/702209/b_mercusys-mr70x-1.jpg",
@@ -8208,6 +8249,47 @@
     "comments": null,
     "packagearchitecture": "arm_cortex-a15_neon-vfpv4",
     "devicetype": "WiFi Router",
+    "switch": null
+  },
+  {
+    "market_title": "TP-Link Festa F52-Outdoor",
+    "price": "23.036,16 TL",
+    "image_url": "https://resim.epey.com/1011199/b_tp-link-festa-f52-outdoor-1.jpg",
+    "epey_url": "https://www.epey.com/menzil-genisletici/tp-link-festa-f52-outdoor.html",
+    "akakce_search_url": "https://www.akakce.com/arama/?q=TP-Link+Festa+F52-Outdoor",
+    "brand": "TP-Link",
+    "model": "Festa F52-Outdoor",
+    "version": [
+      "v1"
+    ],
+    "supported_rel": null,
+    "cpu": "Qualcomm Atheros QCA9563",
+    "ram_mb": "128",
+    "flash_mb": "16",
+    "target": "ath79/generic",
+    "ethernet_1g": "1",
+    "ethernet_2_5g": "-",
+    "wlan_hardware": [
+      "QCA9563 (2.4 GHz)",
+      "QCA9886 (5 GHz; reported in support PR)"
+    ],
+    "device_page": null,
+    "category": "menzil-genisletici",
+    "wlan24ghz": "b/g/n",
+    "wlan50ghz": "a/n/ac",
+    "wlan60ghz": "-",
+    "usbports": [
+      "-"
+    ],
+    "bootloader": "U-Boot",
+    "install_url": null,
+    "upgrade_url": null,
+    "install_methods": [
+      "GUI OEM"
+    ],
+    "comments": null,
+    "packagearchitecture": "mips_24kc",
+    "devicetype": "WiFi AP",
     "switch": null
   },
   {

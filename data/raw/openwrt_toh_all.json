@@ -130397,7 +130397,7 @@
     "serialconnectionparameters": "115200 / 8N1",
     "serialconnectionvoltage": "3.3",
     "subtarget": "ipq807x",
-    "supportedcurrentrel": "24.10.5",
+    "supportedcurrentrel": "25.12.5",
     "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=70fd815e57dc98cef88828faa5ce71717540e99e",
     "supportedsincerel": "24.10.0",
     "switch": "Qualcomm Atheros QCA8075",
@@ -253878,6 +253878,108 @@
     "wikideviurl": null
   },
   {
+    "deviceid": "tp-link:tp-link_festa_f52-outdoor",
+    "audioports": [
+      "-"
+    ],
+    "availability": "Available 2026",
+    "bluetooth": "-",
+    "bootloader": "U-Boot",
+    "brand": "TP-Link",
+    "buttoncount": "1",
+    "cpu": "Qualcomm Atheros QCA9563",
+    "cpucores": "1",
+    "cpumhz": "775",
+    "commentinstallation": "Proposed support: PR \\",
+    "commentrecovery": "No F52-specific recovery procedure verified.",
+    "comments": null,
+    "commentsavports": "-",
+    "commentsusbsataports": "-",
+    "commentsnetworkports": "1x Gigabit Ethernet, PoE",
+    "detachableantennas": "2",
+    "devicepage": null,
+    "devicetype": "WiFi AP",
+    "ethernet100mports": "-",
+    "ethernet10gports": "-",
+    "ethernet1gports": "1",
+    "ethernet2_5gports": "-",
+    "ethernet5gports": "-",
+    "fccid": null,
+    "firmwareoemstockurl": "https://www.tp-link.com/en/support/download/festa-f52-outdoor/v1/",
+    "firmwareopenwrtinstallurl": null,
+    "firmwareopenwrtupgradeurl": null,
+    "firmwareopenwrtsnapshotinstallurl": null,
+    "firmwareopenwrtsnapshotupgradeurl": null,
+    "flashmb": [
+      "16"
+    ],
+    "forumsearch": [
+      "Festa F52-Outdoor"
+    ],
+    "gpios": null,
+    "gitsearch": [
+      "Festa F52-Outdoor"
+    ],
+    "installationmethods": [
+      "GUI OEM"
+    ],
+    "jtag": null,
+    "ledcount": "1",
+    "model": "Festa F52-Outdoor",
+    "modem": "-",
+    "oemdevicehomepageurl": "https://www.tp-link.com/us/business-networking/soho-festa-access-point/festa-f52-outdoor/",
+    "owrt_forum_topic_url": null,
+    "outdoor": "Yes",
+    "packagearchitecture": "mips_24kc",
+    "phoneports": [
+      "-"
+    ],
+    "picture": null,
+    "powersupply": "PoE",
+    "rammb": "128",
+    "recoverymethods": [
+      "unknown"
+    ],
+    "sataports": "-",
+    "sfp_ports": "-",
+    "sfp_plus_ports": "-",
+    "serial": "Yes",
+    "serialconnectionparameters": "115200 / 8N1",
+    "serialconnectionvoltage": "3.3",
+    "subtarget": "generic",
+    "supportedcurrentrel": null,
+    "supportedsincecommit": null,
+    "supportedsincerel": null,
+    "switch": null,
+    "target": "ath79",
+    "usbports": [
+      "-"
+    ],
+    "unsupported_functions": null,
+    "vlan": null,
+    "version": [
+      "v1"
+    ],
+    "videoports": [
+      "-"
+    ],
+    "wlan24ghz": "b/g/n",
+    "wlan50ghz": "a/n/ac",
+    "wlan60ghz": "-",
+    "wlan600ghz": "-",
+    "wlancomments": "2x2 on both bands; 5 GHz MU-MIMO reported in support PR",
+    "wlanhardware": [
+      "QCA9563 (2.4 GHz)",
+      "QCA9886 (5 GHz; reported in support PR)"
+    ],
+    "wlandriver": [
+      "ath9k",
+      "ath10k"
+    ],
+    "whereavailable": "amazon.de",
+    "wikideviurl": null
+  },
+  {
     "deviceid": "tp-link:tp-link_ax55_pro_v1",
     "audioports": [
       "-"
@@ -310295,13 +310397,11 @@
     "gitsearch": [
       "chateau-5g-r17-ax"
     ],
-    "installationmethods": [
-      "TFTP"
-    ],
+    "installationmethods": null,
     "jtag": null,
     "ledcount": "10",
     "model": "Chateau 5G R17 ax",
-    "modem": "5G",
+    "modem": null,
     "oemdevicehomepageurl": "https://mikrotik.com/product/chateau_5g_r17_ax",
     "owrt_forum_topic_url": null,
     "outdoor": "No",
@@ -310314,9 +310414,7 @@
     ],
     "powersupply": "12-28 VDC via barrel jack, 27 W max; supplied adapter 24 V / 1.2 A",
     "rammb": "1024",
-    "recoverymethods": [
-      "TFTP"
-    ],
+    "recoverymethods": null,
     "sataports": "-",
     "sfp_ports": "-",
     "sfp_plus_ports": "-",
@@ -310324,7 +310422,7 @@
     "serialconnectionparameters": "115200 / 8N1",
     "serialconnectionvoltage": "3.3",
     "subtarget": "ipq60xx",
-    "supportedcurrentrel": null,
+    "supportedcurrentrel": "snapshot",
     "supportedsincecommit": null,
     "supportedsincerel": null,
     "switch": "Qualcomm IPQ6010 built-in (PPE)",
