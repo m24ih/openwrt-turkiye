@@ -6985,6 +6985,114 @@
     ]
   },
   {
+    "deviceid": "sinovoip:sinovoip_banana_pi_bpi-r4_pro_8x",
+    "audioports": [
+      "-"
+    ],
+    "availability": "Available 2026",
+    "bluetooth": "-",
+    "bootloader": "U-Boot",
+    "brand": "Sinovoip",
+    "buttoncount": null,
+    "cpu": "MediaTek MT7988A",
+    "cpucores": "4",
+    "cpumhz": "1800",
+    "commentinstallation": null,
+    "commentrecovery": null,
+    "comments": "Random PCIe link down at boot needs clk_ignore_unused, see device page",
+    "commentsavports": null,
+    "commentsusbsataports": "M.2 Key B slots are USB 3.2 (for 4G/5G modules); CN15/CN18 share PCIe with the Key M slots",
+    "commentsnetworkports": "10G WAN and 10G LAN are each either RJ45 (Aeonsemi AS21010 PHY) or SFP+, selected by device tree overlay (not both at once); 4x 2.5G RJ45 via MxL86252C; 1x 1G RJ45 via MT7988A internal switch",
+    "detachableantennas": null,
+    "devicepage": "toh:sinovoip:bananapi_bpi-r4_pro",
+    "devicetype": "Single Board Computer",
+    "ethernet100mports": "-",
+    "ethernet10gports": "2",
+    "ethernet1gports": "1",
+    "ethernet2_5gports": "4",
+    "ethernet5gports": "-",
+    "fccid": null,
+    "firmwareoemstockurl": null,
+    "firmwareopenwrtinstallurl": null,
+    "firmwareopenwrtupgradeurl": null,
+    "firmwareopenwrtsnapshotinstallurl": [
+      "https://downloads.openwrt.org/snapshots/targets/mediatek/filogic/openwrt-mediatek-filogic-bananapi_bpi-r4-pro-8x-sdcard.img.gz"
+    ],
+    "firmwareopenwrtsnapshotupgradeurl": [
+      "https://downloads.openwrt.org/snapshots/targets/mediatek/filogic/openwrt-mediatek-filogic-bananapi_bpi-r4-pro-8x-squashfs-sysupgrade.itb"
+    ],
+    "flashmb": [
+      "256NAND",
+      "eMMC",
+      "microSD"
+    ],
+    "forumsearch": [
+      "BPI-R4 Pro"
+    ],
+    "gpios": null,
+    "gitsearch": [
+      "bpi-r4-pro"
+    ],
+    "installationmethods": [
+      "see devicepage"
+    ],
+    "jtag": null,
+    "ledcount": null,
+    "model": "Banana Pi BPI-R4 Pro",
+    "modem": "-",
+    "oemdevicehomepageurl": "https://docs.banana-pi.org/en/BPI-R4_Pro/BananaPi_BPI-R4_Pro",
+    "owrt_forum_topic_url": null,
+    "outdoor": "No",
+    "packagearchitecture": "aarch64_cortex-a53",
+    "phoneports": [
+      "-"
+    ],
+    "picture": null,
+    "powersupply": null,
+    "rammb": "more than 4GB",
+    "recoverymethods": [
+      "unknown"
+    ],
+    "sataports": "-",
+    "sfp_ports": "-",
+    "sfp_plus_ports": "2",
+    "serial": "Yes",
+    "serialconnectionparameters": "115200 / 8N1",
+    "serialconnectionvoltage": null,
+    "subtarget": "filogic",
+    "supportedcurrentrel": "snapshot",
+    "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=554b5dcc5199d07a84f4fba9f6a56066e5871858",
+    "supportedsincerel": null,
+    "switch": "MaxLinear MxL86252C, MediaTek MT7988A",
+    "target": "mediatek",
+    "usbports": [
+      "1x 2.0",
+      "1x 3.0"
+    ],
+    "unsupported_functions": null,
+    "vlan": "Yes",
+    "version": [
+      "8X"
+    ],
+    "videoports": [
+      "-"
+    ],
+    "wlan24ghz": "b/g/n/ax/be",
+    "wlan50ghz": "a/n/ac/ax/be",
+    "wlan60ghz": "ax/be",
+    "wlan600ghz": "-",
+    "wlancomments": "Requires an optional Wi-Fi module, e.g. BPI-R4-NIC-BE14",
+    "wlanhardware": [
+      "Optional: BPI-R4-NIC-BE14",
+      "MediaTek MT7996 (double miniPCIe module)"
+    ],
+    "wlandriver": [
+      "mt76"
+    ],
+    "whereavailable": null,
+    "wikideviurl": null
+  },
+  {
     "deviceid": "sinovoip:sinovoip_bananapi_bpi-r64_v1.1",
     "audioports": [
       "-"
@@ -23535,6 +23643,106 @@
       "mt76"
     ],
     "whereavailable": null,
+    "wikideviurl": null
+  },
+  {
+    "deviceid": "tuoshi:tuoshi_lt22m_4g_wireless_router",
+    "audioports": [
+      "-"
+    ],
+    "availability": "unknown 2026",
+    "bluetooth": "-",
+    "bootloader": "U-Boot",
+    "brand": "Tuoshi",
+    "buttoncount": "1",
+    "cpu": "MediaTek MT7628DAN",
+    "cpucores": "1",
+    "cpumhz": "580",
+    "commentinstallation": "Proposed PR \\",
+    "commentrecovery": "Original bootloader can restore slot A from a valid OEM image in slot B; see PR \\",
+    "comments": "OpenWrt support is pending in https://github.com/openwrt/openwrt/pull/14011 . No official release or snapshot image is available.",
+    "commentsavports": "-",
+    "commentsusbsataports": "-",
+    "commentsnetworkports": null,
+    "detachableantennas": "2",
+    "devicepage": "toh:tuoshi:lt22m",
+    "devicetype": "WiFi Router",
+    "ethernet100mports": "2",
+    "ethernet10gports": "-",
+    "ethernet1gports": "-",
+    "ethernet2_5gports": "-",
+    "ethernet5gports": "-",
+    "fccid": null,
+    "firmwareoemstockurl": null,
+    "firmwareopenwrtinstallurl": null,
+    "firmwareopenwrtupgradeurl": null,
+    "firmwareopenwrtsnapshotinstallurl": null,
+    "firmwareopenwrtsnapshotupgradeurl": null,
+    "flashmb": [
+      "16"
+    ],
+    "forumsearch": [
+      "LT22M 4G Wireless Router"
+    ],
+    "gpios": null,
+    "gitsearch": [
+      "LT22M 4G Wireless Router"
+    ],
+    "installationmethods": [
+      "GUI OEM"
+    ],
+    "jtag": null,
+    "ledcount": "6",
+    "model": "LT22M 4G Wireless Router",
+    "modem": "Mobile Wireless/Cellular network",
+    "oemdevicehomepageurl": null,
+    "owrt_forum_topic_url": null,
+    "outdoor": "No",
+    "packagearchitecture": "mipsel_24kc",
+    "phoneports": [
+      "-"
+    ],
+    "picture": null,
+    "powersupply": "12 VDC, 2 A",
+    "rammb": "64",
+    "recoverymethods": [
+      "Serial",
+      "U-Boot TFTP + serial recovery",
+      "see devicepage"
+    ],
+    "sataports": "-",
+    "sfp_ports": "-",
+    "sfp_plus_ports": "-",
+    "serial": "Yes",
+    "serialconnectionparameters": "57600 / 8N1",
+    "serialconnectionvoltage": "3.3",
+    "subtarget": "mt76x8",
+    "supportedcurrentrel": null,
+    "supportedsincecommit": null,
+    "supportedsincerel": null,
+    "switch": "MediaTek MT7628 integrated switch",
+    "target": "ramips",
+    "usbports": [
+      "-"
+    ],
+    "unsupported_functions": null,
+    "vlan": "Yes",
+    "version": null,
+    "videoports": [
+      "-"
+    ],
+    "wlan24ghz": "b/g/n",
+    "wlan50ghz": "-",
+    "wlan60ghz": "-",
+    "wlan600ghz": "-",
+    "wlancomments": null,
+    "wlanhardware": [
+      "MediaTek MT7628"
+    ],
+    "wlandriver": [
+      "mt76"
+    ],
+    "whereavailable": "tuoshi.com",
     "wikideviurl": null
   },
   {
@@ -75233,6 +75441,118 @@
     "wikideviurl": null
   },
   {
+    "deviceid": "gl.inet:gl.inet_gl-x2000",
+    "audioports": [
+      "-"
+    ],
+    "availability": "Available 2026",
+    "bluetooth": "-",
+    "bootloader": "U-Boot",
+    "brand": "GL.iNet",
+    "buttoncount": "1",
+    "cpu": "Qualcomm IPQ5018",
+    "cpucores": "2",
+    "cpumhz": "1000",
+    "commentinstallation": "Flash the factory image from the GL.iNet web UI",
+    "commentrecovery": "U-Boot web recovery: hold reset 5 s at power-on, 192.168.1.1",
+    "comments": "LTE needs the modemmanager package (uqmi does not work with this modem)",
+    "commentsavports": null,
+    "commentsusbsataports": "The LTE modem is internal (USB 3.0); the external port is USB 2.0",
+    "commentsnetworkports": "No switch: WAN on the internal GE PHY, LAN on an AR8031 (SGMII). LTE: Quectel EG120K-EA (Cat.12, USB 3.0, QMI), 2x nano-SIM switched inside the modem",
+    "detachableantennas": "4",
+    "devicepage": "toh:gl.inet:gl-x2000",
+    "devicetype": "WiFi Router",
+    "ethernet100mports": "-",
+    "ethernet10gports": "-",
+    "ethernet1gports": "2",
+    "ethernet2_5gports": "-",
+    "ethernet5gports": "-",
+    "fccid": null,
+    "firmwareoemstockurl": "https://dl.gl-inet.com/router/x2000/",
+    "firmwareopenwrtinstallurl": null,
+    "firmwareopenwrtupgradeurl": null,
+    "firmwareopenwrtsnapshotinstallurl": [
+      "https://downloads.openwrt.org/snapshots/targets/qualcommax/ipq50xx/openwrt-qualcommax-ipq50xx-glinet_gl-x2000-squashfs-factory.img"
+    ],
+    "firmwareopenwrtsnapshotupgradeurl": [
+      "https://downloads.openwrt.org/snapshots/targets/qualcommax/ipq50xx/openwrt-qualcommax-ipq50xx-glinet_gl-x2000-squashfs-sysupgrade.bin"
+    ],
+    "flashmb": [
+      "128NAND"
+    ],
+    "forumsearch": [
+      "GL-X2000"
+    ],
+    "gpios": null,
+    "gitsearch": [
+      "GL-X2000"
+    ],
+    "installationmethods": [
+      "GL.Inet installation",
+      "U-Boot web recovery",
+      "see git-commit"
+    ],
+    "jtag": null,
+    "ledcount": "8",
+    "model": "GL-X2000 (Spitz Plus)",
+    "modem": "LTE",
+    "oemdevicehomepageurl": "https://www.gl-inet.com/products/gl-x2000/",
+    "owrt_forum_topic_url": [
+      "https://forum.openwrt.org/t/plain-openwrt-on-gl-x2000/231554"
+    ],
+    "outdoor": "No",
+    "packagearchitecture": "aarch64_cortex-a53",
+    "phoneports": [
+      "-"
+    ],
+    "picture": [
+      "media:gl.inet:x2000_1.webp",
+      "media:gl.inet:x2000_2.webp",
+      "media:gl.inet:x2000_3.webp"
+    ],
+    "powersupply": "12V, 2.5A via barrel (accepts 9-35V DC)",
+    "rammb": "512",
+    "recoverymethods": [
+      "U-Boot web recovery",
+      "see git-commit"
+    ],
+    "sataports": "-",
+    "sfp_ports": "-",
+    "sfp_plus_ports": "-",
+    "serial": "Yes",
+    "serialconnectionparameters": "115200 / 8N1",
+    "serialconnectionvoltage": "3.3v",
+    "subtarget": "ipq50xx",
+    "supportedcurrentrel": "snapshot",
+    "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=9e15f1f49353d57011649c91eb4f9659107d6422",
+    "supportedsincerel": null,
+    "switch": "-",
+    "target": "qualcommax",
+    "usbports": [
+      "1x 2.0"
+    ],
+    "unsupported_functions": null,
+    "vlan": "Yes",
+    "version": null,
+    "videoports": [
+      "-"
+    ],
+    "wlan24ghz": "b/g/n/ax",
+    "wlan50ghz": "a/n/ac/ax",
+    "wlan60ghz": "-",
+    "wlan600ghz": "-",
+    "wlancomments": "MIMO 2x2:2 on both bands",
+    "wlanhardware": [
+      "Qualcomm IPQ5018",
+      "Qualcomm QCN6122"
+    ],
+    "wlandriver": [
+      "ath11k"
+    ],
+    "whereavailable": "gl-inet.com, amazon.com, aliexpress.com",
+    "wikideviurl": null
+  },
+  {
     "deviceid": "gl.inet:gl.inet_gl-ax1800",
     "audioports": [
       "-"
@@ -118805,14 +119125,14 @@
     "cpu": "Qualcomm IPQ6018",
     "cpucores": "4",
     "cpumhz": "1800",
-    "commentinstallation": null,
+    "commentinstallation": "5GbE WAN port firmware needs to be flashed, see device page",
     "commentrecovery": null,
     "comments": null,
     "commentsavports": null,
     "commentsusbsataports": null,
-    "commentsnetworkports": null,
+    "commentsnetworkports": "Marvell AQR114C-B0 5GbE PHY",
     "detachableantennas": "-",
-    "devicepage": null,
+    "devicepage": "toh:linksys:mr7500",
     "devicetype": "WiFi Router",
     "ethernet100mports": "-",
     "ethernet10gports": "-",
@@ -118824,10 +119144,10 @@
     ],
     "firmwareoemstockurl": "https://support.linksys.com/kb/article/953-en/",
     "firmwareopenwrtinstallurl": [
-      "https://downloads.openwrt.org/releases/25.12.0/targets/qualcommax/ipq60xx/openwrt-25.12.0-qualcommax-ipq60xx-linksys_mr7500-squashfs-factory.bin"
+      "https://downloads.openwrt.org/releases/25.12.5/targets/qualcommax/ipq60xx/openwrt-25.12.5-qualcommax-ipq60xx-linksys_mr7500-squashfs-factory.bin"
     ],
     "firmwareopenwrtupgradeurl": [
-      "https://downloads.openwrt.org/releases/25.12.0/targets/qualcommax/ipq60xx/openwrt-25.12.0-qualcommax-ipq60xx-linksys_mr7500-squashfs-sysupgrade.bin"
+      "https://downloads.openwrt.org/releases/25.12.5/targets/qualcommax/ipq60xx/openwrt-25.12.5-qualcommax-ipq60xx-linksys_mr7500-squashfs-sysupgrade.bin"
     ],
     "firmwareopenwrtsnapshotinstallurl": [
       "https://downloads.openwrt.org/snapshots/targets/qualcommax/ipq60xx/openwrt-qualcommax-ipq60xx-linksys_mr7500-squashfs-factory.bin"
@@ -118850,10 +119170,12 @@
     ],
     "jtag": "Yes",
     "ledcount": "5",
-    "model": "MR7500/MR75MS/MR75WH",
+    "model": "MR7500",
     "modem": "-",
     "oemdevicehomepageurl": "https://support.linksys.com/kb/article/953-en/",
-    "owrt_forum_topic_url": null,
+    "owrt_forum_topic_url": [
+      "https://forum.openwrt.org/t/adding-support-for-linksys-mr7500/170721"
+    ],
     "outdoor": "No",
     "packagearchitecture": "aarch64_cortex-a53",
     "phoneports": null,
@@ -118869,10 +119191,10 @@
     "sfp_ports": "-",
     "sfp_plus_ports": "-",
     "serial": "Yes",
-    "serialconnectionparameters": "19200 / 8N1",
+    "serialconnectionparameters": "115200 / 8N1",
     "serialconnectionvoltage": "3.3",
     "subtarget": "ipq60xx",
-    "supportedcurrentrel": "25.12.0",
+    "supportedcurrentrel": "25.12.5",
     "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=a1bf306bb71cfaf7e98c15320a6f3f487935f1b5",
     "supportedsincerel": "25.12.0",
     "switch": "Qualcomm Atheros QCA8075",
@@ -217744,7 +218066,7 @@
       "https://downloads.openwrt.org/releases/24.10.4/targets/lantiq/xrx200/openwrt-24.10.4-lantiq-xrx200-avm_fritz7362sl-initramfs-kernel.bin"
     ],
     "firmwareopenwrtupgradeurl": [
-      "https://downloads.openwrt.org/releases/24.10.4/targets/lantiq/xrx200/openwrt-24.10.4-lantiq-xrx200-avm_fritz7362sl-squashfs-sysupgrade.bin"
+      "https://downloads.openwrt.org/releases/25.12.5/targets/lantiq/xrx200/openwrt-25.12.5-lantiq-xrx200-avm_fritz7362sl-squashfs-sysupgrade.bin"
     ],
     "firmwareopenwrtsnapshotinstallurl": [
       "https://downloads.openwrt.org/snapshots/targets/lantiq/xrx200/openwrt-lantiq-xrx200-avm_fritz7362sl-initramfs-kernel.bin"
@@ -217795,7 +218117,7 @@
     "serialconnectionparameters": null,
     "serialconnectionvoltage": null,
     "subtarget": "xrx200",
-    "supportedcurrentrel": "24.10.4",
+    "supportedcurrentrel": "25.12.5",
     "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=eae6cac6a30b95bef04d033ed8a303b7e35a078b",
     "supportedsincerel": "19.07.0",
     "switch": "Lantiq GSWIP (built-in SoC switch)",
@@ -229569,7 +229891,7 @@
     "serialconnectionvoltage": null,
     "subtarget": "filogic",
     "supportedcurrentrel": "25.12.5",
-    "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=907cb88e103b2e784caf0803b0ee668da28f2d14",
+    "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=907cb88e103b2e784caf0803b0ee668da28f2d1",
     "supportedsincerel": "24.10.2",
     "switch": "-",
     "target": "mediatek",
@@ -253897,7 +254219,7 @@
     "commentsusbsataports": "-",
     "commentsnetworkports": "1x Gigabit Ethernet, PoE",
     "detachableantennas": "2",
-    "devicepage": null,
+    "devicepage": "toh:tp-link:tp-link_festa_f52-outdoor_v1",
     "devicetype": "WiFi AP",
     "ethernet100mports": "-",
     "ethernet10gports": "-",
@@ -285761,6 +286083,107 @@
     ]
   },
   {
+    "deviceid": "zyxel:zyxel_lte3301_q222",
+    "audioports": [
+      "-"
+    ],
+    "availability": "Discontinued",
+    "bluetooth": "-",
+    "bootloader": "U-Boot",
+    "brand": "ZyXEL",
+    "buttoncount": "2",
+    "cpu": "MediaTek MT7620N",
+    "cpucores": "1",
+    "cpumhz": "580",
+    "commentinstallation": "Vendor recovery web UI only accepts the jboot record image (u-boot-install.bin), not factory.bin",
+    "commentrecovery": "Hold reset or WPS at power-on to start the U-Boot TFTP recovery",
+    "comments": "OpenWrt replaces the AMIT \"jboot\" vendor bootloader with mainline U-Boot. Support pending, see openwrt/openwrt",
+    "commentsavports": null,
+    "commentsusbsataports": "No external USB port; the internal USB2 bus carries the LTE modem",
+    "commentsnetworkports": "4x LAN only, the WAN side is the built-in LTE modem (USB 2020:2033, QMI). The modem takes up to one minute to enumerate after power-on.",
+    "detachableantennas": "-",
+    "devicepage": "toh:zyxel:lte3301_q222",
+    "devicetype": "Router",
+    "ethernet100mports": "4",
+    "ethernet10gports": "-",
+    "ethernet1gports": "-",
+    "ethernet2_5gports": "-",
+    "ethernet5gports": "-",
+    "fccid": null,
+    "firmwareoemstockurl": null,
+    "firmwareopenwrtinstallurl": null,
+    "firmwareopenwrtupgradeurl": null,
+    "firmwareopenwrtsnapshotinstallurl": null,
+    "firmwareopenwrtsnapshotupgradeurl": null,
+    "flashmb": [
+      "16"
+    ],
+    "forumsearch": [
+      "LTE3301"
+    ],
+    "gpios": null,
+    "gitsearch": [
+      "lte3301"
+    ],
+    "installationmethods": [
+      "see devicepage",
+      "see git-commit"
+    ],
+    "jtag": null,
+    "ledcount": "6",
+    "model": "LTE3301-Q222",
+    "modem": "LTE",
+    "oemdevicehomepageurl": null,
+    "owrt_forum_topic_url": null,
+    "outdoor": "No",
+    "packagearchitecture": "mipsel_24kc",
+    "phoneports": [
+      "-"
+    ],
+    "picture": null,
+    "powersupply": null,
+    "rammb": "64",
+    "recoverymethods": [
+      "see devicepage",
+      "Serial console",
+      "TFTP"
+    ],
+    "sataports": "-",
+    "sfp_ports": "-",
+    "sfp_plus_ports": "-",
+    "serial": "Yes",
+    "serialconnectionparameters": "115200 / 8N1",
+    "serialconnectionvoltage": "3.3",
+    "subtarget": "mt7620",
+    "supportedcurrentrel": null,
+    "supportedsincecommit": null,
+    "supportedsincerel": null,
+    "switch": "MediaTek MT7620N built-in",
+    "target": "ramips",
+    "usbports": [
+      "-"
+    ],
+    "unsupported_functions": null,
+    "vlan": "Yes",
+    "version": null,
+    "videoports": [
+      "-"
+    ],
+    "wlan24ghz": "b/g/n",
+    "wlan50ghz": "-",
+    "wlan60ghz": null,
+    "wlan600ghz": null,
+    "wlancomments": "Calibration data is read out of the vendor config partition",
+    "wlanhardware": [
+      "MediaTek MT7620N built-in"
+    ],
+    "wlandriver": [
+      "rt2800"
+    ],
+    "whereavailable": null,
+    "wikideviurl": null
+  },
+  {
     "deviceid": "zyxel:zyxel_gs1900-24e",
     "audioports": [
       "-"
@@ -286323,6 +286746,107 @@
     "wikideviurl": [
       "https://wikidevi.wi-cat.ru/ZyXEL_GS1900-24HPv2"
     ]
+  },
+  {
+    "deviceid": "zyxel:zyxel_lte3301_m209",
+    "audioports": [
+      "-"
+    ],
+    "availability": "Discontinued",
+    "bluetooth": "-",
+    "bootloader": "U-Boot",
+    "brand": "ZyXEL",
+    "buttoncount": "2",
+    "cpu": "MediaTek MT7620N",
+    "cpucores": "1",
+    "cpumhz": "580",
+    "commentinstallation": "Vendor recovery web UI only accepts the jboot record image (u-boot-install.bin), not factory.bin",
+    "commentrecovery": "Hold reset or WPS at power-on to start the U-Boot TFTP recovery",
+    "comments": "OpenWrt replaces the AMIT \"jboot\" vendor bootloader with mainline U-Boot. Support pending, see openwrt/openwrt",
+    "commentsavports": null,
+    "commentsusbsataports": "No external USB port; the internal USB2 bus carries the LTE modem",
+    "commentsnetworkports": "4x LAN only, the WAN side is the built-in LTE modem (USB 2020:2033, QMI). The modem takes up to one minute to enumerate after power-on.",
+    "detachableantennas": "-",
+    "devicepage": "toh:zyxel:lte3301_m209",
+    "devicetype": "Router",
+    "ethernet100mports": "4",
+    "ethernet10gports": "-",
+    "ethernet1gports": "-",
+    "ethernet2_5gports": "-",
+    "ethernet5gports": "-",
+    "fccid": null,
+    "firmwareoemstockurl": null,
+    "firmwareopenwrtinstallurl": null,
+    "firmwareopenwrtupgradeurl": null,
+    "firmwareopenwrtsnapshotinstallurl": null,
+    "firmwareopenwrtsnapshotupgradeurl": null,
+    "flashmb": [
+      "16"
+    ],
+    "forumsearch": [
+      "LTE3301"
+    ],
+    "gpios": null,
+    "gitsearch": [
+      "lte3301"
+    ],
+    "installationmethods": [
+      "see devicepage",
+      "see git-commit"
+    ],
+    "jtag": null,
+    "ledcount": "6",
+    "model": "LTE3301-M209",
+    "modem": "LTE",
+    "oemdevicehomepageurl": null,
+    "owrt_forum_topic_url": null,
+    "outdoor": "No",
+    "packagearchitecture": "mipsel_24kc",
+    "phoneports": [
+      "-"
+    ],
+    "picture": null,
+    "powersupply": null,
+    "rammb": "64",
+    "recoverymethods": [
+      "see devicepage",
+      "Serial console",
+      "TFTP"
+    ],
+    "sataports": "-",
+    "sfp_ports": "-",
+    "sfp_plus_ports": "-",
+    "serial": "Yes",
+    "serialconnectionparameters": "115200 / 8N1",
+    "serialconnectionvoltage": "3.3",
+    "subtarget": "mt7620",
+    "supportedcurrentrel": null,
+    "supportedsincecommit": null,
+    "supportedsincerel": null,
+    "switch": "MediaTek MT7620N built-in",
+    "target": "ramips",
+    "usbports": [
+      "-"
+    ],
+    "unsupported_functions": null,
+    "vlan": "Yes",
+    "version": null,
+    "videoports": [
+      "-"
+    ],
+    "wlan24ghz": "b/g/n",
+    "wlan50ghz": "-",
+    "wlan60ghz": null,
+    "wlan600ghz": null,
+    "wlancomments": "Calibration data is read out of the vendor config partition",
+    "wlanhardware": [
+      "MediaTek MT7620N built-in"
+    ],
+    "wlandriver": [
+      "rt2800"
+    ],
+    "whereavailable": null,
+    "wikideviurl": null
   },
   {
     "deviceid": "zyxel:zyxel_nbg6817",
@@ -303380,6 +303904,112 @@
     "wikideviurl": null
   },
   {
+    "deviceid": "elecom:elecom_wrc-x6000qs",
+    "audioports": [
+      "-"
+    ],
+    "availability": "Discontinued 2026",
+    "bluetooth": null,
+    "bootloader": "U-Boot",
+    "brand": "ELECOM",
+    "buttoncount": "4",
+    "cpu": "MediaTek MT7986B",
+    "cpucores": "4",
+    "cpumhz": "1600",
+    "commentinstallation": "Access to the WebUI http://192.168.2.1/ flash factory image",
+    "commentrecovery": null,
+    "comments": null,
+    "commentsavports": null,
+    "commentsusbsataports": null,
+    "commentsnetworkports": "WAN - Maxlinear Ethernet GPY211C",
+    "detachableantennas": "-",
+    "devicepage": null,
+    "devicetype": "WiFi Router",
+    "ethernet100mports": null,
+    "ethernet10gports": null,
+    "ethernet1gports": "4",
+    "ethernet2_5gports": "1",
+    "ethernet5gports": null,
+    "fccid": null,
+    "firmwareoemstockurl": "https://www.elecom.co.jp/support/download/network/wireless_lan/wrc-x6000qs/",
+    "firmwareopenwrtinstallurl": null,
+    "firmwareopenwrtupgradeurl": null,
+    "firmwareopenwrtsnapshotinstallurl": [
+      "http://https://downloads.openwrt.org/snapshots/targets/mediatek/filogic/openwrt-mediatek-filogic-elecom_wrc-x6000qs-squashfs-factory.bin"
+    ],
+    "firmwareopenwrtsnapshotupgradeurl": [
+      "http://https://downloads.openwrt.org/snapshots/targets/mediatek/filogic/openwrt-mediatek-filogic-elecom_wrc-x6000qs-squashfs-sysupgrade.bin"
+    ],
+    "flashmb": [
+      "128"
+    ],
+    "forumsearch": [
+      "WRC-X6000QS"
+    ],
+    "gpios": null,
+    "gitsearch": [
+      "WRC-X6000QS"
+    ],
+    "installationmethods": [
+      "see git-commit"
+    ],
+    "jtag": "No",
+    "ledcount": "11",
+    "model": "WRC-X6000QS",
+    "modem": null,
+    "oemdevicehomepageurl": "https://www.elecom.co.jp/products/WRC-X6000QS-G.html",
+    "owrt_forum_topic_url": null,
+    "outdoor": "No",
+    "packagearchitecture": "aarch64_cortex-a53",
+    "phoneports": [
+      "-"
+    ],
+    "picture": [
+      "media:example:genericrouter1.png"
+    ],
+    "powersupply": "12 VDC, 1.5 A",
+    "rammb": "512",
+    "recoverymethods": [
+      "U-Boot TFTP + serial recovery"
+    ],
+    "sataports": null,
+    "sfp_ports": null,
+    "sfp_plus_ports": null,
+    "serial": "Yes",
+    "serialconnectionparameters": "115200 / 8N1",
+    "serialconnectionvoltage": "3.3",
+    "subtarget": "filogic",
+    "supportedcurrentrel": "snapshot",
+    "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=16d159c77837c3d2bb1742051cef11e81d0dc5f9",
+    "supportedsincerel": "-",
+    "switch": "MediaTek MT7531",
+    "target": "mediatek",
+    "usbports": [
+      "-"
+    ],
+    "unsupported_functions": null,
+    "vlan": "Yes",
+    "version": [
+      "v1"
+    ],
+    "videoports": [
+      "-"
+    ],
+    "wlan24ghz": "b/g/n/ax",
+    "wlan50ghz": "a/n/ac/ax",
+    "wlan60ghz": "-",
+    "wlan600ghz": null,
+    "wlancomments": null,
+    "wlanhardware": [
+      "MediaTek MT7986"
+    ],
+    "wlandriver": [
+      "other"
+    ],
+    "whereavailable": "mercari.com,amazon.co.jp",
+    "wikideviurl": null
+  },
+  {
     "deviceid": "elecom:elecom_wrc-1900gst",
     "audioports": [
       "-"
@@ -305022,6 +305652,108 @@
       "mt76"
     ],
     "whereavailable": "amazon.co.jp",
+    "wikideviurl": null
+  },
+  {
+    "deviceid": "elecom:elecom_rc-x6000qs",
+    "audioports": [
+      "-"
+    ],
+    "availability": "Available 2022",
+    "bluetooth": null,
+    "bootloader": "U-Boot",
+    "brand": "ELECOM",
+    "buttoncount": "1",
+    "cpu": "MediaTek MT7986B",
+    "cpucores": "4",
+    "cpumhz": "1600",
+    "commentinstallation": null,
+    "commentrecovery": null,
+    "comments": null,
+    "commentsavports": "-",
+    "commentsusbsataports": null,
+    "commentsnetworkports": null,
+    "detachableantennas": "-",
+    "devicepage": null,
+    "devicetype": "WiFi Router",
+    "ethernet100mports": null,
+    "ethernet10gports": null,
+    "ethernet1gports": "4",
+    "ethernet2_5gports": "1",
+    "ethernet5gports": null,
+    "fccid": null,
+    "firmwareoemstockurl": null,
+    "firmwareopenwrtinstallurl": null,
+    "firmwareopenwrtupgradeurl": null,
+    "firmwareopenwrtsnapshotinstallurl": null,
+    "firmwareopenwrtsnapshotupgradeurl": null,
+    "flashmb": [
+      "128"
+    ],
+    "forumsearch": [
+      "WRC-X6000QS"
+    ],
+    "gpios": "4",
+    "gitsearch": [
+      "WRC-X6000QS"
+    ],
+    "installationmethods": [
+      "see git-commit"
+    ],
+    "jtag": "No",
+    "ledcount": "7",
+    "model": "WRC-X6000QS",
+    "modem": null,
+    "oemdevicehomepageurl": null,
+    "owrt_forum_topic_url": null,
+    "outdoor": "No",
+    "packagearchitecture": "aarch64_cortex-a53",
+    "phoneports": [
+      "-"
+    ],
+    "picture": [
+      "media:example:genericrouter1.png"
+    ],
+    "powersupply": "12 VDC, 1.5 A",
+    "rammb": "512",
+    "recoverymethods": [
+      "U-Boot TFTP + serial recovery"
+    ],
+    "sataports": null,
+    "sfp_ports": "-",
+    "sfp_plus_ports": "-",
+    "serial": "Yes",
+    "serialconnectionparameters": "115200 / 8N1",
+    "serialconnectionvoltage": "3.3",
+    "subtarget": "filogic",
+    "supportedcurrentrel": "snapshot",
+    "supportedsincecommit": "http://https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=16d159c77837c3d2bb1742051cef11e81d0dc5f9",
+    "supportedsincerel": "-",
+    "switch": "MediaTek MT7531",
+    "target": "ramips",
+    "usbports": [
+      "-"
+    ],
+    "unsupported_functions": null,
+    "vlan": "Yes",
+    "version": [
+      "v1"
+    ],
+    "videoports": [
+      "-"
+    ],
+    "wlan24ghz": "b/g/n/ax",
+    "wlan50ghz": "a/n/ac/ax",
+    "wlan60ghz": "-",
+    "wlan600ghz": "-",
+    "wlancomments": null,
+    "wlanhardware": [
+      "MediaTek MT7986"
+    ],
+    "wlandriver": [
+      "other"
+    ],
+    "whereavailable": null,
     "wikideviurl": null
   },
   {
@@ -322008,7 +322740,7 @@
     "installationmethods": [
       "SD card"
     ],
-    "jtag": null,
+    "jtag": "No",
     "ledcount": "3",
     "model": "NanoPi R76S",
     "modem": "-",
@@ -322027,7 +322759,7 @@
     "powersupply": "5 VDC, 3A via USB Type-C",
     "rammb": "4096",
     "recoverymethods": [
-      "unknown"
+      "USB"
     ],
     "sataports": "-",
     "sfp_ports": "-",
@@ -322036,7 +322768,7 @@
     "serialconnectionparameters": "1500000 / 8N1",
     "serialconnectionvoltage": "3.3",
     "subtarget": "armv8",
-    "supportedcurrentrel": "25.12.4",
+    "supportedcurrentrel": "25.12.5",
     "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=c19ad8db1b23381ff9a4826fab25ee605bf1035d",
     "supportedsincerel": "25.12.0",
     "switch": "-",

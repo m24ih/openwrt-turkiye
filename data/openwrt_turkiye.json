@@ -1493,7 +1493,7 @@
       "QCA9563 (2.4 GHz)",
       "QCA9886 (5 GHz; reported in support PR)"
     ],
-    "device_page": null,
+    "device_page": "https://openwrt.org/toh:tp-link:tp-link_festa_f52-outdoor_v1",
     "category": "menzil-genisletici",
     "wlan24ghz": "b/g/n",
     "wlan50ghz": "a/n/ac",
@@ -8273,7 +8273,7 @@
       "QCA9563 (2.4 GHz)",
       "QCA9886 (5 GHz; reported in support PR)"
     ],
-    "device_page": null,
+    "device_page": "https://openwrt.org/toh:tp-link:tp-link_festa_f52-outdoor_v1",
     "category": "menzil-genisletici",
     "wlan24ghz": "b/g/n",
     "wlan50ghz": "a/n/ac",
