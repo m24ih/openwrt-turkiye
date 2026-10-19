@@ -21297,7 +21297,7 @@
     "audioports": [
       "-"
     ],
-    "availability": "unknown 2017",
+    "availability": "Discontinued 2024",
     "bluetooth": "-",
     "bootloader": "U-Boot",
     "brand": "Meraki",
@@ -21323,10 +21323,18 @@
       "https://fccid.io/UDX-60053010"
     ],
     "firmwareoemstockurl": null,
-    "firmwareopenwrtinstallurl": null,
-    "firmwareopenwrtupgradeurl": null,
-    "firmwareopenwrtsnapshotinstallurl": null,
-    "firmwareopenwrtsnapshotupgradeurl": null,
+    "firmwareopenwrtinstallurl": [
+      "https://downloads.openwrt.org/releases/25.12.6/targets/ipq40xx/generic/openwrt-25.12.6-ipq40xx-generic-meraki_z3-initramfs-uImage.itb"
+    ],
+    "firmwareopenwrtupgradeurl": [
+      "https://downloads.openwrt.org/releases/25.12.6/targets/ipq40xx/generic/openwrt-25.12.6-ipq40xx-generic-meraki_z3-squashfs-sysupgrade.bin"
+    ],
+    "firmwareopenwrtsnapshotinstallurl": [
+      "https://downloads.openwrt.org/snapshots/targets/ipq40xx/generic/openwrt-ipq40xx-generic-meraki_z3-initramfs-uImage.itb"
+    ],
+    "firmwareopenwrtsnapshotupgradeurl": [
+      "https://downloads.openwrt.org/snapshots/targets/ipq40xx/generic/openwrt-ipq40xx-generic-meraki_z3-squashfs-sysupgrade.bin"
+    ],
     "flashmb": [
       "128NAND"
     ],
@@ -21367,9 +21375,9 @@
     "serialconnectionparameters": "115200 / 8N1",
     "serialconnectionvoltage": "3.3",
     "subtarget": "generic",
-    "supportedcurrentrel": "external image",
-    "supportedsincecommit": null,
-    "supportedsincerel": "external image",
+    "supportedcurrentrel": "25.12.6",
+    "supportedsincecommit": "https://git.openwrt.org/openwrt/openwrt/commit/?h=master&id=60bbf46930ffd661e0f9a52f2ba1ea2ccea15fd7",
+    "supportedsincerel": "25.12.0",
     "switch": "Qualcomm Atheros QCA8075",
     "target": "ipq40xx",
     "usbports": [
@@ -21388,6 +21396,214 @@
     "wlancomments": null,
     "wlanhardware": [
       "Qualcomm Atheros IPQ4029"
+    ],
+    "wlandriver": [
+      "ath10k"
+    ],
+    "whereavailable": null,
+    "wikideviurl": null
+  },
+  {
+    "deviceid": "meraki:meraki_z3c",
+    "audioports": [
+      "-"
+    ],
+    "availability": "Discontinued 2024",
+    "bluetooth": "-",
+    "bootloader": "U-Boot",
+    "brand": "Meraki",
+    "buttoncount": null,
+    "cpu": "Qualcomm IPQ4029",
+    "cpucores": "4",
+    "cpumhz": "700",
+    "commentinstallation": null,
+    "commentrecovery": null,
+    "comments": null,
+    "commentsavports": "-",
+    "commentsusbsataports": "-",
+    "commentsnetworkports": "Port 5 has POE output (802.3af)",
+    "detachableantennas": "-",
+    "devicepage": null,
+    "devicetype": "WiFi Router",
+    "ethernet100mports": "-",
+    "ethernet10gports": "-",
+    "ethernet1gports": "5",
+    "ethernet2_5gports": "-",
+    "ethernet5gports": "-",
+    "fccid": null,
+    "firmwareoemstockurl": null,
+    "firmwareopenwrtinstallurl": null,
+    "firmwareopenwrtupgradeurl": null,
+    "firmwareopenwrtsnapshotinstallurl": [
+      "https://downloads.openwrt.org/snapshots/targets/ipq40xx/generic/openwrt-ipq40xx-generic-meraki_z3c-initramfs-uImage.itb"
+    ],
+    "firmwareopenwrtsnapshotupgradeurl": [
+      "https://downloads.openwrt.org/snapshots/targets/ipq40xx/generic/openwrt-ipq40xx-generic-meraki_z3c-squashfs-sysupgrade.bin"
+    ],
+    "flashmb": [
+      "128NAND"
+    ],
+    "forumsearch": [
+      "Z3C"
+    ],
+    "gpios": null,
+    "gitsearch": [
+      "Z3C"
+    ],
+    "installationmethods": [
+      "see git-commit"
+    ],
+    "jtag": null,
+    "ledcount": null,
+    "model": "Z3C",
+    "modem": "LTE",
+    "oemdevicehomepageurl": null,
+    "owrt_forum_topic_url": null,
+    "outdoor": "No",
+    "packagearchitecture": "arm_cortex-a7_neon-vfpv4",
+    "phoneports": [
+      "-"
+    ],
+    "picture": [
+      "media:example:genericrouter1.png"
+    ],
+    "powersupply": "54V/0.92A via barrel",
+    "rammb": "512",
+    "recoverymethods": [
+      "see git-commit"
+    ],
+    "sataports": "-",
+    "sfp_ports": "-",
+    "sfp_plus_ports": "-",
+    "serial": "Yes",
+    "serialconnectionparameters": null,
+    "serialconnectionvoltage": null,
+    "subtarget": "generic",
+    "supportedcurrentrel": "snapshot",
+    "supportedsincecommit": "https://git.openwrt.org/openwrt/openwrt/commit/?h=master&id=db0ce075e675de03cf63f34b192daa33000b30fe",
+    "supportedsincerel": null,
+    "switch": "Qualcomm Atheros QCA8075",
+    "target": "ipq40xx",
+    "usbports": [
+      "-"
+    ],
+    "unsupported_functions": null,
+    "vlan": "Yes",
+    "version": null,
+    "videoports": [
+      "-"
+    ],
+    "wlan24ghz": "b/g/n",
+    "wlan50ghz": "a/n/ac",
+    "wlan60ghz": "-",
+    "wlan600ghz": "-",
+    "wlancomments": "2.4GHz 2x2 MIMO, 5GHz 2x2 MIMO",
+    "wlanhardware": [
+      "Qualcomm QCA4019"
+    ],
+    "wlandriver": [
+      "ath10k"
+    ],
+    "whereavailable": null,
+    "wikideviurl": null
+  },
+  {
+    "deviceid": "meraki:meraki_mr70",
+    "audioports": [
+      "-"
+    ],
+    "availability": "Available 2026",
+    "bluetooth": "-",
+    "bootloader": "U-Boot",
+    "brand": "Meraki",
+    "buttoncount": null,
+    "cpu": "Qualcomm IPQ4029",
+    "cpucores": "4",
+    "cpumhz": "700",
+    "commentinstallation": null,
+    "commentrecovery": null,
+    "comments": null,
+    "commentsavports": "-",
+    "commentsusbsataports": "-",
+    "commentsnetworkports": null,
+    "detachableantennas": "-",
+    "devicepage": null,
+    "devicetype": "WiFi AP",
+    "ethernet100mports": "-",
+    "ethernet10gports": "-",
+    "ethernet1gports": "1",
+    "ethernet2_5gports": "-",
+    "ethernet5gports": "-",
+    "fccid": null,
+    "firmwareoemstockurl": null,
+    "firmwareopenwrtinstallurl": null,
+    "firmwareopenwrtupgradeurl": null,
+    "firmwareopenwrtsnapshotinstallurl": [
+      "https://downloads.openwrt.org/snapshots/targets/ipq40xx/generic/openwrt-ipq40xx-generic-meraki_mr70-initramfs-uImage.itb"
+    ],
+    "firmwareopenwrtsnapshotupgradeurl": [
+      "https://downloads.openwrt.org/snapshots/targets/ipq40xx/generic/openwrt-ipq40xx-generic-meraki_mr70-squashfs-sysupgrade.bin"
+    ],
+    "flashmb": [
+      "128NAND"
+    ],
+    "forumsearch": [
+      "MR70"
+    ],
+    "gpios": null,
+    "gitsearch": [
+      "MR70"
+    ],
+    "installationmethods": [
+      "see git-commit"
+    ],
+    "jtag": null,
+    "ledcount": null,
+    "model": "MR70",
+    "modem": "-",
+    "oemdevicehomepageurl": null,
+    "owrt_forum_topic_url": null,
+    "outdoor": "Yes",
+    "packagearchitecture": "arm_cortex-a7_neon-vfpv4",
+    "phoneports": [
+      "-"
+    ],
+    "picture": [
+      "media:example:genericrouter1.png"
+    ],
+    "powersupply": null,
+    "rammb": "256",
+    "recoverymethods": [
+      "see git-commit"
+    ],
+    "sataports": "-",
+    "sfp_ports": "-",
+    "sfp_plus_ports": "-",
+    "serial": "Yes",
+    "serialconnectionparameters": null,
+    "serialconnectionvoltage": null,
+    "subtarget": "generic",
+    "supportedcurrentrel": "snapshot",
+    "supportedsincecommit": "https://git.openwrt.org/openwrt/openwrt/commit/?h=master&id=88f3c67eb28cafd584a927b32dc54cf4ac7fc56e",
+    "supportedsincerel": null,
+    "switch": null,
+    "target": "ipq40xx",
+    "usbports": [
+      "-"
+    ],
+    "unsupported_functions": null,
+    "vlan": null,
+    "version": null,
+    "videoports": [
+      "-"
+    ],
+    "wlan24ghz": "b/g/n",
+    "wlan50ghz": "a/n/ac",
+    "wlan60ghz": "-",
+    "wlan600ghz": "-",
+    "wlancomments": null,
+    "wlanhardware": [
+      "Qualcomm QCA4019"
     ],
     "wlandriver": [
       "ath10k"
@@ -21472,7 +21688,7 @@
     "serial": "Yes",
     "serialconnectionparameters": "115200 / 8N1",
     "serialconnectionvoltage": null,
-    "subtarget": "generic",
+    "subtarget": "nand",
     "supportedcurrentrel": "EOL",
     "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=68d649f5cd9ee2f6fda00df7bde4b9074474becf",
     "supportedsincerel": "17.01.0",
@@ -21500,6 +21716,111 @@
       "ath9k"
     ],
     "whereavailable": null,
+    "wikideviurl": null
+  },
+  {
+    "deviceid": "meraki:meraki_go_gx20",
+    "audioports": [
+      "-"
+    ],
+    "availability": "Available 2026",
+    "bluetooth": null,
+    "bootloader": "U-Boot",
+    "brand": "Meraki",
+    "buttoncount": null,
+    "cpu": "Qualcomm IPQ4029",
+    "cpucores": "4",
+    "cpumhz": "700",
+    "commentinstallation": null,
+    "commentrecovery": null,
+    "comments": null,
+    "commentsavports": "-",
+    "commentsusbsataports": null,
+    "commentsnetworkports": null,
+    "detachableantennas": null,
+    "devicepage": null,
+    "devicetype": "Router",
+    "ethernet100mports": "-",
+    "ethernet10gports": "-",
+    "ethernet1gports": "5",
+    "ethernet2_5gports": "-",
+    "ethernet5gports": "-",
+    "fccid": null,
+    "firmwareoemstockurl": null,
+    "firmwareopenwrtinstallurl": [
+      "https://downloads.openwrt.org/releases/25.12.6/targets/ipq40xx/generic/openwrt-25.12.6-ipq40xx-generic-meraki_gx20-initramfs-uImage.itb"
+    ],
+    "firmwareopenwrtupgradeurl": [
+      "https://downloads.openwrt.org/releases/25.12.6/targets/ipq40xx/generic/openwrt-25.12.6-ipq40xx-generic-meraki_gx20-squashfs-sysupgrade.bin"
+    ],
+    "firmwareopenwrtsnapshotinstallurl": [
+      "https://downloads.openwrt.org/snapshots/targets/ipq40xx/generic/openwrt-ipq40xx-generic-meraki_gx20-initramfs-uImage.itb"
+    ],
+    "firmwareopenwrtsnapshotupgradeurl": [
+      "https://downloads.openwrt.org/snapshots/targets/ipq40xx/generic/openwrt-ipq40xx-generic-meraki_gx20-squashfs-sysupgrade.bin"
+    ],
+    "flashmb": [
+      "128NAND"
+    ],
+    "forumsearch": [
+      "Go GX20"
+    ],
+    "gpios": null,
+    "gitsearch": [
+      "Go GX20"
+    ],
+    "installationmethods": [
+      "see git-commit"
+    ],
+    "jtag": null,
+    "ledcount": null,
+    "model": "Go GX20",
+    "modem": "-",
+    "oemdevicehomepageurl": null,
+    "owrt_forum_topic_url": null,
+    "outdoor": "No",
+    "packagearchitecture": "arm_cortex-a7_neon-vfpv4",
+    "phoneports": [
+      "-"
+    ],
+    "picture": [
+      "media:example:genericrouter1.png"
+    ],
+    "powersupply": null,
+    "rammb": "512",
+    "recoverymethods": [
+      "see git-commit"
+    ],
+    "sataports": null,
+    "sfp_ports": "-",
+    "sfp_plus_ports": "-",
+    "serial": null,
+    "serialconnectionparameters": null,
+    "serialconnectionvoltage": null,
+    "subtarget": "generic",
+    "supportedcurrentrel": "25.12.6",
+    "supportedsincecommit": "https://git.openwrt.org/openwrt/openwrt/commit/?h=master&id=11f7aa122ae7e63ede8bae0f3cad3f688f917e63",
+    "supportedsincerel": "25.12.0",
+    "switch": "Qualcomm Atheros QCA8075",
+    "target": "ipq40xx",
+    "usbports": [
+      "Yes",
+      "1x 3.0"
+    ],
+    "unsupported_functions": null,
+    "vlan": "Yes",
+    "version": null,
+    "videoports": [
+      "-"
+    ],
+    "wlan24ghz": null,
+    "wlan50ghz": null,
+    "wlan60ghz": null,
+    "wlan600ghz": null,
+    "wlancomments": null,
+    "wlanhardware": null,
+    "wlandriver": null,
+    "whereavailable": "bhphotovideo.com, amazon.com",
     "wikideviurl": null
   },
   {
@@ -22177,6 +22498,110 @@
     ]
   },
   {
+    "deviceid": "meraki:meraki_go_gr60",
+    "audioports": [
+      "-"
+    ],
+    "availability": "Available 2026",
+    "bluetooth": "-",
+    "bootloader": "U-Boot",
+    "brand": "Meraki",
+    "buttoncount": null,
+    "cpu": "Qualcomm IPQ4029",
+    "cpucores": "4",
+    "cpumhz": "700",
+    "commentinstallation": null,
+    "commentrecovery": null,
+    "comments": null,
+    "commentsavports": "-",
+    "commentsusbsataports": "-",
+    "commentsnetworkports": null,
+    "detachableantennas": "-",
+    "devicepage": null,
+    "devicetype": "WiFi AP",
+    "ethernet100mports": "-",
+    "ethernet10gports": "-",
+    "ethernet1gports": "1",
+    "ethernet2_5gports": "-",
+    "ethernet5gports": "-",
+    "fccid": null,
+    "firmwareoemstockurl": null,
+    "firmwareopenwrtinstallurl": null,
+    "firmwareopenwrtupgradeurl": null,
+    "firmwareopenwrtsnapshotinstallurl": [
+      "https://downloads.openwrt.org/snapshots/targets/ipq40xx/generic/openwrt-ipq40xx-generic-meraki_mr70-initramfs-uImage.itb"
+    ],
+    "firmwareopenwrtsnapshotupgradeurl": [
+      "https://downloads.openwrt.org/snapshots/targets/ipq40xx/generic/openwrt-ipq40xx-generic-meraki_mr70-squashfs-sysupgrade.bin"
+    ],
+    "flashmb": [
+      "128NAND"
+    ],
+    "forumsearch": [
+      "Go GR60"
+    ],
+    "gpios": null,
+    "gitsearch": [
+      "Go GR60"
+    ],
+    "installationmethods": [
+      "see git-commit"
+    ],
+    "jtag": null,
+    "ledcount": null,
+    "model": "Go GR60",
+    "modem": "-",
+    "oemdevicehomepageurl": null,
+    "owrt_forum_topic_url": null,
+    "outdoor": "Yes",
+    "packagearchitecture": "arm_cortex-a7_neon-vfpv4",
+    "phoneports": [
+      "-"
+    ],
+    "picture": [
+      "media:example:genericrouter1.png"
+    ],
+    "powersupply": null,
+    "rammb": "256",
+    "recoverymethods": [
+      "see git-commit"
+    ],
+    "sataports": "-",
+    "sfp_ports": "-",
+    "sfp_plus_ports": "-",
+    "serial": "Yes",
+    "serialconnectionparameters": null,
+    "serialconnectionvoltage": null,
+    "subtarget": "generic",
+    "supportedcurrentrel": "snapshot",
+    "supportedsincecommit": "https://git.openwrt.org/openwrt/openwrt/commit/?h=master&id=88f3c67eb28cafd584a927b32dc54cf4ac7fc56e",
+    "supportedsincerel": null,
+    "switch": null,
+    "target": "ipq40xx",
+    "usbports": [
+      "-"
+    ],
+    "unsupported_functions": null,
+    "vlan": null,
+    "version": null,
+    "videoports": [
+      "-"
+    ],
+    "wlan24ghz": "b/g/n",
+    "wlan50ghz": "a/n/ac",
+    "wlan60ghz": "-",
+    "wlan600ghz": "-",
+    "wlancomments": null,
+    "wlanhardware": [
+      "Qualcomm QCA4019"
+    ],
+    "wlandriver": [
+      "ath10k"
+    ],
+    "whereavailable": null,
+    "wikideviurl": null
+  },
+  {
     "deviceid": "meraki:meraki_mx65",
     "audioports": [
       "-"
@@ -22282,6 +22707,108 @@
     ],
     "wlandriver": [
       "none"
+    ],
+    "whereavailable": null,
+    "wikideviurl": null
+  },
+  {
+    "deviceid": "meraki:meraki_mr20",
+    "audioports": [
+      "-"
+    ],
+    "availability": "Discontinued 2023",
+    "bluetooth": "-",
+    "bootloader": "U-Boot",
+    "brand": "Meraki",
+    "buttoncount": null,
+    "cpu": "Qualcomm IPQ4029",
+    "cpucores": "4",
+    "cpumhz": "700",
+    "commentinstallation": null,
+    "commentrecovery": null,
+    "comments": null,
+    "commentsavports": "-",
+    "commentsusbsataports": "-",
+    "commentsnetworkports": null,
+    "detachableantennas": "-",
+    "devicepage": null,
+    "devicetype": "WiFi AP",
+    "ethernet100mports": "-",
+    "ethernet10gports": "-",
+    "ethernet1gports": "1",
+    "ethernet2_5gports": "-",
+    "ethernet5gports": "-",
+    "fccid": null,
+    "firmwareoemstockurl": null,
+    "firmwareopenwrtinstallurl": null,
+    "firmwareopenwrtupgradeurl": null,
+    "firmwareopenwrtsnapshotinstallurl": [
+      "https://downloads.openwrt.org/snapshots/targets/ipq40xx/generic/openwrt-ipq40xx-generic-meraki_mr20-initramfs-uImage.itb"
+    ],
+    "firmwareopenwrtsnapshotupgradeurl": [
+      "https://downloads.openwrt.org/snapshots/targets/ipq40xx/generic/openwrt-ipq40xx-generic-meraki_mr20-squashfs-sysupgrade.bin"
+    ],
+    "flashmb": [
+      "128NAND"
+    ],
+    "forumsearch": [
+      "MR20"
+    ],
+    "gpios": null,
+    "gitsearch": [
+      "MR20"
+    ],
+    "installationmethods": [
+      "see git-commit"
+    ],
+    "jtag": null,
+    "ledcount": null,
+    "model": "MR20",
+    "modem": "-",
+    "oemdevicehomepageurl": null,
+    "owrt_forum_topic_url": null,
+    "outdoor": "No",
+    "packagearchitecture": "arm_cortex-a7_neon-vfpv4",
+    "phoneports": [
+      "-"
+    ],
+    "picture": [
+      "media:example:genericrouter1.png"
+    ],
+    "powersupply": null,
+    "rammb": "256",
+    "recoverymethods": [
+      "see git-commit"
+    ],
+    "sataports": "-",
+    "sfp_ports": "-",
+    "sfp_plus_ports": "-",
+    "serial": "Yes",
+    "serialconnectionparameters": null,
+    "serialconnectionvoltage": null,
+    "subtarget": "generic",
+    "supportedcurrentrel": "snapshot",
+    "supportedsincecommit": "https://git.openwrt.org/openwrt/openwrt/commit/?h=master&id=5578eb69c2eb279fee6d9dc47a6d5d328bc33acd",
+    "supportedsincerel": null,
+    "switch": null,
+    "target": "ipq40xx",
+    "usbports": null,
+    "unsupported_functions": null,
+    "vlan": null,
+    "version": null,
+    "videoports": [
+      "-"
+    ],
+    "wlan24ghz": "b/g/n",
+    "wlan50ghz": "a/n/ac",
+    "wlan60ghz": "-",
+    "wlan600ghz": "-",
+    "wlancomments": null,
+    "wlanhardware": [
+      "Qualcomm QCA4019"
+    ],
+    "wlandriver": [
+      "ath10k"
     ],
     "whereavailable": null,
     "wikideviurl": null
@@ -22731,6 +23258,108 @@
     ],
     "wlandriver": [
       "ath10k-ct"
+    ],
+    "whereavailable": null,
+    "wikideviurl": null
+  },
+  {
+    "deviceid": "meraki:meraki_go_gr10",
+    "audioports": [
+      "-"
+    ],
+    "availability": "Discontinued 2023",
+    "bluetooth": "-",
+    "bootloader": "U-Boot",
+    "brand": "Meraki",
+    "buttoncount": null,
+    "cpu": "Qualcomm IPQ4029",
+    "cpucores": "4",
+    "cpumhz": "700",
+    "commentinstallation": null,
+    "commentrecovery": null,
+    "comments": null,
+    "commentsavports": "-",
+    "commentsusbsataports": "-",
+    "commentsnetworkports": null,
+    "detachableantennas": "-",
+    "devicepage": null,
+    "devicetype": "WiFi AP",
+    "ethernet100mports": "-",
+    "ethernet10gports": "-",
+    "ethernet1gports": "1",
+    "ethernet2_5gports": "-",
+    "ethernet5gports": "-",
+    "fccid": null,
+    "firmwareoemstockurl": null,
+    "firmwareopenwrtinstallurl": null,
+    "firmwareopenwrtupgradeurl": null,
+    "firmwareopenwrtsnapshotinstallurl": [
+      "https://downloads.openwrt.org/snapshots/targets/ipq40xx/generic/openwrt-ipq40xx-generic-meraki_mr20-initramfs-uImage.itb"
+    ],
+    "firmwareopenwrtsnapshotupgradeurl": [
+      "https://downloads.openwrt.org/snapshots/targets/ipq40xx/generic/openwrt-ipq40xx-generic-meraki_mr20-squashfs-sysupgrade.bin"
+    ],
+    "flashmb": [
+      "128NAND"
+    ],
+    "forumsearch": [
+      "Go GR10"
+    ],
+    "gpios": null,
+    "gitsearch": [
+      "Go GR10"
+    ],
+    "installationmethods": [
+      "see git-commit"
+    ],
+    "jtag": null,
+    "ledcount": null,
+    "model": "Go GR10",
+    "modem": "-",
+    "oemdevicehomepageurl": null,
+    "owrt_forum_topic_url": null,
+    "outdoor": "No",
+    "packagearchitecture": "arm_cortex-a7_neon-vfpv4",
+    "phoneports": [
+      "-"
+    ],
+    "picture": [
+      "media:example:genericrouter1.png"
+    ],
+    "powersupply": null,
+    "rammb": "256",
+    "recoverymethods": [
+      "see git-commit"
+    ],
+    "sataports": "-",
+    "sfp_ports": "-",
+    "sfp_plus_ports": "-",
+    "serial": "Yes",
+    "serialconnectionparameters": null,
+    "serialconnectionvoltage": null,
+    "subtarget": "generic",
+    "supportedcurrentrel": "snapshot",
+    "supportedsincecommit": "https://git.openwrt.org/openwrt/openwrt/commit/?h=master&id=5578eb69c2eb279fee6d9dc47a6d5d328bc33acd",
+    "supportedsincerel": null,
+    "switch": null,
+    "target": "ipq40xx",
+    "usbports": null,
+    "unsupported_functions": null,
+    "vlan": null,
+    "version": null,
+    "videoports": [
+      "-"
+    ],
+    "wlan24ghz": "b/g/n",
+    "wlan50ghz": "a/n/ac",
+    "wlan60ghz": "-",
+    "wlan600ghz": "-",
+    "wlancomments": null,
+    "wlanhardware": [
+      "Qualcomm QCA4019"
+    ],
+    "wlandriver": [
+      "ath10k"
     ],
     "whereavailable": null,
     "wikideviurl": null
@@ -23775,10 +24404,10 @@
     "fccid": null,
     "firmwareoemstockurl": null,
     "firmwareopenwrtinstallurl": [
-      "https://downloads.openwrt.org/releases/24.10.3/targets/ath79/generic/openwrt-24.10.3-ath79-generic-alcatel_hh40v-squashfs-factory.bin"
+      "https://downloads.openwrt.org/releases/25.12.5/targets/ath79/generic/openwrt-25.12.5-ath79-generic-alcatel_hh40v-squashfs-factory.bin"
     ],
     "firmwareopenwrtupgradeurl": [
-      "https://downloads.openwrt.org/releases/24.10.3/targets/ath79/generic/openwrt-24.10.3-ath79-generic-alcatel_hh40v-squashfs-sysupgrade.bin"
+      "https://downloads.openwrt.org/releases/25.12.5/targets/ath79/generic/openwrt-25.12.5-ath79-generic-alcatel_hh40v-squashfs-sysupgrade.bin"
     ],
     "firmwareopenwrtsnapshotinstallurl": [
       "https://downloads.openwrt.org/snapshots/targets/ath79/generic/openwrt-ath79-generic-alcatel_hh40v-squashfs-factory.bin"
@@ -23826,7 +24455,7 @@
     "serialconnectionparameters": null,
     "serialconnectionvoltage": null,
     "subtarget": "generic",
-    "supportedcurrentrel": "24.10.3",
+    "supportedcurrentrel": "25.12.5",
     "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=097f350aebc542963c7208af4973ff17e01ce76e",
     "supportedsincerel": "23.05.0",
     "switch": "Qualcomm Atheros QCA9531",
@@ -27810,6 +28439,111 @@
     "wikideviurl": [
       "https://wikidevi.wi-cat.ru/Nokia_XG-040G-MD"
     ]
+  },
+  {
+    "deviceid": "nokia:nokia_valyrian",
+    "audioports": [
+      "-"
+    ],
+    "availability": "unknown 2026",
+    "bluetooth": "-",
+    "bootloader": "U-Boot",
+    "brand": "Nokia",
+    "buttoncount": "3",
+    "cpu": "Airoha AN7581",
+    "cpucores": "4",
+    "cpumhz": "1300",
+    "commentinstallation": null,
+    "commentrecovery": null,
+    "comments": null,
+    "commentsavports": "2x FXS port",
+    "commentsusbsataports": "-",
+    "commentsnetworkports": null,
+    "detachableantennas": "-",
+    "devicepage": null,
+    "devicetype": "WiFi Router",
+    "ethernet100mports": "-",
+    "ethernet10gports": "1",
+    "ethernet1gports": "3",
+    "ethernet2_5gports": "-",
+    "ethernet5gports": "-",
+    "fccid": null,
+    "firmwareoemstockurl": null,
+    "firmwareopenwrtinstallurl": null,
+    "firmwareopenwrtupgradeurl": null,
+    "firmwareopenwrtsnapshotinstallurl": [
+      "http://https://downloads.openwrt.org/snapshots/targets/airoha/an7581/"
+    ],
+    "firmwareopenwrtsnapshotupgradeurl": [
+      "https://downloads.openwrt.org/snapshots/targets/airoha/an7581/openwrt-airoha-an7581-nokia_valyrian-squashfs-sysupgrade.bin"
+    ],
+    "flashmb": [
+      "eMMC"
+    ],
+    "forumsearch": [
+      "Valyrian"
+    ],
+    "gpios": null,
+    "gitsearch": [
+      "Valyrian"
+    ],
+    "installationmethods": [
+      "see git-commit"
+    ],
+    "jtag": null,
+    "ledcount": "11",
+    "model": "Valyrian",
+    "modem": "-",
+    "oemdevicehomepageurl": null,
+    "owrt_forum_topic_url": null,
+    "outdoor": "No",
+    "packagearchitecture": "aarch64_cortex-a53",
+    "phoneports": [
+      "2"
+    ],
+    "picture": [
+      "media:example:genericrouter1.png"
+    ],
+    "powersupply": null,
+    "rammb": "1024",
+    "recoverymethods": [
+      "see git-commit"
+    ],
+    "sataports": "-",
+    "sfp_ports": "1",
+    "sfp_plus_ports": "-",
+    "serial": null,
+    "serialconnectionparameters": null,
+    "serialconnectionvoltage": null,
+    "subtarget": "an7581",
+    "supportedcurrentrel": "snapshot",
+    "supportedsincecommit": "https://git.openwrt.org/openwrt/openwrt/commit/?h=master&id=e210d994faa58d033c13147f16157a80aa266bf1",
+    "supportedsincerel": null,
+    "switch": "10g via AS21x1x",
+    "target": "airoha",
+    "usbports": [
+      "Yes",
+      "1x 2.0"
+    ],
+    "unsupported_functions": null,
+    "vlan": "Yes",
+    "version": null,
+    "videoports": [
+      "-"
+    ],
+    "wlan24ghz": "b/g/n/ax",
+    "wlan50ghz": "a/n/ac/ax",
+    "wlan60ghz": "ax/be",
+    "wlan600ghz": "-",
+    "wlancomments": null,
+    "wlanhardware": [
+      "MediaTek MT7996"
+    ],
+    "wlandriver": [
+      "mt76"
+    ],
+    "whereavailable": null,
+    "wikideviurl": null
   },
   {
     "deviceid": "nokia:nokia_ea0326gmp",
@@ -31993,6 +32727,113 @@
     "wlandriver": [
       "ath9k",
       "ath10k-ct"
+    ],
+    "whereavailable": null,
+    "wikideviurl": null
+  },
+  {
+    "deviceid": "sophos:sophos_apx_120",
+    "audioports": [
+      "-"
+    ],
+    "availability": "Discontinued 2024",
+    "bluetooth": "-",
+    "bootloader": "U-Boot",
+    "brand": "Sophos",
+    "buttoncount": "1",
+    "cpu": "Qualcomm IPQ4019",
+    "cpucores": "4",
+    "cpumhz": "716",
+    "commentinstallation": null,
+    "commentrecovery": null,
+    "comments": null,
+    "commentsavports": "-",
+    "commentsusbsataports": "-",
+    "commentsnetworkports": "Qualcomm QCA8075 Phy",
+    "detachableantennas": "-",
+    "devicepage": null,
+    "devicetype": "WiFi AP",
+    "ethernet100mports": "-",
+    "ethernet10gports": "-",
+    "ethernet1gports": "1",
+    "ethernet2_5gports": "-",
+    "ethernet5gports": "-",
+    "fccid": [
+      "https://fcc.io/2ACTO-AXP120"
+    ],
+    "firmwareoemstockurl": null,
+    "firmwareopenwrtinstallurl": null,
+    "firmwareopenwrtupgradeurl": null,
+    "firmwareopenwrtsnapshotinstallurl": [
+      "https://downloads.openwrt.org/snapshots/targets/ipq40xx/generic/openwrt-ipq40xx-generic-sophos_apx120-initramfs-uImage.itb"
+    ],
+    "firmwareopenwrtsnapshotupgradeurl": [
+      "https://downloads.openwrt.org/snapshots/targets/ipq40xx/generic/openwrt-ipq40xx-generic-sophos_apx120-squashfs-sysupgrade.bin"
+    ],
+    "flashmb": [
+      "2",
+      "256NAND"
+    ],
+    "forumsearch": [
+      "APX 120"
+    ],
+    "gpios": null,
+    "gitsearch": [
+      "APX 120"
+    ],
+    "installationmethods": [
+      "see git-commit"
+    ],
+    "jtag": null,
+    "ledcount": "2",
+    "model": "APX 120",
+    "modem": "-",
+    "oemdevicehomepageurl": null,
+    "owrt_forum_topic_url": null,
+    "outdoor": "No",
+    "packagearchitecture": "arm_cortex-a7_neon-vfpv4",
+    "phoneports": [
+      "-"
+    ],
+    "picture": [
+      "media:example:genericrouter1.png"
+    ],
+    "powersupply": "12V/1A via barrel or 802.11af PoE",
+    "rammb": "256",
+    "recoverymethods": [
+      "see git-commit"
+    ],
+    "sataports": "-",
+    "sfp_ports": "-",
+    "sfp_plus_ports": "-",
+    "serial": "Yes",
+    "serialconnectionparameters": "115200 / 8N1",
+    "serialconnectionvoltage": "3.3",
+    "subtarget": "generic",
+    "supportedcurrentrel": "snapshot",
+    "supportedsincecommit": "https://git.openwrt.org/openwrt/openwrt/commit/?h=master&id=dfd531f5178be41c84a559ca6f273c0a7fa70159",
+    "supportedsincerel": null,
+    "switch": null,
+    "target": "ipq40xx",
+    "usbports": [
+      "-"
+    ],
+    "unsupported_functions": null,
+    "vlan": "Yes",
+    "version": null,
+    "videoports": [
+      "-"
+    ],
+    "wlan24ghz": "b/g/n",
+    "wlan50ghz": "a/n/ac",
+    "wlan60ghz": "-",
+    "wlan600ghz": "-",
+    "wlancomments": null,
+    "wlanhardware": [
+      "Qualcomm QCA4019"
+    ],
+    "wlandriver": [
+      "ath10k"
     ],
     "whereavailable": null,
     "wikideviurl": null
@@ -42326,7 +43167,7 @@
     "picture": [
       "media:d-link:m30_a1_frontview_600x250.png"
     ],
-    "powersupply": "12 VDC, 1A via barrel",
+    "powersupply": "12 VDC, 1A, 3.5 mm x 1.35 mm barrel jack",
     "rammb": "512",
     "recoverymethods": [
       "D-Link Recovery GUI"
@@ -60449,7 +61290,7 @@
     "commentsusbsataports": null,
     "commentsnetworkports": "8 SFP-ports",
     "detachableantennas": "-",
-    "devicepage": "inbox:toh:cisco:vedge_1000",
+    "devicepage": "toh:cisco:vedge_1000",
     "devicetype": "Router",
     "ethernet100mports": "-",
     "ethernet10gports": "-",
@@ -61444,7 +62285,7 @@
     "fccid": null,
     "firmwareoemstockurl": null,
     "firmwareopenwrtinstallurl": [
-      "https://downloads.openwrt.org/releases/24.10.4/targets/imx/cortexa9/"
+      "https://downloads.openwrt.org/releases/25.12.6/targets/imx/cortexa9/"
     ],
     "firmwareopenwrtupgradeurl": null,
     "firmwareopenwrtsnapshotinstallurl": [
@@ -61490,7 +62331,7 @@
     "serialconnectionparameters": "115200 / 8N1",
     "serialconnectionvoltage": "3.3",
     "subtarget": "cortexa9",
-    "supportedcurrentrel": "24.10.4",
+    "supportedcurrentrel": "25.12.6",
     "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=f55d0ff66c34aaaa57637b2f074e840f29fde9a2",
     "supportedsincerel": "15.05",
     "switch": "-",
@@ -61553,7 +62394,7 @@
     "fccid": null,
     "firmwareoemstockurl": null,
     "firmwareopenwrtinstallurl": [
-      "https://downloads.openwrt.org/releases/24.10.4/targets/imx/cortexa9/"
+      "https://downloads.openwrt.org/releases/25.12.6/targets/imx/cortexa9/"
     ],
     "firmwareopenwrtupgradeurl": null,
     "firmwareopenwrtsnapshotinstallurl": [
@@ -61599,7 +62440,7 @@
     "serialconnectionparameters": "115200 / 8N1",
     "serialconnectionvoltage": "3.3",
     "subtarget": "cortexa9",
-    "supportedcurrentrel": "24.10.4",
+    "supportedcurrentrel": "25.12.6",
     "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=8c6556049763053a40d55f4071d64111598f898c",
     "supportedsincerel": "15.05",
     "switch": null,
@@ -61861,7 +62702,7 @@
     "fccid": null,
     "firmwareoemstockurl": "http://dev.gateworks.com/openwrt/latest/imx6/gateworks-imx6-ventana-squashfs-nand_normal.ubi",
     "firmwareopenwrtinstallurl": [
-      "https://downloads.openwrt.org/releases/24.10.4/targets/imx/cortexa9/"
+      "https://downloads.openwrt.org/releases/25.12.6/targets/imx/cortexa9/"
     ],
     "firmwareopenwrtupgradeurl": null,
     "firmwareopenwrtsnapshotinstallurl": [
@@ -61907,7 +62748,7 @@
     "serialconnectionparameters": "115200 / 8N1",
     "serialconnectionvoltage": "3.3",
     "subtarget": "cortexa9",
-    "supportedcurrentrel": "24.10.4",
+    "supportedcurrentrel": "25.12.6",
     "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=77d075aa541665a5a96223686772e96ee1a9442b",
     "supportedsincerel": "15.05",
     "switch": "-",
@@ -62071,7 +62912,7 @@
     "fccid": null,
     "firmwareoemstockurl": null,
     "firmwareopenwrtinstallurl": [
-      "https://downloads.openwrt.org/releases/24.10.4/targets/imx/cortexa9/"
+      "https://downloads.openwrt.org/releases/25.12.6/targets/imx/cortexa9/"
     ],
     "firmwareopenwrtupgradeurl": null,
     "firmwareopenwrtsnapshotinstallurl": [
@@ -62117,7 +62958,7 @@
     "serialconnectionparameters": "115200 / 8N1",
     "serialconnectionvoltage": "3.3",
     "subtarget": "cortexa9",
-    "supportedcurrentrel": "24.10.4",
+    "supportedcurrentrel": "25.12.6",
     "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=3666c67a5430abea1b70864e9cf218c1f192f5de",
     "supportedsincerel": "21.02.0",
     "switch": "-",
@@ -62175,7 +63016,7 @@
     "fccid": null,
     "firmwareoemstockurl": null,
     "firmwareopenwrtinstallurl": [
-      "https://downloads.openwrt.org/releases/24.10.4/targets/imx/cortexa9/"
+      "https://downloads.openwrt.org/releases/25.12.6/targets/imx/cortexa9/"
     ],
     "firmwareopenwrtupgradeurl": null,
     "firmwareopenwrtsnapshotinstallurl": [
@@ -62221,7 +63062,7 @@
     "serialconnectionparameters": "115200 / 8N1",
     "serialconnectionvoltage": "3.3",
     "subtarget": "cortexa9",
-    "supportedcurrentrel": "24.10.4",
+    "supportedcurrentrel": "25.12.6",
     "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=0a0ac79cb7f6c3e4968e2b5b8e0a7a251b2e6f2e",
     "supportedsincerel": "15.05",
     "switch": "-",
@@ -62282,7 +63123,7 @@
     "fccid": null,
     "firmwareoemstockurl": null,
     "firmwareopenwrtinstallurl": [
-      "https://downloads.openwrt.org/releases/24.10.4/targets/imx/cortexa9/"
+      "https://downloads.openwrt.org/releases/25.12.6/targets/imx/cortexa9/"
     ],
     "firmwareopenwrtupgradeurl": null,
     "firmwareopenwrtsnapshotinstallurl": [
@@ -62328,7 +63169,7 @@
     "serialconnectionparameters": "115200 / 8N1",
     "serialconnectionvoltage": "3.3",
     "subtarget": "cortexa9",
-    "supportedcurrentrel": "24.10.4",
+    "supportedcurrentrel": "25.12.6",
     "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=0a0ac79cb7f6c3e4968e2b5b8e0a7a251b2e6f2e",
     "supportedsincerel": "15.05",
     "switch": null,
@@ -62387,7 +63228,7 @@
     "fccid": null,
     "firmwareoemstockurl": null,
     "firmwareopenwrtinstallurl": [
-      "https://downloads.openwrt.org/releases/24.10.4/targets/imx/cortexa9/"
+      "https://downloads.openwrt.org/releases/25.12.6/targets/imx/cortexa9/"
     ],
     "firmwareopenwrtupgradeurl": null,
     "firmwareopenwrtsnapshotinstallurl": [
@@ -62434,7 +63275,7 @@
     "serialconnectionparameters": "115200 / 8N1",
     "serialconnectionvoltage": "3.3",
     "subtarget": "cortexa9",
-    "supportedcurrentrel": "24.10.4",
+    "supportedcurrentrel": "25.12.6",
     "supportedsincecommit": "https://git.lede-project.org/?p=source.git;a=commit;h=3314bcf7152767d45785882f586832adcd2a5723",
     "supportedsincerel": "17.01.0",
     "switch": "-",
@@ -62492,7 +63333,7 @@
     "fccid": null,
     "firmwareoemstockurl": "http://dev.gateworks.com/openwrt/latest/imx6/gateworks-imx6-ventana-squashfs-nand_normal.ubi",
     "firmwareopenwrtinstallurl": [
-      "https://downloads.openwrt.org/releases/24.10.4/targets/imx/cortexa9/"
+      "https://downloads.openwrt.org/releases/25.12.6/targets/imx/cortexa9/"
     ],
     "firmwareopenwrtupgradeurl": null,
     "firmwareopenwrtsnapshotinstallurl": [
@@ -62538,7 +63379,7 @@
     "serialconnectionparameters": "115200 / 8N1",
     "serialconnectionvoltage": "3.3",
     "subtarget": "cortexa9",
-    "supportedcurrentrel": "24.10.4",
+    "supportedcurrentrel": "25.12.6",
     "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=77d075aa541665a5a96223686772e96ee1a9442b",
     "supportedsincerel": "15.05",
     "switch": "-",
@@ -62600,7 +63441,7 @@
     "fccid": null,
     "firmwareoemstockurl": null,
     "firmwareopenwrtinstallurl": [
-      "https://downloads.openwrt.org/releases/24.10.4/targets/imx/cortexa9/"
+      "https://downloads.openwrt.org/releases/25.12.6/targets/imx/cortexa9/"
     ],
     "firmwareopenwrtupgradeurl": null,
     "firmwareopenwrtsnapshotinstallurl": [
@@ -62646,7 +63487,7 @@
     "serialconnectionparameters": "115200 / 8N1",
     "serialconnectionvoltage": "3.3",
     "subtarget": "cortexa9",
-    "supportedcurrentrel": "24.10.4",
+    "supportedcurrentrel": "25.12.6",
     "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=f55d0ff66c34aaaa57637b2f074e840f29fde9a2",
     "supportedsincerel": "15.05",
     "switch": "-",
@@ -62911,7 +63752,7 @@
     "fccid": null,
     "firmwareoemstockurl": null,
     "firmwareopenwrtinstallurl": [
-      "https://downloads.openwrt.org/releases/24.10.4/targets/imx/cortexa9/"
+      "https://downloads.openwrt.org/releases/25.12.6/targets/imx/cortexa9/"
     ],
     "firmwareopenwrtupgradeurl": null,
     "firmwareopenwrtsnapshotinstallurl": [
@@ -62958,7 +63799,7 @@
     "serialconnectionparameters": "115200 / 8N1",
     "serialconnectionvoltage": "3.3",
     "subtarget": "cortexa9",
-    "supportedcurrentrel": "24.10.4",
+    "supportedcurrentrel": "25.12.6",
     "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=3666c67a5430abea1b70864e9cf218c1f192f5de",
     "supportedsincerel": "21.02.0",
     "switch": "-",
@@ -63120,10 +63961,10 @@
     "fccid": null,
     "firmwareoemstockurl": null,
     "firmwareopenwrtinstallurl": [
-      "https://downloads.openwrt.org/releases/24.10.4/targets/imx/cortexa53/"
+      "https://downloads.openwrt.org/releases/25.12.6/targets/imx/cortexa53/"
     ],
     "firmwareopenwrtupgradeurl": [
-      "https://downloads.openwrt.org/releases/24.10.4/targets/imx/cortexa53/openwrt-24.10.4-imx-cortexa53-gateworks_venice-squashfs-img.gz"
+      "https://downloads.openwrt.org/releases/25.12.6/targets/imx/cortexa53/openwrt-25.12.6-imx-cortexa53-gateworks_venice-squashfs-img.gz"
     ],
     "firmwareopenwrtsnapshotinstallurl": [
       "https://downloads.openwrt.org/snapshots/targets/imx/cortexa53/"
@@ -63171,7 +64012,7 @@
     "serialconnectionparameters": "115200 / 8N1",
     "serialconnectionvoltage": "3.3",
     "subtarget": "cortexa53",
-    "supportedcurrentrel": "24.10.4",
+    "supportedcurrentrel": "25.12.6",
     "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=bd512e368fb488c441ef4c81fd61c89459043f2c",
     "supportedsincerel": "24.10.0",
     "switch": null,
@@ -63660,7 +64501,7 @@
     "fccid": null,
     "firmwareoemstockurl": null,
     "firmwareopenwrtinstallurl": [
-      "https://downloads.openwrt.org/releases/24.10.4/targets/imx/cortexa9/"
+      "https://downloads.openwrt.org/releases/25.12.6/targets/imx/cortexa9/"
     ],
     "firmwareopenwrtupgradeurl": null,
     "firmwareopenwrtsnapshotinstallurl": [
@@ -63707,7 +64548,7 @@
     "serialconnectionparameters": "115200 / 8N1",
     "serialconnectionvoltage": "3.3",
     "subtarget": "cortexa9",
-    "supportedcurrentrel": "24.10.4",
+    "supportedcurrentrel": "25.12.6",
     "supportedsincecommit": "https://git.lede-project.org/?p=source.git;a=commit;h=3314bcf7152767d45785882f586832adcd2a5723",
     "supportedsincerel": "17.01.0",
     "switch": "-",
@@ -63869,10 +64710,10 @@
     "fccid": null,
     "firmwareoemstockurl": null,
     "firmwareopenwrtinstallurl": [
-      "https://downloads.openwrt.org/releases/24.10.4/targets/imx/cortexa53/"
+      "https://downloads.openwrt.org/releases/25.12.6/targets/imx/cortexa53/"
     ],
     "firmwareopenwrtupgradeurl": [
-      "https://downloads.openwrt.org/releases/24.10.4/targets/imx/cortexa53/openwrt-24.10.4-imx-cortexa53-gateworks_venice-squashfs-img.gz"
+      "https://downloads.openwrt.org/releases/25.12.6/targets/imx/cortexa53/openwrt-25.12.6-imx-cortexa53-gateworks_venice-squashfs-img.gz"
     ],
     "firmwareopenwrtsnapshotinstallurl": [
       "https://downloads.openwrt.org/snapshots/targets/imx/cortexa53/"
@@ -63920,7 +64761,7 @@
     "serialconnectionparameters": "115200 / 8N1",
     "serialconnectionvoltage": "3.3",
     "subtarget": "cortexa53",
-    "supportedcurrentrel": "24.10.4",
+    "supportedcurrentrel": "25.12.6",
     "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=bd512e368fb488c441ef4c81fd61c89459043f2c",
     "supportedsincerel": "24.10.0",
     "switch": null,
@@ -64083,10 +64924,10 @@
     "fccid": null,
     "firmwareoemstockurl": null,
     "firmwareopenwrtinstallurl": [
-      "https://downloads.openwrt.org/releases/24.10.4/targets/imx/cortexa53/"
+      "https://downloads.openwrt.org/releases/25.12.6/targets/imx/cortexa53/"
     ],
     "firmwareopenwrtupgradeurl": [
-      "https://downloads.openwrt.org/releases/24.10.4/targets/imx/cortexa53/openwrt-24.10.4-imx-cortexa53-gateworks_venice-squashfs-img.gz"
+      "https://downloads.openwrt.org/releases/25.12.6/targets/imx/cortexa53/openwrt-25.12.6-imx-cortexa53-gateworks_venice-squashfs-img.gz"
     ],
     "firmwareopenwrtsnapshotinstallurl": [
       "https://downloads.openwrt.org/snapshots/targets/imx/cortexa53/"
@@ -64134,7 +64975,7 @@
     "serialconnectionparameters": "115200 / 8N1",
     "serialconnectionvoltage": "3.3",
     "subtarget": "cortexa53",
-    "supportedcurrentrel": "24.10.4",
+    "supportedcurrentrel": "25.12.6",
     "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=bd512e368fb488c441ef4c81fd61c89459043f2c",
     "supportedsincerel": "24.10.0",
     "switch": null,
@@ -64194,10 +65035,10 @@
     "fccid": null,
     "firmwareoemstockurl": null,
     "firmwareopenwrtinstallurl": [
-      "https://downloads.openwrt.org/releases/24.10.4/targets/imx/cortexa53/"
+      "https://downloads.openwrt.org/releases/25.12.6/targets/imx/cortexa53/"
     ],
     "firmwareopenwrtupgradeurl": [
-      "https://downloads.openwrt.org/releases/24.10.4/targets/imx/cortexa53/openwrt-24.10.4-imx-cortexa53-gateworks_venice-squashfs-img.gz"
+      "https://downloads.openwrt.org/releases/25.12.6/targets/imx/cortexa53/openwrt-25.12.6-imx-cortexa53-gateworks_venice-squashfs-img.gz"
     ],
     "firmwareopenwrtsnapshotinstallurl": [
       "https://downloads.openwrt.org/snapshots/targets/imx/cortexa53/"
@@ -64245,7 +65086,7 @@
     "serialconnectionparameters": "115200 / 8N1",
     "serialconnectionvoltage": "3.3",
     "subtarget": "cortexa53",
-    "supportedcurrentrel": "24.10.4",
+    "supportedcurrentrel": "25.12.6",
     "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=bd512e368fb488c441ef4c81fd61c89459043f2c",
     "supportedsincerel": "24.10.0",
     "switch": "Microchip KSZ9897",
@@ -64304,7 +65145,7 @@
     "fccid": null,
     "firmwareoemstockurl": null,
     "firmwareopenwrtinstallurl": [
-      "https://downloads.openwrt.org/releases/24.10.4/targets/imx/cortexa9/"
+      "https://downloads.openwrt.org/releases/25.12.6/targets/imx/cortexa9/"
     ],
     "firmwareopenwrtupgradeurl": null,
     "firmwareopenwrtsnapshotinstallurl": [
@@ -64351,7 +65192,7 @@
     "serialconnectionparameters": "115200 / 8N1",
     "serialconnectionvoltage": "3.3",
     "subtarget": "cortexa9",
-    "supportedcurrentrel": "24.10.4",
+    "supportedcurrentrel": "25.12.6",
     "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=f55d0ff66c34aaaa57637b2f074e840f29fde9a2",
     "supportedsincerel": "15.05",
     "switch": "-",
@@ -64512,7 +65353,7 @@
     "fccid": null,
     "firmwareoemstockurl": null,
     "firmwareopenwrtinstallurl": [
-      "https://downloads.openwrt.org/releases/24.10.4/targets/imx/cortexa9/"
+      "https://downloads.openwrt.org/releases/25.12.6/targets/imx/cortexa9/"
     ],
     "firmwareopenwrtupgradeurl": null,
     "firmwareopenwrtsnapshotinstallurl": [
@@ -64558,7 +65399,7 @@
     "serialconnectionparameters": "115200 / 8N1",
     "serialconnectionvoltage": "3.3",
     "subtarget": "cortexa9",
-    "supportedcurrentrel": "24.10.4",
+    "supportedcurrentrel": "25.12.6",
     "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=3666c67a5430abea1b70864e9cf218c1f192f5de",
     "supportedsincerel": "21.02.0",
     "switch": "-",
@@ -64618,7 +65459,7 @@
     "fccid": null,
     "firmwareoemstockurl": null,
     "firmwareopenwrtinstallurl": [
-      "https://downloads.openwrt.org/releases/24.10.4/targets/imx/cortexa9/"
+      "https://downloads.openwrt.org/releases/25.12.6/targets/imx/cortexa9/"
     ],
     "firmwareopenwrtupgradeurl": null,
     "firmwareopenwrtsnapshotinstallurl": [
@@ -64665,7 +65506,7 @@
     "serialconnectionparameters": "115200 / 8N1",
     "serialconnectionvoltage": "3.3",
     "subtarget": "cortexa9",
-    "supportedcurrentrel": "24.10.4",
+    "supportedcurrentrel": "25.12.6",
     "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=c8753ca97c50523f721e5fa8507768c6dc16ef49",
     "supportedsincerel": "15.05",
     "switch": "-",
@@ -64730,7 +65571,7 @@
     "fccid": null,
     "firmwareoemstockurl": null,
     "firmwareopenwrtinstallurl": [
-      "https://downloads.openwrt.org/releases/24.10.4/targets/imx/cortexa9/"
+      "https://downloads.openwrt.org/releases/25.12.6/targets/imx/cortexa9/"
     ],
     "firmwareopenwrtupgradeurl": null,
     "firmwareopenwrtsnapshotinstallurl": [
@@ -64777,7 +65618,7 @@
     "serialconnectionparameters": "115200 / 8N1",
     "serialconnectionvoltage": "3.3",
     "subtarget": "cortexa9",
-    "supportedcurrentrel": "24.10.4",
+    "supportedcurrentrel": "25.12.6",
     "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=0a0ac79cb7f6c3e4968e2b5b8e0a7a251b2e6f2e",
     "supportedsincerel": "15.05",
     "switch": "-",
@@ -64838,10 +65679,10 @@
     "fccid": null,
     "firmwareoemstockurl": null,
     "firmwareopenwrtinstallurl": [
-      "https://downloads.openwrt.org/releases/24.10.4/targets/imx/cortexa53/"
+      "https://downloads.openwrt.org/releases/25.12.6/targets/imx/cortexa53/"
     ],
     "firmwareopenwrtupgradeurl": [
-      "https://downloads.openwrt.org/releases/24.10.4/targets/imx/cortexa53/openwrt-24.10.4-imx-cortexa53-gateworks_venice-squashfs-img.gz"
+      "https://downloads.openwrt.org/releases/25.12.6/targets/imx/cortexa53/openwrt-25.12.6-imx-cortexa53-gateworks_venice-squashfs-img.gz"
     ],
     "firmwareopenwrtsnapshotinstallurl": [
       "https://downloads.openwrt.org/snapshots/targets/imx/cortexa53/"
@@ -64889,7 +65730,7 @@
     "serialconnectionparameters": "115200 / 8N1",
     "serialconnectionvoltage": "3.3",
     "subtarget": "cortexa53",
-    "supportedcurrentrel": "24.10.4",
+    "supportedcurrentrel": "25.12.6",
     "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=bd512e368fb488c441ef4c81fd61c89459043f2c",
     "supportedsincerel": "24.10.0",
     "switch": null,
@@ -64949,7 +65790,7 @@
     "fccid": null,
     "firmwareoemstockurl": null,
     "firmwareopenwrtinstallurl": [
-      "https://downloads.openwrt.org/releases/24.10.4/targets/imx/cortexa9/"
+      "https://downloads.openwrt.org/releases/25.12.6/targets/imx/cortexa9/"
     ],
     "firmwareopenwrtupgradeurl": null,
     "firmwareopenwrtsnapshotinstallurl": [
@@ -64995,7 +65836,7 @@
     "serialconnectionparameters": "115200 / 8N1",
     "serialconnectionvoltage": "3.3",
     "subtarget": "cortexa9",
-    "supportedcurrentrel": "24.10.4",
+    "supportedcurrentrel": "25.12.6",
     "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=fa8e8d262ead0f30cdb82e84965ca4884ffe1c10",
     "supportedsincerel": "15.05",
     "switch": "-",
@@ -65055,7 +65896,7 @@
     "fccid": null,
     "firmwareoemstockurl": null,
     "firmwareopenwrtinstallurl": [
-      "https://downloads.openwrt.org/releases/24.10.4/targets/imx/cortexa9/"
+      "https://downloads.openwrt.org/releases/25.12.6/targets/imx/cortexa9/"
     ],
     "firmwareopenwrtupgradeurl": null,
     "firmwareopenwrtsnapshotinstallurl": [
@@ -65102,7 +65943,7 @@
     "serialconnectionparameters": "115200 / 8N1",
     "serialconnectionvoltage": "3.3",
     "subtarget": "cortexa9",
-    "supportedcurrentrel": "24.10.4",
+    "supportedcurrentrel": "25.12.6",
     "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=c8753ca97c50523f721e5fa8507768c6dc16ef49",
     "supportedsincerel": "15.05",
     "switch": "-",
@@ -65165,7 +66006,7 @@
     "fccid": null,
     "firmwareoemstockurl": null,
     "firmwareopenwrtinstallurl": [
-      "https://downloads.openwrt.org/releases/24.10.4/targets/imx/cortexa9/"
+      "https://downloads.openwrt.org/releases/25.12.6/targets/imx/cortexa9/"
     ],
     "firmwareopenwrtupgradeurl": null,
     "firmwareopenwrtsnapshotinstallurl": [
@@ -65211,7 +66052,7 @@
     "serialconnectionparameters": "115200 / 8N1",
     "serialconnectionvoltage": "3.3",
     "subtarget": "cortexa9",
-    "supportedcurrentrel": "24.10.4",
+    "supportedcurrentrel": "25.12.6",
     "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=fa8e8d262ead0f30cdb82e84965ca4884ffe1c10",
     "supportedsincerel": "15.05",
     "switch": "-",
@@ -65269,10 +66110,10 @@
     "fccid": null,
     "firmwareoemstockurl": null,
     "firmwareopenwrtinstallurl": [
-      "https://downloads.openwrt.org/releases/24.10.4/targets/imx/cortexa53/"
+      "https://downloads.openwrt.org/releases/25.12.6/targets/imx/cortexa53/"
     ],
     "firmwareopenwrtupgradeurl": [
-      "https://downloads.openwrt.org/releases/24.10.4/targets/imx/cortexa53/openwrt-24.10.4-imx-cortexa53-gateworks_venice-squashfs-img.gz"
+      "https://downloads.openwrt.org/releases/25.12.6/targets/imx/cortexa53/openwrt-25.12.6-imx-cortexa53-gateworks_venice-squashfs-img.gz"
     ],
     "firmwareopenwrtsnapshotinstallurl": [
       "https://downloads.openwrt.org/snapshots/targets/imx/cortexa53/"
@@ -65320,7 +66161,7 @@
     "serialconnectionparameters": "115200 / 8N1",
     "serialconnectionvoltage": "3.3",
     "subtarget": "cortexa53",
-    "supportedcurrentrel": "24.10.4",
+    "supportedcurrentrel": "25.12.6",
     "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=bd512e368fb488c441ef4c81fd61c89459043f2c",
     "supportedsincerel": "24.10.0",
     "switch": null,
@@ -65587,16 +66428,16 @@
     "fccid": null,
     "firmwareoemstockurl": null,
     "firmwareopenwrtinstallurl": [
-      "https://downloads.openwrt.org/releases/24.10.4/targets/imx/cortexa53/"
+      "https://downloads.openwrt.org/releases/25.12.6/targets/imx/cortexa53/"
     ],
     "firmwareopenwrtupgradeurl": [
-      "https://downloads.openwrt.org/releases/24.10.4/targets/imx/cortexa53/openwrt-24.10.4-imx-cortexa53-gateworks_venice-squashfs-img.gz"
+      "https://downloads.openwrt.org/releases/25.12.6/targets/imx/cortexa53/openwrt-25.12.6-imx-cortexa53-gateworks_venice-squashfs-img.gz"
     ],
     "firmwareopenwrtsnapshotinstallurl": [
       "https://downloads.openwrt.org/snapshots/targets/imx/cortexa53/"
     ],
     "firmwareopenwrtsnapshotupgradeurl": [
-      "https://downloads.openwrt.org/releases/24.10.0/targets/imx/cortexa53/openwrt-24.10.0-imx-cortexa53-gateworks_venice-squashfs-img.gz"
+      "https://downloads.openwrt.org/snapshots/targets/imx/cortexa53/openwrt-imx-cortexa53-gateworks_venice-squashfs-img.gz"
     ],
     "flashmb": [
       "eMMC",
@@ -65610,7 +66451,7 @@
       "Venice GW7401"
     ],
     "installationmethods": [
-      "see git-commit"
+      "see forum"
     ],
     "jtag": "Yes",
     "ledcount": "2",
@@ -65638,7 +66479,7 @@
     "serialconnectionparameters": "115200 / 8N1",
     "serialconnectionvoltage": "3.3",
     "subtarget": "cortexa53",
-    "supportedcurrentrel": "24.10.4",
+    "supportedcurrentrel": "25.12.6",
     "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=bd512e368fb488c441ef4c81fd61c89459043f2c",
     "supportedsincerel": "24.10.0",
     "switch": "Microchip KSZ9897",
@@ -65804,10 +66645,10 @@
     "fccid": null,
     "firmwareoemstockurl": null,
     "firmwareopenwrtinstallurl": [
-      "https://downloads.openwrt.org/releases/24.10.4/targets/imx/cortexa53/"
+      "https://downloads.openwrt.org/releases/25.12.6/targets/imx/cortexa53/"
     ],
     "firmwareopenwrtupgradeurl": [
-      "https://downloads.openwrt.org/releases/24.10.4/targets/imx/cortexa53/openwrt-24.10.4-imx-cortexa53-gateworks_venice-squashfs-img.gz"
+      "https://downloads.openwrt.org/releases/25.12.6/targets/imx/cortexa53/openwrt-25.12.6-imx-cortexa53-gateworks_venice-squashfs-img.gz"
     ],
     "firmwareopenwrtsnapshotinstallurl": [
       "https://downloads.openwrt.org/snapshots/targets/imx/cortexa53/"
@@ -65855,7 +66696,7 @@
     "serialconnectionparameters": "115200 / 8N1",
     "serialconnectionvoltage": "3.3",
     "subtarget": "cortexa53",
-    "supportedcurrentrel": "24.10.4",
+    "supportedcurrentrel": "25.12.6",
     "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=bd512e368fb488c441ef4c81fd61c89459043f2c",
     "supportedsincerel": "24.10.0",
     "switch": null,
@@ -65912,7 +66753,7 @@
     "fccid": null,
     "firmwareoemstockurl": null,
     "firmwareopenwrtinstallurl": [
-      "https://downloads.openwrt.org/releases/24.10.4/targets/imx/cortexa9/"
+      "https://downloads.openwrt.org/releases/25.12.6/targets/imx/cortexa9/"
     ],
     "firmwareopenwrtupgradeurl": null,
     "firmwareopenwrtsnapshotinstallurl": [
@@ -65958,7 +66799,7 @@
     "serialconnectionparameters": "115200 / 8N1",
     "serialconnectionvoltage": "3.3",
     "subtarget": "cortexa9",
-    "supportedcurrentrel": "24.10.4",
+    "supportedcurrentrel": "25.12.6",
     "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=3666c67a5430abea1b70864e9cf218c1f192f5de",
     "supportedsincerel": "21.02.0",
     "switch": "-",
@@ -66118,7 +66959,7 @@
     "fccid": null,
     "firmwareoemstockurl": null,
     "firmwareopenwrtinstallurl": [
-      "https://downloads.openwrt.org/releases/24.10.4/targets/imx/cortexa9/"
+      "https://downloads.openwrt.org/releases/25.12.6/targets/imx/cortexa9/"
     ],
     "firmwareopenwrtupgradeurl": null,
     "firmwareopenwrtsnapshotinstallurl": [
@@ -66164,7 +67005,7 @@
     "serialconnectionparameters": "115200 / 8N1",
     "serialconnectionvoltage": "3.3",
     "subtarget": "cortexa9",
-    "supportedcurrentrel": "24.10.4",
+    "supportedcurrentrel": "25.12.6",
     "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=8c6556049763053a40d55f4071d64111598f898c",
     "supportedsincerel": "15.05",
     "switch": "-",
@@ -66222,7 +67063,7 @@
     "fccid": null,
     "firmwareoemstockurl": null,
     "firmwareopenwrtinstallurl": [
-      "https://downloads.openwrt.org/releases/24.10.4/targets/imx/cortexa9/"
+      "https://downloads.openwrt.org/releases/25.12.6/targets/imx/cortexa9/"
     ],
     "firmwareopenwrtupgradeurl": null,
     "firmwareopenwrtsnapshotinstallurl": [
@@ -66268,7 +67109,7 @@
     "serialconnectionparameters": "115200 / 8N1",
     "serialconnectionvoltage": "3.3",
     "subtarget": "cortexa9",
-    "supportedcurrentrel": "24.10.4",
+    "supportedcurrentrel": "25.12.6",
     "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=5f458bf7f82e3774856a32c10fd30fcdfb41647d",
     "supportedsincerel": "18.06.0",
     "switch": "Marvell 88E61716",
@@ -66326,10 +67167,10 @@
     "fccid": null,
     "firmwareoemstockurl": null,
     "firmwareopenwrtinstallurl": [
-      "https://downloads.openwrt.org/releases/24.10.4/targets/imx/cortexa53/"
+      "https://downloads.openwrt.org/releases/25.12.6/targets/imx/cortexa53/"
     ],
     "firmwareopenwrtupgradeurl": [
-      "https://downloads.openwrt.org/releases/24.10.4/targets/imx/cortexa53/openwrt-24.10.4-imx-cortexa53-gateworks_venice-squashfs-img.gz"
+      "https://downloads.openwrt.org/releases/25.12.6/targets/imx/cortexa53/openwrt-25.12.6-imx-cortexa53-gateworks_venice-squashfs-img.gz"
     ],
     "firmwareopenwrtsnapshotinstallurl": [
       "https://downloads.openwrt.org/snapshots/targets/imx/cortexa53/"
@@ -66377,7 +67218,7 @@
     "serialconnectionparameters": "115200 / 8N1",
     "serialconnectionvoltage": "3.3",
     "subtarget": "cortexa53",
-    "supportedcurrentrel": "24.10.4",
+    "supportedcurrentrel": "25.12.6",
     "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=bd512e368fb488c441ef4c81fd61c89459043f2c",
     "supportedsincerel": "24.10.0",
     "switch": null,
@@ -66438,7 +67279,7 @@
     "fccid": null,
     "firmwareoemstockurl": null,
     "firmwareopenwrtinstallurl": [
-      "https://downloads.openwrt.org/releases/24.10.4/targets/imx/cortexa9/"
+      "https://downloads.openwrt.org/releases/25.12.6/targets/imx/cortexa9/"
     ],
     "firmwareopenwrtupgradeurl": null,
     "firmwareopenwrtsnapshotinstallurl": [
@@ -66485,7 +67326,7 @@
     "serialconnectionparameters": "115200 / 8N1",
     "serialconnectionvoltage": "3.3",
     "subtarget": "cortexa9",
-    "supportedcurrentrel": "24.10.4",
+    "supportedcurrentrel": "25.12.6",
     "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=0a0ac79cb7f6c3e4968e2b5b8e0a7a251b2e6f2e",
     "supportedsincerel": "15.05",
     "switch": "-",
@@ -66544,10 +67385,10 @@
     "fccid": null,
     "firmwareoemstockurl": null,
     "firmwareopenwrtinstallurl": [
-      "https://downloads.openwrt.org/releases/24.10.4/targets/imx/cortexa53/"
+      "https://downloads.openwrt.org/releases/25.12.6/targets/imx/cortexa53/"
     ],
     "firmwareopenwrtupgradeurl": [
-      "https://downloads.openwrt.org/releases/24.10.4/targets/imx/cortexa53/openwrt-24.10.4-imx-cortexa53-gateworks_venice-squashfs-img.gz"
+      "https://downloads.openwrt.org/releases/25.12.6/targets/imx/cortexa53/openwrt-25.12.6-imx-cortexa53-gateworks_venice-squashfs-img.gz"
     ],
     "firmwareopenwrtsnapshotinstallurl": [
       "https://downloads.openwrt.org/snapshots/targets/imx/cortexa53/"
@@ -66595,7 +67436,7 @@
     "serialconnectionparameters": "115200 / 8N1",
     "serialconnectionvoltage": "3.3",
     "subtarget": "cortexa53",
-    "supportedcurrentrel": "24.10.4",
+    "supportedcurrentrel": "25.12.6",
     "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=bd512e368fb488c441ef4c81fd61c89459043f2c",
     "supportedsincerel": "24.10.0",
     "switch": null,
@@ -66655,7 +67496,7 @@
     "fccid": null,
     "firmwareoemstockurl": null,
     "firmwareopenwrtinstallurl": [
-      "https://downloads.openwrt.org/releases/24.10.4/targets/imx/cortexa9/"
+      "https://downloads.openwrt.org/releases/25.12.6/targets/imx/cortexa9/"
     ],
     "firmwareopenwrtupgradeurl": null,
     "firmwareopenwrtsnapshotinstallurl": [
@@ -66701,7 +67542,7 @@
     "serialconnectionparameters": "115200 / 8N1",
     "serialconnectionvoltage": "3.3",
     "subtarget": "cortexa9",
-    "supportedcurrentrel": "24.10.4",
+    "supportedcurrentrel": "25.12.6",
     "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=c8753ca97c50523f721e5fa8507768c6dc16ef49",
     "supportedsincerel": "15.05",
     "switch": "-",
@@ -77367,6 +78208,100 @@
     "wikideviurl": null
   },
   {
+    "deviceid": "quantumfiber:quantumfiber_q1000k",
+    "audioports": [
+      "-"
+    ],
+    "availability": null,
+    "bluetooth": "-",
+    "bootloader": "U-Boot",
+    "brand": "Quantum Fiber",
+    "buttoncount": null,
+    "cpu": "Airoha AN7581SIT",
+    "cpucores": "4",
+    "cpumhz": "1300",
+    "commentinstallation": null,
+    "commentrecovery": null,
+    "comments": null,
+    "commentsavports": null,
+    "commentsusbsataports": null,
+    "commentsnetworkports": "1x RTL8261N 10Gbe Phy",
+    "detachableantennas": "-",
+    "devicepage": null,
+    "devicetype": "Router",
+    "ethernet100mports": "-",
+    "ethernet10gports": "1",
+    "ethernet1gports": "1",
+    "ethernet2_5gports": "-",
+    "ethernet5gports": "-",
+    "fccid": null,
+    "firmwareoemstockurl": null,
+    "firmwareopenwrtinstallurl": null,
+    "firmwareopenwrtupgradeurl": null,
+    "firmwareopenwrtsnapshotinstallurl": [
+      "https://downloads.openwrt.org/snapshots/targets/airoha/an7581/"
+    ],
+    "firmwareopenwrtsnapshotupgradeurl": [
+      "https://downloads.openwrt.org/snapshots/targets/airoha/an7581/openwrt-airoha-an7581-quantum_q1000k-ubi-squashfs-sysupgrade.itb"
+    ],
+    "flashmb": [
+      "512NAND"
+    ],
+    "forumsearch": [
+      "Q1000K"
+    ],
+    "gpios": null,
+    "gitsearch": [
+      "Q1000K"
+    ],
+    "installationmethods": null,
+    "jtag": null,
+    "ledcount": null,
+    "model": "Q1000K",
+    "modem": "-",
+    "oemdevicehomepageurl": null,
+    "owrt_forum_topic_url": null,
+    "outdoor": "No",
+    "packagearchitecture": "aarch64_cortex-a53",
+    "phoneports": [
+      "-"
+    ],
+    "picture": null,
+    "powersupply": "12V/1.5A",
+    "rammb": "512",
+    "recoverymethods": null,
+    "sataports": "-",
+    "sfp_ports": "-",
+    "sfp_plus_ports": "-",
+    "serial": "Yes",
+    "serialconnectionparameters": "115200 / 8N1",
+    "serialconnectionvoltage": "1.8",
+    "subtarget": "an7581",
+    "supportedcurrentrel": "snapshot",
+    "supportedsincecommit": "https://git.openwrt.org/openwrt/openwrt/commit/?h=master&id=0d7bfcb7e31eb4aaa4bdf574019d0cacf6604a29",
+    "supportedsincerel": null,
+    "switch": "Airoha AN7581 (MT7531 integrated switch)",
+    "target": "airoha",
+    "usbports": [
+      "-"
+    ],
+    "unsupported_functions": null,
+    "vlan": "Yes",
+    "version": null,
+    "videoports": [
+      "-"
+    ],
+    "wlan24ghz": "-",
+    "wlan50ghz": "-",
+    "wlan60ghz": "-",
+    "wlan600ghz": "-",
+    "wlancomments": null,
+    "wlanhardware": null,
+    "wlandriver": null,
+    "whereavailable": null,
+    "wikideviurl": null
+  },
+  {
     "deviceid": "4g_systems:4g_systems_s3ac2100_wifi_5",
     "audioports": null,
     "availability": "unknown 2022",
@@ -84205,10 +85140,10 @@
     "fccid": null,
     "firmwareoemstockurl": null,
     "firmwareopenwrtinstallurl": [
-      "https://downloads.openwrt.org/releases/24.10.3/targets/ath79/generic/openwrt-24.10.3-ath79-generic-alfa-network_wifi-camppro-nano-duo-squashfs-sysupgrade.bin"
+      "https://downloads.openwrt.org/releases/25.12.5/targets/ath79/generic/openwrt-25.12.5-ath79-generic-alfa-network_wifi-camppro-nano-duo-squashfs-sysupgrade.bin"
     ],
     "firmwareopenwrtupgradeurl": [
-      "https://downloads.openwrt.org/releases/24.10.3/targets/ath79/generic/openwrt-24.10.3-ath79-generic-alfa-network_wifi-camppro-nano-duo-squashfs-sysupgrade.bin"
+      "https://downloads.openwrt.org/releases/25.12.5/targets/ath79/generic/openwrt-25.12.5-ath79-generic-alfa-network_wifi-camppro-nano-duo-squashfs-sysupgrade.bin"
     ],
     "firmwareopenwrtsnapshotinstallurl": [
       "https://downloads.openwrt.org/snapshots/targets/ath79/generic/openwrt-ath79-generic-alfa-network_wifi-camppro-nano-duo-squashfs-sysupgrade.bin"
@@ -84259,7 +85194,7 @@
     "serialconnectionparameters": "115200 / 8N1",
     "serialconnectionvoltage": "3.3",
     "subtarget": "generic",
-    "supportedcurrentrel": "24.10.3",
+    "supportedcurrentrel": "25.12.5",
     "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=861a9dac68b9427758ed1771dfb533db2a5bb88e",
     "supportedsincerel": "24.10.0",
     "switch": "-",
@@ -84268,7 +85203,7 @@
       "-"
     ],
     "unsupported_functions": null,
-    "vlan": null,
+    "vlan": "Yes",
     "version": null,
     "videoports": [
       "-"
@@ -86435,6 +87370,107 @@
     "wlandriver": [
       "rt2800pci"
     ],
+    "whereavailable": null,
+    "wikideviurl": null
+  },
+  {
+    "deviceid": "kontron:kontron_osm-s",
+    "audioports": null,
+    "availability": "Available 2024",
+    "bluetooth": null,
+    "bootloader": "U-Boot",
+    "brand": "Kontron",
+    "buttoncount": null,
+    "cpu": "NXP i.MX8M Plus",
+    "cpucores": "4",
+    "cpumhz": "1600",
+    "commentinstallation": null,
+    "commentrecovery": null,
+    "comments": null,
+    "commentsavports": null,
+    "commentsusbsataports": null,
+    "commentsnetworkports": null,
+    "detachableantennas": "-",
+    "devicepage": null,
+    "devicetype": "Single Board Computer",
+    "ethernet100mports": "-",
+    "ethernet10gports": "-",
+    "ethernet1gports": "2",
+    "ethernet2_5gports": "-",
+    "ethernet5gports": "-",
+    "fccid": null,
+    "firmwareoemstockurl": null,
+    "firmwareopenwrtinstallurl": null,
+    "firmwareopenwrtupgradeurl": null,
+    "firmwareopenwrtsnapshotinstallurl": [
+      "https://downloads.openwrt.org/snapshots/targets/imx/cortexa53/openwrt-imx-cortexa53-kontron_osm-s-imx8mp-squashfs-img.gz"
+    ],
+    "firmwareopenwrtsnapshotupgradeurl": [
+      "https://downloads.openwrt.org/snapshots/targets/imx/cortexa53/openwrt-imx-cortexa53-kontron_osm-s-imx8mp-squashfs-img.gz"
+    ],
+    "flashmb": [
+      "eMMC",
+      "microSDHC"
+    ],
+    "forumsearch": [
+      "Kontron OSM-S"
+    ],
+    "gpios": null,
+    "gitsearch": [
+      "Kontron OSM-S"
+    ],
+    "installationmethods": [
+      "see git-commit"
+    ],
+    "jtag": null,
+    "ledcount": null,
+    "model": "OSM-S/BL",
+    "modem": "-",
+    "oemdevicehomepageurl": "https://www.kontron.com/en/products/som-osm-s-i.mx8m-plus/p178530",
+    "owrt_forum_topic_url": null,
+    "outdoor": "No",
+    "packagearchitecture": "aarch64_cortex-a53",
+    "phoneports": [
+      "-"
+    ],
+    "picture": [
+      "media:example:genericrouter1.png"
+    ],
+    "powersupply": null,
+    "rammb": "4096",
+    "recoverymethods": [
+      "unknown"
+    ],
+    "sataports": "-",
+    "sfp_ports": "-",
+    "sfp_plus_ports": "-",
+    "serial": "Yes",
+    "serialconnectionparameters": "115200 / 8N1",
+    "serialconnectionvoltage": null,
+    "subtarget": "cortexa53",
+    "supportedcurrentrel": "snapshot",
+    "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=07a5e432c83aa5c5b8ef21caf84fc1d051dfcadc",
+    "supportedsincerel": null,
+    "switch": null,
+    "target": "imx",
+    "usbports": [
+      "Yes",
+      "2x 2.0",
+      "1x 3.0"
+    ],
+    "unsupported_functions": null,
+    "vlan": null,
+    "version": null,
+    "videoports": [
+      "HDMI"
+    ],
+    "wlan24ghz": "-",
+    "wlan50ghz": "-",
+    "wlan60ghz": "-",
+    "wlan600ghz": "-",
+    "wlancomments": null,
+    "wlanhardware": null,
+    "wlandriver": null,
     "whereavailable": null,
     "wikideviurl": null
   },
@@ -97518,6 +98554,208 @@
     "wikideviurl": null
   },
   {
+    "deviceid": "mokerlink:mokerlink_2g080gm",
+    "audioports": [
+      "-"
+    ],
+    "availability": "Available 2025",
+    "bluetooth": "-",
+    "bootloader": "U-Boot",
+    "brand": "MokerLink",
+    "buttoncount": "1",
+    "cpu": "Realtek RTL9303",
+    "cpucores": "1",
+    "cpumhz": "800",
+    "commentinstallation": null,
+    "commentrecovery": null,
+    "comments": null,
+    "commentsavports": null,
+    "commentsusbsataports": null,
+    "commentsnetworkports": "8x Realtek RTL8221B",
+    "detachableantennas": "-",
+    "devicepage": null,
+    "devicetype": "Switch",
+    "ethernet100mports": "-",
+    "ethernet10gports": "-",
+    "ethernet1gports": "-",
+    "ethernet2_5gports": "8",
+    "ethernet5gports": "-",
+    "fccid": null,
+    "firmwareoemstockurl": null,
+    "firmwareopenwrtinstallurl": null,
+    "firmwareopenwrtupgradeurl": null,
+    "firmwareopenwrtsnapshotinstallurl": [
+      "https://downloads.openwrt.org/snapshots/targets/realtek/rtl930x/openwrt-realtek-rtl930x-mokerlink_2g080gm-squashfs-factory.bix"
+    ],
+    "firmwareopenwrtsnapshotupgradeurl": [
+      "https://downloads.openwrt.org/snapshots/targets/realtek/rtl930x/openwrt-realtek-rtl930x-mokerlink_2g080gm-squashfs-sysupgrade.bin"
+    ],
+    "flashmb": [
+      "16"
+    ],
+    "forumsearch": [
+      "2G080GM"
+    ],
+    "gpios": null,
+    "gitsearch": [
+      "2G080GM"
+    ],
+    "installationmethods": null,
+    "jtag": null,
+    "ledcount": null,
+    "model": "2G080GM",
+    "modem": "-",
+    "oemdevicehomepageurl": null,
+    "owrt_forum_topic_url": null,
+    "outdoor": "No",
+    "packagearchitecture": "mips_24kc",
+    "phoneports": [
+      "-"
+    ],
+    "picture": null,
+    "powersupply": null,
+    "rammb": "128",
+    "recoverymethods": null,
+    "sataports": "-",
+    "sfp_ports": "-",
+    "sfp_plus_ports": "-",
+    "serial": "Yes",
+    "serialconnectionparameters": null,
+    "serialconnectionvoltage": null,
+    "subtarget": "rtl9303",
+    "supportedcurrentrel": "snapshot",
+    "supportedsincecommit": "https://git.openwrt.org/openwrt/openwrt/commit/?h=master&id=205bbaf585c5be19d723787af0a03d1ac3ced4c7",
+    "supportedsincerel": null,
+    "switch": "Realtek RTL9303",
+    "target": "realtek",
+    "usbports": [
+      "-"
+    ],
+    "unsupported_functions": null,
+    "vlan": "Yes",
+    "version": null,
+    "videoports": [
+      "-"
+    ],
+    "wlan24ghz": "-",
+    "wlan50ghz": "-",
+    "wlan60ghz": "-",
+    "wlan600ghz": "-",
+    "wlancomments": "No WLAN",
+    "wlanhardware": [
+      "-"
+    ],
+    "wlandriver": [
+      "none"
+    ],
+    "whereavailable": "mokerlink.com, amazon.com",
+    "wikideviurl": null
+  },
+  {
+    "deviceid": "mokerlink:mokerlink_10gt080m",
+    "audioports": [
+      "-"
+    ],
+    "availability": "Available 2025",
+    "bluetooth": "-",
+    "bootloader": "U-Boot",
+    "brand": "MokerLink",
+    "buttoncount": "1",
+    "cpu": "Realtek RTL9313",
+    "cpucores": "1",
+    "cpumhz": "1000",
+    "commentinstallation": null,
+    "commentrecovery": null,
+    "comments": null,
+    "commentsavports": null,
+    "commentsusbsataports": null,
+    "commentsnetworkports": null,
+    "detachableantennas": "-",
+    "devicepage": null,
+    "devicetype": "Switch",
+    "ethernet100mports": "-",
+    "ethernet10gports": "8",
+    "ethernet1gports": "-",
+    "ethernet2_5gports": "-",
+    "ethernet5gports": "-",
+    "fccid": null,
+    "firmwareoemstockurl": null,
+    "firmwareopenwrtinstallurl": null,
+    "firmwareopenwrtupgradeurl": null,
+    "firmwareopenwrtsnapshotinstallurl": [
+      "https://downloads.openwrt.org/snapshots/targets/realtek/rtl931x/openwrt-realtek-rtl931x-mokerlink_10gt080m-initramfs-kernel.bin"
+    ],
+    "firmwareopenwrtsnapshotupgradeurl": [
+      "https://downloads.openwrt.org/snapshots/targets/realtek/rtl931x/openwrt-realtek-rtl931x-mokerlink_10gt080m-squashfs-sysupgrade.bin"
+    ],
+    "flashmb": [
+      "32"
+    ],
+    "forumsearch": [
+      "10GT080M"
+    ],
+    "gpios": null,
+    "gitsearch": [
+      "10GT080M"
+    ],
+    "installationmethods": [
+      "U-Boot TFTP + serial recovery",
+      "see git-commit"
+    ],
+    "jtag": null,
+    "ledcount": null,
+    "model": "10GT080M",
+    "modem": "-",
+    "oemdevicehomepageurl": null,
+    "owrt_forum_topic_url": null,
+    "outdoor": "No",
+    "packagearchitecture": "mips_24kc",
+    "phoneports": [
+      "-"
+    ],
+    "picture": null,
+    "powersupply": "100-240V AC (wall plug)",
+    "rammb": "512",
+    "recoverymethods": [
+      "U-Boot TFTP + serial recovery",
+      "see git-commit"
+    ],
+    "sataports": "-",
+    "sfp_ports": "-",
+    "sfp_plus_ports": "4",
+    "serial": "Yes",
+    "serialconnectionparameters": null,
+    "serialconnectionvoltage": null,
+    "subtarget": "rtl931x",
+    "supportedcurrentrel": "snapshot",
+    "supportedsincecommit": "https://git.openwrt.org/openwrt/openwrt/commit/?h=master&id=7f03bc02b0a98b9a824be1fbec5d390014b09d9f",
+    "supportedsincerel": null,
+    "switch": "Realtek RTL9313",
+    "target": "realtek",
+    "usbports": [
+      "-"
+    ],
+    "unsupported_functions": null,
+    "vlan": "Yes",
+    "version": null,
+    "videoports": [
+      "-"
+    ],
+    "wlan24ghz": "-",
+    "wlan50ghz": "-",
+    "wlan60ghz": "-",
+    "wlan600ghz": "-",
+    "wlancomments": "No WLAN",
+    "wlanhardware": [
+      "-"
+    ],
+    "wlandriver": [
+      "none"
+    ],
+    "whereavailable": "mokerlink.com, amazon.com",
+    "wikideviurl": null
+  },
+  {
     "deviceid": "airtight:airtight_c-75",
     "audioports": [
       "-"
@@ -100809,7 +102047,7 @@
     "fccid": null,
     "firmwareoemstockurl": null,
     "firmwareopenwrtinstallurl": [
-      "https://downloads.openwrt.org/releases/24.10.4/targets/imx/cortexa9/"
+      "https://downloads.openwrt.org/releases/25.12.6/targets/imx/cortexa9/"
     ],
     "firmwareopenwrtupgradeurl": null,
     "firmwareopenwrtsnapshotinstallurl": [
@@ -100856,7 +102094,7 @@
     "serialconnectionparameters": null,
     "serialconnectionvoltage": null,
     "subtarget": "cortexa9",
-    "supportedcurrentrel": "24.10.4",
+    "supportedcurrentrel": "25.12.6",
     "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=6cda4f68619ec139be7897ea61b7f22c72c38b59",
     "supportedsincerel": "19.07.0",
     "switch": "-",
@@ -101021,7 +102259,7 @@
     "fccid": null,
     "firmwareoemstockurl": null,
     "firmwareopenwrtinstallurl": [
-      "https://downloads.openwrt.org/releases/24.10.4/targets/imx/cortexa9/"
+      "https://downloads.openwrt.org/releases/25.12.6/targets/imx/cortexa9/"
     ],
     "firmwareopenwrtupgradeurl": null,
     "firmwareopenwrtsnapshotinstallurl": [
@@ -101068,7 +102306,7 @@
     "serialconnectionparameters": null,
     "serialconnectionvoltage": null,
     "subtarget": "cortexa9",
-    "supportedcurrentrel": "24.10.4",
+    "supportedcurrentrel": "25.12.6",
     "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=6cda4f68619ec139be7897ea61b7f22c72c38b59",
     "supportedsincerel": "19.07.0",
     "switch": "-",
@@ -101128,7 +102366,7 @@
     "fccid": null,
     "firmwareoemstockurl": null,
     "firmwareopenwrtinstallurl": [
-      "https://downloads.openwrt.org/releases/24.10.4/targets/imx/cortexa9/"
+      "https://downloads.openwrt.org/releases/25.12.6/targets/imx/cortexa9/"
     ],
     "firmwareopenwrtupgradeurl": null,
     "firmwareopenwrtsnapshotinstallurl": [
@@ -101174,7 +102412,7 @@
     "serialconnectionparameters": "115200 / 8N1",
     "serialconnectionvoltage": "3.3",
     "subtarget": "cortexa9",
-    "supportedcurrentrel": "24.10.4",
+    "supportedcurrentrel": "25.12.6",
     "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=ded905ce431bfdb4809124e0f0a587013f980b07",
     "supportedsincerel": "19.07.0",
     "switch": "-",
@@ -101347,7 +102585,7 @@
     "fccid": null,
     "firmwareoemstockurl": null,
     "firmwareopenwrtinstallurl": [
-      "https://downloads.openwrt.org/releases/24.10.4/targets/imx/cortexa9/"
+      "https://downloads.openwrt.org/releases/25.12.6/targets/imx/cortexa9/"
     ],
     "firmwareopenwrtupgradeurl": null,
     "firmwareopenwrtsnapshotinstallurl": [
@@ -101394,7 +102632,7 @@
     "serialconnectionparameters": "115200 / 8N1",
     "serialconnectionvoltage": null,
     "subtarget": "cortexa9",
-    "supportedcurrentrel": "24.10.4",
+    "supportedcurrentrel": "25.12.6",
     "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=6cda4f68619ec139be7897ea61b7f22c72c38b59",
     "supportedsincerel": "19.07.0",
     "switch": "-",
@@ -101452,7 +102690,7 @@
     "fccid": null,
     "firmwareoemstockurl": null,
     "firmwareopenwrtinstallurl": [
-      "https://downloads.openwrt.org/releases/24.10.4/targets/imx/cortexa9/"
+      "https://downloads.openwrt.org/releases/25.12.6/targets/imx/cortexa9/"
     ],
     "firmwareopenwrtupgradeurl": null,
     "firmwareopenwrtsnapshotinstallurl": [
@@ -101499,7 +102737,7 @@
     "serialconnectionparameters": "115200 / 8N1",
     "serialconnectionvoltage": null,
     "subtarget": "cortexa9",
-    "supportedcurrentrel": "24.10.4",
+    "supportedcurrentrel": "25.12.6",
     "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=6cda4f68619ec139be7897ea61b7f22c72c38b59",
     "supportedsincerel": "19.07.0",
     "switch": "-",
@@ -101560,7 +102798,7 @@
     "fccid": null,
     "firmwareoemstockurl": null,
     "firmwareopenwrtinstallurl": [
-      "https://downloads.openwrt.org/releases/24.10.4/targets/imx/cortexa9/"
+      "https://downloads.openwrt.org/releases/25.12.6/targets/imx/cortexa9/"
     ],
     "firmwareopenwrtupgradeurl": null,
     "firmwareopenwrtsnapshotinstallurl": [
@@ -101607,7 +102845,7 @@
     "serialconnectionparameters": null,
     "serialconnectionvoltage": null,
     "subtarget": "cortexa9",
-    "supportedcurrentrel": "24.10.4",
+    "supportedcurrentrel": "25.12.6",
     "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=6cda4f68619ec139be7897ea61b7f22c72c38b59",
     "supportedsincerel": "19.07.0",
     "switch": "-",
@@ -101774,7 +103012,7 @@
     "fccid": null,
     "firmwareoemstockurl": null,
     "firmwareopenwrtinstallurl": [
-      "https://downloads.openwrt.org/releases/24.10.4/targets/imx/cortexa9/"
+      "https://downloads.openwrt.org/releases/25.12.6/targets/imx/cortexa9/"
     ],
     "firmwareopenwrtupgradeurl": null,
     "firmwareopenwrtsnapshotinstallurl": [
@@ -101821,7 +103059,7 @@
     "serialconnectionparameters": "115200 / 8N1",
     "serialconnectionvoltage": null,
     "subtarget": "cortexa9",
-    "supportedcurrentrel": "24.10.4",
+    "supportedcurrentrel": "25.12.6",
     "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=6cda4f68619ec139be7897ea61b7f22c72c38b59",
     "supportedsincerel": "19.07.0",
     "switch": "-",
@@ -101884,7 +103122,7 @@
     "fccid": null,
     "firmwareoemstockurl": null,
     "firmwareopenwrtinstallurl": [
-      "https://downloads.openwrt.org/releases/24.10.4/targets/imx/cortexa9/"
+      "https://downloads.openwrt.org/releases/25.12.6/targets/imx/cortexa9/"
     ],
     "firmwareopenwrtupgradeurl": null,
     "firmwareopenwrtsnapshotinstallurl": [
@@ -101930,7 +103168,7 @@
     "serialconnectionparameters": "115200 / 8N1",
     "serialconnectionvoltage": "3.3",
     "subtarget": "cortexa9",
-    "supportedcurrentrel": "24.10.4",
+    "supportedcurrentrel": "25.12.6",
     "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=ded905ce431bfdb4809124e0f0a587013f980b07",
     "supportedsincerel": "19.07.0",
     "switch": "-",
@@ -141470,10 +142708,10 @@
     ],
     "firmwareoemstockurl": "https://dl.google.com/dl/edgedl/chromeos/recovery/chromeos_9334.41.3_gale_recovery_stable-channel_mp.bin.zip",
     "firmwareopenwrtinstallurl": [
-      "https://downloads.openwrt.org/releases/25.12.2/targets/ipq40xx/chromium/openwrt-25.12.2-ipq40xx-chromium-google_wifi-squashfs-factory.bin"
+      "https://downloads.openwrt.org/releases/25.12.6/targets/ipq40xx/chromium/openwrt-25.12.6-ipq40xx-chromium-google_wifi-squashfs-factory.bin"
     ],
     "firmwareopenwrtupgradeurl": [
-      "https://downloads.openwrt.org/releases/25.12.2/targets/ipq40xx/chromium/openwrt-25.12.2-ipq40xx-chromium-google_wifi-squashfs-sysupgrade.bin"
+      "https://downloads.openwrt.org/releases/25.12.6/targets/ipq40xx/chromium/openwrt-25.12.6-ipq40xx-chromium-google_wifi-squashfs-sysupgrade.bin"
     ],
     "firmwareopenwrtsnapshotinstallurl": [
       "https://downloads.openwrt.org/snapshots/targets/ipq40xx/chromium/openwrt-ipq40xx-chromium-google_wifi-squashfs-factory.bin"
@@ -141521,7 +142759,7 @@
     "serialconnectionparameters": "115200 / 8N1",
     "serialconnectionvoltage": null,
     "subtarget": "chromium",
-    "supportedcurrentrel": "25.12.2",
+    "supportedcurrentrel": "25.12.6",
     "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=f1c041e34f9742fcdd0c8c65f69888d3ec580541",
     "supportedsincerel": "23.05.0",
     "switch": "Qualcomm Atheros QCA8075",
@@ -141585,10 +142823,10 @@
     ],
     "firmwareoemstockurl": "https://dl.google.com/dl/edgedl/chromeos/recovery/chromeos_9334.41.3_gale_recovery_stable-channel_mp.bin.zip",
     "firmwareopenwrtinstallurl": [
-      "https://downloads.openwrt.org/releases/25.12.2/targets/ipq40xx/chromium/openwrt-25.12.2-ipq40xx-chromium-google_wifi-squashfs-factory.bin"
+      "https://downloads.openwrt.org/releases/25.12.6/targets/ipq40xx/chromium/openwrt-25.12.6-ipq40xx-chromium-google_wifi-squashfs-factory.bin"
     ],
     "firmwareopenwrtupgradeurl": [
-      "https://downloads.openwrt.org/releases/25.12.2/targets/ipq40xx/chromium/openwrt-25.12.2-ipq40xx-chromium-google_wifi-squashfs-sysupgrade.bin"
+      "https://downloads.openwrt.org/releases/25.12.6/targets/ipq40xx/chromium/openwrt-25.12.6-ipq40xx-chromium-google_wifi-squashfs-sysupgrade.bin"
     ],
     "firmwareopenwrtsnapshotinstallurl": [
       "https://downloads.openwrt.org/snapshots/targets/ipq40xx/chromium/openwrt-ipq40xx-chromium-google_wifi-squashfs-factory.bin"
@@ -141636,7 +142874,7 @@
     "serialconnectionparameters": "115200 / 8N1",
     "serialconnectionvoltage": null,
     "subtarget": "chromium",
-    "supportedcurrentrel": "25.12.2",
+    "supportedcurrentrel": "25.12.6",
     "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=f1c041e34f9742fcdd0c8c65f69888d3ec580541",
     "supportedsincerel": "23.05.0",
     "switch": "Qualcomm Atheros QCA8072",
@@ -141699,10 +142937,10 @@
     "fccid": null,
     "firmwareoemstockurl": null,
     "firmwareopenwrtinstallurl": [
-      "https://downloads.openwrt.org/releases/24.10.4/targets/imx/cortexa7/openwrt-24.10.4-imx-cortexa7-technexion_imx7d-pico-pi-squashfs-combined.bin"
+      "https://downloads.openwrt.org/releases/25.12.6/targets/imx/cortexa7/openwrt-25.12.6-imx-cortexa7-technexion_imx7d-pico-pi-squashfs-combined.bin"
     ],
     "firmwareopenwrtupgradeurl": [
-      "https://downloads.openwrt.org/releases/24.10.4/targets/imx/cortexa7/openwrt-24.10.4-imx-cortexa7-technexion_imx7d-pico-pi-squashfs-sysupgrade.bin"
+      "https://downloads.openwrt.org/releases/25.12.6/targets/imx/cortexa7/openwrt-25.12.6-imx-cortexa7-technexion_imx7d-pico-pi-squashfs-sysupgrade.bin"
     ],
     "firmwareopenwrtsnapshotinstallurl": [
       "https://downloads.openwrt.org/snapshots/targets/imx/cortexa7/openwrt-imx-cortexa7-technexion_imx7d-pico-pi-squashfs-combined.bin"
@@ -141750,7 +142988,7 @@
     "serialconnectionparameters": "115200 / 8N1",
     "serialconnectionvoltage": "3.3",
     "subtarget": "cortexa7",
-    "supportedcurrentrel": "24.10.4",
+    "supportedcurrentrel": "25.12.6",
     "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=fa26cdacc2eb7924f71ea62c0dfbeec7763b465f",
     "supportedsincerel": "23.05.0",
     "switch": "-",
@@ -157982,10 +159220,10 @@
     ],
     "firmwareoemstockurl": "https://www.netgear.com/support/product/EX7300",
     "firmwareopenwrtinstallurl": [
-      "https://downloads.openwrt.org/releases/24.10.3/targets/ath79/generic/openwrt-24.10.3-ath79-generic-netgear_ex7300-squashfs-factory.img"
+      "https://downloads.openwrt.org/releases/25.12.5/targets/ath79/generic/openwrt-25.12.5-ath79-generic-netgear_ex7300-squashfs-factory.img"
     ],
     "firmwareopenwrtupgradeurl": [
-      "https://downloads.openwrt.org/releases/24.10.3/targets/ath79/generic/openwrt-24.10.3-ath79-generic-netgear_ex7300-squashfs-sysupgrade.bin"
+      "https://downloads.openwrt.org/releases/25.12.5/targets/ath79/generic/openwrt-25.12.5-ath79-generic-netgear_ex7300-squashfs-sysupgrade.bin"
     ],
     "firmwareopenwrtsnapshotinstallurl": [
       "https://downloads.openwrt.org/snapshots/targets/ath79/generic/openwrt-ath79-generic-netgear_ex7300-squashfs-factory.img"
@@ -158022,7 +159260,7 @@
     "picture": [
       "media:example:genericrouter1.png"
     ],
-    "powersupply": "100-240 VAC, 0.5 A",
+    "powersupply": "100-240 VAC, 0.5A",
     "rammb": "128",
     "recoverymethods": [
       "U-Boot TFTP recovery"
@@ -158034,16 +159272,16 @@
     "serialconnectionparameters": "115200 / 8N1",
     "serialconnectionvoltage": "3.3",
     "subtarget": "generic",
-    "supportedcurrentrel": "24.10.3",
+    "supportedcurrentrel": "25.12.5",
     "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=f61e754522996d1557691f945518b69a14d0446c",
     "supportedsincerel": "19.07.0",
-    "switch": null,
+    "switch": "-",
     "target": "ath79",
     "usbports": [
       "-"
     ],
     "unsupported_functions": null,
-    "vlan": null,
+    "vlan": "Yes",
     "version": [
       "v1"
     ],
@@ -161026,10 +162264,10 @@
     ],
     "firmwareoemstockurl": "https://www.netgear.com/support/product/d7800",
     "firmwareopenwrtinstallurl": [
-      "https://downloads.openwrt.org/releases/25.12.4/targets/ipq806x/generic/openwrt-25.12.4-ipq806x-generic-netgear_d7800-squashfs-factory.img"
+      "https://downloads.openwrt.org/releases/25.12.6/targets/ipq806x/generic/openwrt-25.12.6-ipq806x-generic-netgear_d7800-squashfs-factory.img"
     ],
     "firmwareopenwrtupgradeurl": [
-      "https://downloads.openwrt.org/releases/25.12.4/targets/ipq806x/generic/openwrt-25.12.4-ipq806x-generic-netgear_d7800-squashfs-sysupgrade.bin"
+      "https://downloads.openwrt.org/releases/25.12.6/targets/ipq806x/generic/openwrt-25.12.6-ipq806x-generic-netgear_d7800-squashfs-sysupgrade.bin"
     ],
     "firmwareopenwrtsnapshotinstallurl": [
       "https://downloads.openwrt.org/snapshots//targets/ipq806x/generic/openwrt-ipq806x-generic-netgear_d7800-squashfs-factory.img"
@@ -161079,7 +162317,7 @@
     "serialconnectionparameters": null,
     "serialconnectionvoltage": null,
     "subtarget": "generic",
-    "supportedcurrentrel": "25.12.4",
+    "supportedcurrentrel": "25.12.6",
     "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=78a6a9aec306f3fa53b3eaffb35a2344c26a43c7",
     "supportedsincerel": "17.01.0",
     "switch": "Qualcomm Atheros QCA8337",
@@ -161451,6 +162689,119 @@
     "wikideviurl": [
       "https://wikidevi.wi-cat.ru/Netgear_EVG2000"
     ]
+  },
+  {
+    "deviceid": "netgear:netgear_r6400_v1",
+    "audioports": [
+      "-"
+    ],
+    "availability": "Discontinued",
+    "bluetooth": "-",
+    "bootloader": "CFE",
+    "brand": "NETGEAR",
+    "buttoncount": "3",
+    "cpu": "Broadcom BCM4708",
+    "cpucores": "2",
+    "cpumhz": "800",
+    "commentinstallation": "Board ID U12H332T00_NETGEAR",
+    "commentrecovery": "nmrpflash with a stock or OpenWrt .chk",
+    "comments": "Serial header J252 (V G T R)",
+    "commentsavports": null,
+    "commentsusbsataports": null,
+    "commentsnetworkports": null,
+    "detachableantennas": "3",
+    "devicepage": "toh:netgear:r6400_v1",
+    "devicetype": "WiFi Router",
+    "ethernet100mports": "-",
+    "ethernet10gports": "-",
+    "ethernet1gports": "5",
+    "ethernet2_5gports": "-",
+    "ethernet5gports": "-",
+    "fccid": [
+      "https://fcc.io/PY3/15100300"
+    ],
+    "firmwareoemstockurl": "https://www.netgear.com/support/product/r6400/",
+    "firmwareopenwrtinstallurl": null,
+    "firmwareopenwrtupgradeurl": null,
+    "firmwareopenwrtsnapshotinstallurl": [
+      "https://downloads.openwrt.org/snapshots/targets/bcm53xx/generic/openwrt-bcm53xx-generic-netgear_r6400-v1-squashfs.chk"
+    ],
+    "firmwareopenwrtsnapshotupgradeurl": [
+      "https://downloads.openwrt.org/snapshots/targets/bcm53xx/generic/openwrt-bcm53xx-generic-netgear_r6400-v1-squashfs.chk"
+    ],
+    "flashmb": [
+      "128NAND"
+    ],
+    "forumsearch": [
+      "R6400"
+    ],
+    "gpios": "-",
+    "gitsearch": [
+      "R6400"
+    ],
+    "installationmethods": [
+      "GUI OEM"
+    ],
+    "jtag": null,
+    "ledcount": "10",
+    "model": "R6400",
+    "modem": "-",
+    "oemdevicehomepageurl": "https://www.netgear.com/support/product/r6400/",
+    "owrt_forum_topic_url": null,
+    "outdoor": "No",
+    "packagearchitecture": "arm_cortex-a9",
+    "phoneports": [
+      "-"
+    ],
+    "picture": [
+      "media:netgear:r6400_general_view.jpg"
+    ],
+    "powersupply": "12 VDC, 2.5 A",
+    "rammb": "256",
+    "recoverymethods": [
+      "see devicepage"
+    ],
+    "sataports": "-",
+    "sfp_ports": "-",
+    "sfp_plus_ports": "-",
+    "serial": "Yes",
+    "serialconnectionparameters": "115200 / 8N1",
+    "serialconnectionvoltage": "3.3",
+    "subtarget": "generic",
+    "supportedcurrentrel": "snapshot",
+    "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=21d9bd899bb0747fdf60ac029cc7bdad045c4c3a",
+    "supportedsincerel": "snapshot",
+    "switch": "Broadcom BCM53011 (SoC integrated)",
+    "target": "bcm53xx",
+    "usbports": [
+      "1x 2.0",
+      "1x 3.0"
+    ],
+    "unsupported_functions": [
+      "WiFi 5GHz",
+      "WiFi 2.4GHz partly (802.11g only)"
+    ],
+    "vlan": "Yes",
+    "version": [
+      "v1"
+    ],
+    "videoports": [
+      "-"
+    ],
+    "wlan24ghz": "b/g/n",
+    "wlan50ghz": "a/n/ac",
+    "wlan60ghz": null,
+    "wlan600ghz": null,
+    "wlancomments": "3x3, AC1750",
+    "wlanhardware": [
+      "Broadcom BCM4331",
+      "Broadcom BCM4360"
+    ],
+    "wlandriver": [
+      "b43"
+    ],
+    "whereavailable": null,
+    "wikideviurl": null
   },
   {
     "deviceid": "netgear:netgear_wax620",
@@ -167802,10 +169153,10 @@
     ],
     "firmwareoemstockurl": "https://www.netgear.com/support/product/EX6400",
     "firmwareopenwrtinstallurl": [
-      "https://downloads.openwrt.org/releases/24.10.3/targets/ath79/generic/openwrt-24.10.3-ath79-generic-netgear_ex7300-squashfs-factory.img"
+      "https://downloads.openwrt.org/releases/25.12.5/targets/ath79/generic/openwrt-25.12.5-ath79-generic-netgear_ex7300-squashfs-factory.img"
     ],
     "firmwareopenwrtupgradeurl": [
-      "https://downloads.openwrt.org/releases/24.10.3/targets/ath79/generic/openwrt-24.10.3-ath79-generic-netgear_ex7300-squashfs-sysupgrade.bin"
+      "https://downloads.openwrt.org/releases/25.12.5/targets/ath79/generic/openwrt-25.12.5-ath79-generic-netgear_ex7300-squashfs-sysupgrade.bin"
     ],
     "firmwareopenwrtsnapshotinstallurl": [
       "https://downloads.openwrt.org/snapshots/targets/ath79/generic/openwrt-ath79-generic-netgear_ex7300-squashfs-factory.img"
@@ -167842,7 +169193,7 @@
     "picture": [
       "media:example:genericrouter1.png"
     ],
-    "powersupply": "100-240 VAC, 0.5 A",
+    "powersupply": "100-240 VAC, 0.5A",
     "rammb": "128",
     "recoverymethods": [
       "U-Boot TFTP recovery"
@@ -167854,16 +169205,16 @@
     "serialconnectionparameters": "115200 / 8N1",
     "serialconnectionvoltage": "3.3",
     "subtarget": "generic",
-    "supportedcurrentrel": "24.10.3",
+    "supportedcurrentrel": "25.12.5",
     "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=f61e754522996d1557691f945518b69a14d0446c",
     "supportedsincerel": "19.07.0",
-    "switch": null,
+    "switch": "-",
     "target": "ath79",
     "usbports": [
       "-"
     ],
     "unsupported_functions": null,
-    "vlan": null,
+    "vlan": "Yes",
     "version": [
       "v1"
     ],
@@ -169120,6 +170471,115 @@
     "wikideviurl": [
       "https://wikidevi.wi-cat.ru/Netgear_R6220"
     ]
+  },
+  {
+    "deviceid": "netgear:netgear_r6400_v2",
+    "audioports": [
+      "-"
+    ],
+    "availability": "Discontinued",
+    "bluetooth": "-",
+    "bootloader": "CFE",
+    "brand": "NETGEAR",
+    "buttoncount": "3",
+    "cpu": "Broadcom BCM4708C0 (BCM47094 family)",
+    "cpucores": "2",
+    "cpumhz": "1000",
+    "commentinstallation": "Two images: netgear_r6400-v2 for board ID U12H332T20_NETGEAR, netgear_r6400-v2-otp for U12H332T30_NETGEAR (check nvram board_id)",
+    "commentrecovery": "nmrpflash with a stock or OpenWrt .chk",
+    "comments": "Support pending: https://github.com/openwrt/openwrt/pull/25929 (no images yet). Serial header J252 (V G T R)",
+    "commentsavports": null,
+    "commentsusbsataports": null,
+    "commentsnetworkports": "LAN-WAN routing about 550 Mbit/s",
+    "detachableantennas": "3",
+    "devicepage": "toh:netgear:r6400_v2",
+    "devicetype": "WiFi Router",
+    "ethernet100mports": "-",
+    "ethernet10gports": "-",
+    "ethernet1gports": "5",
+    "ethernet2_5gports": "-",
+    "ethernet5gports": "-",
+    "fccid": [
+      "https://fcc.io/PY3/16200342"
+    ],
+    "firmwareoemstockurl": "https://www.netgear.com/support/product/r6400v2/",
+    "firmwareopenwrtinstallurl": null,
+    "firmwareopenwrtupgradeurl": null,
+    "firmwareopenwrtsnapshotinstallurl": null,
+    "firmwareopenwrtsnapshotupgradeurl": null,
+    "flashmb": [
+      "128NAND"
+    ],
+    "forumsearch": [
+      "R6400"
+    ],
+    "gpios": "-",
+    "gitsearch": [
+      "R6400"
+    ],
+    "installationmethods": [
+      "GUI OEM"
+    ],
+    "jtag": null,
+    "ledcount": "10",
+    "model": "R6400",
+    "modem": "-",
+    "oemdevicehomepageurl": "https://www.netgear.com/support/product/r6400v2/",
+    "owrt_forum_topic_url": null,
+    "outdoor": "No",
+    "packagearchitecture": "arm_cortex-a9",
+    "phoneports": [
+      "-"
+    ],
+    "picture": [
+      "media:netgear:r6400_general_view.jpg"
+    ],
+    "powersupply": "12 VDC, 2.5 A",
+    "rammb": "256",
+    "recoverymethods": [
+      "see devicepage"
+    ],
+    "sataports": "-",
+    "sfp_ports": "-",
+    "sfp_plus_ports": "-",
+    "serial": "Yes",
+    "serialconnectionparameters": "115200 / 8N1",
+    "serialconnectionvoltage": "3.3",
+    "subtarget": "generic",
+    "supportedcurrentrel": "-",
+    "supportedsincecommit": null,
+    "supportedsincerel": "-",
+    "switch": "Broadcom BCM53011 (SoC integrated)",
+    "target": "bcm53xx",
+    "usbports": [
+      "1x 2.0",
+      "1x 3.0"
+    ],
+    "unsupported_functions": [
+      "WiFi 5GHz",
+      "WiFi 2.4GHz partly (802.11g only)"
+    ],
+    "vlan": "Yes",
+    "version": [
+      "v2"
+    ],
+    "videoports": [
+      "-"
+    ],
+    "wlan24ghz": "b/g/n",
+    "wlan50ghz": "a/n/ac",
+    "wlan60ghz": null,
+    "wlan600ghz": null,
+    "wlancomments": "3x3, AC1750",
+    "wlanhardware": [
+      "Broadcom BCM4331",
+      "Broadcom BCM4360"
+    ],
+    "wlandriver": [
+      "b43"
+    ],
+    "whereavailable": null,
+    "wikideviurl": null
   },
   {
     "deviceid": "netgear:netgear_jwnr2010_v5",
@@ -181181,7 +182641,7 @@
     "commentsnetworkports": null,
     "detachableantennas": "2",
     "devicepage": null,
-    "devicetype": "WiFi Router",
+    "devicetype": "Single Board Computer",
     "ethernet100mports": "-",
     "ethernet10gports": "-",
     "ethernet1gports": "5",
@@ -181192,10 +182652,10 @@
     ],
     "firmwareoemstockurl": "https://www.8devices.com/wiki/habanero",
     "firmwareopenwrtinstallurl": [
-      "https://downloads.openwrt.org/releases/24.10.4/targets/ipq40xx/generic/openwrt-24.10.4-ipq40xx-generic-8dev_habanero-dvk-squashfs-sysupgrade.bin"
+      "https://downloads.openwrt.org/releases/25.12.6/targets/ipq40xx/generic/openwrt-25.12.6-ipq40xx-generic-8dev_habanero-dvk-squashfs-sysupgrade.bin"
     ],
     "firmwareopenwrtupgradeurl": [
-      "https://downloads.openwrt.org/releases/24.10.4/targets/ipq40xx/generic/openwrt-24.10.4-ipq40xx-generic-8dev_habanero-dvk-squashfs-sysupgrade.bin"
+      "https://downloads.openwrt.org/releases/25.12.6/targets/ipq40xx/generic/openwrt-25.12.6-ipq40xx-generic-8dev_habanero-dvk-squashfs-sysupgrade.bin"
     ],
     "firmwareopenwrtsnapshotinstallurl": [
       "https://downloads.openwrt.org/snapshots/targets/ipq40xx/generic/openwrt-ipq40xx-generic-8dev_habanero-dvk-squashfs-sysupgrade.bin"
@@ -181244,7 +182704,7 @@
     "serialconnectionparameters": "115200 / 8N1",
     "serialconnectionvoltage": null,
     "subtarget": "generic",
-    "supportedcurrentrel": "24.10.4",
+    "supportedcurrentrel": "25.12.6",
     "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=6256ca323235a9e0601796a45c5ebb9a70373362",
     "supportedsincerel": "21.02.0",
     "switch": "Qualcomm Atheros QCA8075",
@@ -181737,7 +183197,7 @@
     "commentsavports": null,
     "commentsusbsataports": null,
     "commentsnetworkports": null,
-    "detachableantennas": null,
+    "detachableantennas": "-",
     "devicepage": null,
     "devicetype": "Single Board Computer",
     "ethernet100mports": "2",
@@ -181750,10 +183210,10 @@
     ],
     "firmwareoemstockurl": null,
     "firmwareopenwrtinstallurl": [
-      "https://downloads.openwrt.org/releases/24.10.3/targets/ath79/generic/openwrt-24.10.3-ath79-generic-8dev_carambola3-initramfs-kernel.bin"
+      "https://downloads.openwrt.org/releases/25.12.5/targets/ath79/generic/openwrt-25.12.5-ath79-generic-8dev_carambola3-initramfs-kernel.bin"
     ],
     "firmwareopenwrtupgradeurl": [
-      "https://downloads.openwrt.org/releases/24.10.3/targets/ath79/generic/openwrt-24.10.3-ath79-generic-8dev_carambola3-squashfs-sysupgrade.bin"
+      "https://downloads.openwrt.org/releases/25.12.5/targets/ath79/generic/openwrt-25.12.5-ath79-generic-8dev_carambola3-squashfs-sysupgrade.bin"
     ],
     "firmwareopenwrtsnapshotinstallurl": [
       "https://downloads.openwrt.org/snapshots/targets/ath79/generic/openwrt-ath79-generic-8dev_carambola3-initramfs-kernel.bin"
@@ -181778,7 +183238,7 @@
     "jtag": null,
     "ledcount": "3",
     "model": "Carambola 3",
-    "modem": null,
+    "modem": "-",
     "oemdevicehomepageurl": "http://wiki.8devices.com/carambola3",
     "owrt_forum_topic_url": null,
     "outdoor": "No",
@@ -181801,7 +183261,7 @@
     "serialconnectionparameters": "115200 / 8N1",
     "serialconnectionvoltage": "3.3",
     "subtarget": "generic",
-    "supportedcurrentrel": "24.10.3",
+    "supportedcurrentrel": "25.12.5",
     "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=febcfadc804d5877cb5e51483c51d2da6d04768c",
     "supportedsincerel": "24.10.0",
     "switch": "Qualcomm Atheros QCA4531",
@@ -181974,10 +183434,10 @@
     "fccid": null,
     "firmwareoemstockurl": null,
     "firmwareopenwrtinstallurl": [
-      "https://downloads.openwrt.org/releases/24.10.4/targets/ipq40xx/generic/openwrt-24.10.4-ipq40xx-generic-8dev_jalapeno-squashfs-factory.ubi"
+      "https://downloads.openwrt.org/releases/25.12.6/targets/ipq40xx/generic/openwrt-25.12.6-ipq40xx-generic-8dev_jalapeno-squashfs-factory.ubi"
     ],
     "firmwareopenwrtupgradeurl": [
-      "https://downloads.openwrt.org/releases/24.10.4/targets/ipq40xx/generic/openwrt-24.10.4-ipq40xx-generic-8dev_jalapeno-squashfs-sysupgrade.bin"
+      "https://downloads.openwrt.org/releases/25.12.6/targets/ipq40xx/generic/openwrt-25.12.6-ipq40xx-generic-8dev_jalapeno-squashfs-sysupgrade.bin"
     ],
     "firmwareopenwrtsnapshotinstallurl": [
       "https://downloads.openwrt.org/snapshots/targets/ipq40xx/generic/openwrt-ipq40xx-generic-8dev_jalapeno-squashfs-factory.ubi"
@@ -182026,7 +183486,7 @@
     "serialconnectionparameters": "115200 / 8N1",
     "serialconnectionvoltage": "5",
     "subtarget": "generic",
-    "supportedcurrentrel": "24.10.4",
+    "supportedcurrentrel": "25.12.6",
     "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=1e341bb5ef9ba342a56ad2765c2876091fdc66db",
     "supportedsincerel": "18.06.0",
     "switch": "Qualcomm Atheros QCA8072",
@@ -189053,6 +190513,107 @@
     "wikideviurl": null
   },
   {
+    "deviceid": "olimex:olimex_i.mx8mp-som-evb",
+    "audioports": [
+      "-"
+    ],
+    "availability": "Available 2026",
+    "bluetooth": null,
+    "bootloader": "U-Boot",
+    "brand": "Olimex",
+    "buttoncount": null,
+    "cpu": "NXP i.MX8MP",
+    "cpucores": "4",
+    "cpumhz": "1600",
+    "commentinstallation": null,
+    "commentrecovery": null,
+    "comments": null,
+    "commentsavports": "-",
+    "commentsusbsataports": "-",
+    "commentsnetworkports": "Micrel PHY",
+    "detachableantennas": null,
+    "devicepage": null,
+    "devicetype": "Single Board Computer",
+    "ethernet100mports": "-",
+    "ethernet10gports": "-",
+    "ethernet1gports": "2",
+    "ethernet2_5gports": "-",
+    "ethernet5gports": "-",
+    "fccid": null,
+    "firmwareoemstockurl": null,
+    "firmwareopenwrtinstallurl": null,
+    "firmwareopenwrtupgradeurl": null,
+    "firmwareopenwrtsnapshotinstallurl": [
+      "https://downloads.openwrt.org/snapshots/targets/imx/cortexa53/openwrt-imx-cortexa53-olimex_imx8mp-som-squashfs-img.gz"
+    ],
+    "firmwareopenwrtsnapshotupgradeurl": [
+      "https://downloads.openwrt.org/snapshots/targets/imx/cortexa53/openwrt-imx-cortexa53-olimex_imx8mp-som-squashfs-img.gz"
+    ],
+    "flashmb": [
+      "eMMC",
+      "microSDHC"
+    ],
+    "forumsearch": [
+      "i.MX8MP-SOM-EVB"
+    ],
+    "gpios": null,
+    "gitsearch": [
+      "i.MX8MP-SOM-EVB"
+    ],
+    "installationmethods": [
+      "SD card"
+    ],
+    "jtag": null,
+    "ledcount": null,
+    "model": "i.MX8MP-SOM-EVB",
+    "modem": "-",
+    "oemdevicehomepageurl": "https://www.olimex.com/Products/SOM/NXP-iMX8/iMX8MP-SOM-EVB-IND/open-source-hardware",
+    "owrt_forum_topic_url": null,
+    "outdoor": "No",
+    "packagearchitecture": "aarch64_cortex-a53",
+    "phoneports": [
+      "-"
+    ],
+    "picture": [
+      "media:example:genericrouter1.png"
+    ],
+    "powersupply": "5 VDC",
+    "rammb": "4096",
+    "recoverymethods": [
+      "SD card"
+    ],
+    "sataports": "-",
+    "sfp_ports": "-",
+    "sfp_plus_ports": "-",
+    "serial": "Yes",
+    "serialconnectionparameters": null,
+    "serialconnectionvoltage": null,
+    "subtarget": "cortexa53",
+    "supportedcurrentrel": "snapshot",
+    "supportedsincecommit": "https://git.openwrt.org/openwrt/openwrt/commit/?h=master&id=980becf1da726c1917b62c30209c0d9c916ff141",
+    "supportedsincerel": null,
+    "switch": null,
+    "target": "imx",
+    "usbports": [
+      "2x 3.0"
+    ],
+    "unsupported_functions": null,
+    "vlan": "Yes",
+    "version": null,
+    "videoports": [
+      "HDMI"
+    ],
+    "wlan24ghz": null,
+    "wlan50ghz": null,
+    "wlan60ghz": null,
+    "wlan600ghz": null,
+    "wlancomments": null,
+    "wlanhardware": null,
+    "wlandriver": null,
+    "whereavailable": "olimex.com",
+    "wikideviurl": null
+  },
+  {
     "deviceid": "olimex:olimex_a13-som-256",
     "audioports": [
       "-"
@@ -192635,6 +194196,107 @@
     "wikideviurl": [
       "https://wikidevi.wi-cat.ru/SerComm_H500-s"
     ]
+  },
+  {
+    "deviceid": "sercomm:sercomm_jcow414",
+    "audioports": [
+      "-"
+    ],
+    "availability": "Available 2022",
+    "bluetooth": "-",
+    "bootloader": "U-Boot",
+    "brand": "Sercomm",
+    "buttoncount": "1",
+    "cpu": "EcoNet EN7528HU",
+    "cpucores": "2",
+    "cpumhz": "900",
+    "commentinstallation": null,
+    "commentrecovery": null,
+    "comments": null,
+    "commentsavports": "-",
+    "commentsusbsataports": "-",
+    "commentsnetworkports": null,
+    "detachableantennas": "-",
+    "devicepage": "toh:sercomm:jcow414",
+    "devicetype": "WiFi Router",
+    "ethernet100mports": "-",
+    "ethernet10gports": "-",
+    "ethernet1gports": "4",
+    "ethernet2_5gports": "-",
+    "ethernet5gports": "-",
+    "fccid": null,
+    "firmwareoemstockurl": null,
+    "firmwareopenwrtinstallurl": null,
+    "firmwareopenwrtupgradeurl": null,
+    "firmwareopenwrtsnapshotinstallurl": null,
+    "firmwareopenwrtsnapshotupgradeurl": null,
+    "flashmb": [
+      "256NAND"
+    ],
+    "forumsearch": [
+      "JCOW414"
+    ],
+    "gpios": "4",
+    "gitsearch": [
+      "JCOW414"
+    ],
+    "installationmethods": [
+      "U-Boot web recovery"
+    ],
+    "jtag": "Yes",
+    "ledcount": "7",
+    "model": "JCOW414",
+    "modem": "-",
+    "oemdevicehomepageurl": null,
+    "owrt_forum_topic_url": null,
+    "outdoor": "No",
+    "packagearchitecture": "mips_24kc",
+    "phoneports": [
+      "-"
+    ],
+    "picture": [
+      "media:toh:sercomm:jiofiberrouter.jpg"
+    ],
+    "powersupply": "12 VDC, 2.5 A",
+    "rammb": "512",
+    "recoverymethods": [
+      "unknown"
+    ],
+    "sataports": "-",
+    "sfp_ports": "-",
+    "sfp_plus_ports": "-",
+    "serial": "Yes",
+    "serialconnectionparameters": "115200 / 8N1",
+    "serialconnectionvoltage": "3.3",
+    "subtarget": "en7528",
+    "supportedcurrentrel": "25.12.4",
+    "supportedsincecommit": null,
+    "supportedsincerel": "25.12.0",
+    "switch": "MediaTek MT7621AT",
+    "target": "airoha",
+    "usbports": null,
+    "unsupported_functions": null,
+    "vlan": "Yes",
+    "version": [
+      "v1"
+    ],
+    "videoports": [
+      "-"
+    ],
+    "wlan24ghz": "b/g/n",
+    "wlan50ghz": "a/n/ac",
+    "wlan60ghz": "-",
+    "wlan600ghz": "-",
+    "wlancomments": null,
+    "wlanhardware": [
+      "MediaTek MT7603E",
+      "MediaTek MT7613E"
+    ],
+    "wlandriver": [
+      "mt76"
+    ],
+    "whereavailable": null,
+    "wikideviurl": null
   },
   {
     "deviceid": "sercomm:sercomm_shg1500_vs2",
@@ -208159,6 +209821,112 @@
     "wikideviurl": null
   },
   {
+    "deviceid": "ubiquiti:ubiquiti_nanostation_loco_m_xw_v2",
+    "audioports": [
+      "-"
+    ],
+    "availability": "unknown 2026",
+    "bluetooth": "-",
+    "bootloader": "U-Boot",
+    "brand": "Ubiquiti",
+    "buttoncount": null,
+    "cpu": "Atheros AR9342 (rev 3)",
+    "cpucores": "1",
+    "cpumhz": "535",
+    "commentinstallation": null,
+    "commentrecovery": null,
+    "comments": null,
+    "commentsavports": "-",
+    "commentsusbsataports": "-",
+    "commentsnetworkports": "Atheros AR8035 Phy",
+    "detachableantennas": "-",
+    "devicepage": null,
+    "devicetype": "WiFi AP",
+    "ethernet100mports": "1",
+    "ethernet10gports": "-",
+    "ethernet1gports": "-",
+    "ethernet2_5gports": "-",
+    "ethernet5gports": "-",
+    "fccid": null,
+    "firmwareoemstockurl": null,
+    "firmwareopenwrtinstallurl": null,
+    "firmwareopenwrtupgradeurl": null,
+    "firmwareopenwrtsnapshotinstallurl": [
+      "https://downloads.openwrt.org/snapshots/targets/ath79/generic/openwrt-ath79-generic-ubnt_nanostation-loco-m-xw-v2-squashfs-factory.bin"
+    ],
+    "firmwareopenwrtsnapshotupgradeurl": [
+      "https://downloads.openwrt.org/snapshots/targets/ath79/generic/openwrt-ath79-generic-ubnt_nanostation-loco-m-xw-v2-squashfs-sysupgrade.bin"
+    ],
+    "flashmb": [
+      "8"
+    ],
+    "forumsearch": [
+      "NanoStation Loco M"
+    ],
+    "gpios": null,
+    "gitsearch": [
+      "NanoStation Loco M"
+    ],
+    "installationmethods": [
+      "see git-commit"
+    ],
+    "jtag": null,
+    "ledcount": "5",
+    "model": "NanoStation Loco M",
+    "modem": "-",
+    "oemdevicehomepageurl": null,
+    "owrt_forum_topic_url": null,
+    "outdoor": null,
+    "packagearchitecture": "mipsel_24kc",
+    "phoneports": [
+      "-"
+    ],
+    "picture": [
+      "media:example:genericrouter1.png"
+    ],
+    "powersupply": "24V PoE In",
+    "rammb": "64",
+    "recoverymethods": [
+      "see git-commit"
+    ],
+    "sataports": "-",
+    "sfp_ports": "-",
+    "sfp_plus_ports": "-",
+    "serial": "Yes",
+    "serialconnectionparameters": "115200 / 8N1",
+    "serialconnectionvoltage": "3.3",
+    "subtarget": "generic",
+    "supportedcurrentrel": "snapshot",
+    "supportedsincecommit": "https://git.openwrt.org/openwrt/openwrt/commit/?h=master&id=54e70703a0bdcdb9d52fb9e0cd7d01cbaea59c2f",
+    "supportedsincerel": null,
+    "switch": null,
+    "target": "ath79",
+    "usbports": [
+      "-"
+    ],
+    "unsupported_functions": null,
+    "vlan": null,
+    "version": [
+      "XW v2"
+    ],
+    "videoports": [
+      "-"
+    ],
+    "wlan24ghz": "b/g/n",
+    "wlan50ghz": "-",
+    "wlan60ghz": "-",
+    "wlan600ghz": "-",
+    "wlancomments": "2T2R 5 GHz radio, 22 dBm",
+    "wlanhardware": [
+      "Atheros AR9342"
+    ],
+    "wlandriver": [
+      "ath9k"
+    ],
+    "whereavailable": null,
+    "wikideviurl": null
+  },
+  {
     "deviceid": "ubiquiti:ubiquiti_powerbeam_m2-400",
     "audioports": [
       "-"
@@ -218117,7 +219885,7 @@
     "serialconnectionparameters": null,
     "serialconnectionvoltage": null,
     "subtarget": "xrx200",
-    "supportedcurrentrel": "25.12.5",
+    "supportedcurrentrel": "25.12.6",
     "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=eae6cac6a30b95bef04d033ed8a303b7e35a078b",
     "supportedsincerel": "19.07.0",
     "switch": "Lantiq GSWIP (built-in SoC switch)",
@@ -218347,7 +220115,7 @@
     "serialconnectionparameters": "115200 / 8N1",
     "serialconnectionvoltage": null,
     "subtarget": "xrx200",
-    "supportedcurrentrel": "24.10.4",
+    "supportedcurrentrel": "25.12.6",
     "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=78bebe680f67e8967c2baad8a5c07035d431f9d5",
     "supportedsincerel": "21.02.0",
     "switch": "Lantiq GSWIP (built-in SoC switch)",
@@ -225486,6 +227254,104 @@
     "wikideviurl": [
       "https://wikidevi.wi-cat.ru/Xiaomi_Mi_Router_CR6606"
     ]
+  },
+  {
+    "deviceid": "goodtop:goodtop_gt-swtxg8fm",
+    "audioports": [
+      "-"
+    ],
+    "availability": "Available 2025",
+    "bluetooth": "-",
+    "bootloader": "U-Boot",
+    "brand": "GoodTop",
+    "buttoncount": null,
+    "cpu": "Realtek RTL9303",
+    "cpucores": "1",
+    "cpumhz": "800",
+    "commentinstallation": null,
+    "commentrecovery": null,
+    "comments": null,
+    "commentsavports": null,
+    "commentsusbsataports": null,
+    "commentsnetworkports": null,
+    "detachableantennas": "-",
+    "devicepage": null,
+    "devicetype": "Switch",
+    "ethernet100mports": "-",
+    "ethernet10gports": "-",
+    "ethernet1gports": "-",
+    "ethernet2_5gports": "-",
+    "ethernet5gports": "-",
+    "fccid": null,
+    "firmwareoemstockurl": null,
+    "firmwareopenwrtinstallurl": null,
+    "firmwareopenwrtupgradeurl": null,
+    "firmwareopenwrtsnapshotinstallurl": [
+      "https://downloads.openwrt.org/snapshots/targets/realtek/rtl930x/openwrt-realtek-rtl930x-goodtop_gt-swtxg8fm-squashfs-factory.bix"
+    ],
+    "firmwareopenwrtsnapshotupgradeurl": [
+      "https://downloads.openwrt.org/snapshots/targets/realtek/rtl930x/openwrt-realtek-rtl930x-goodtop_gt-swtxg8fm-squashfs-sysupgrade.bin"
+    ],
+    "flashmb": [
+      "16"
+    ],
+    "forumsearch": [
+      "GT-SWTXG8FM"
+    ],
+    "gpios": null,
+    "gitsearch": [
+      "GT-SWTXG8FM"
+    ],
+    "installationmethods": null,
+    "jtag": null,
+    "ledcount": null,
+    "model": "GT-SWTXG8FM",
+    "modem": "-",
+    "oemdevicehomepageurl": null,
+    "owrt_forum_topic_url": null,
+    "outdoor": "No",
+    "packagearchitecture": "mips_24kc",
+    "phoneports": [
+      "-"
+    ],
+    "picture": null,
+    "powersupply": null,
+    "rammb": "128",
+    "recoverymethods": null,
+    "sataports": "-",
+    "sfp_ports": "-",
+    "sfp_plus_ports": "8",
+    "serial": "Yes",
+    "serialconnectionparameters": null,
+    "serialconnectionvoltage": null,
+    "subtarget": "rtl9303",
+    "supportedcurrentrel": "snapshot",
+    "supportedsincecommit": "https://git.openwrt.org/openwrt/openwrt/commit/?h=master&id=c1fc123ea624dd9a5ac73d73ea341f024576d7b4",
+    "supportedsincerel": null,
+    "switch": "Realtek RTL9303",
+    "target": "realtek",
+    "usbports": [
+      "-"
+    ],
+    "unsupported_functions": null,
+    "vlan": "Yes",
+    "version": null,
+    "videoports": [
+      "-"
+    ],
+    "wlan24ghz": "-",
+    "wlan50ghz": "-",
+    "wlan60ghz": "-",
+    "wlan600ghz": "-",
+    "wlancomments": "No WLAN",
+    "wlanhardware": [
+      "-"
+    ],
+    "wlandriver": [
+      "none"
+    ],
+    "whereavailable": null,
+    "wikideviurl": null
   },
   {
     "deviceid": "longdata:longdata_aps256",
@@ -242748,7 +244614,7 @@
     "comments": null,
     "commentsavports": "-",
     "commentsusbsataports": "-",
-    "commentsnetworkports": null,
+    "commentsnetworkports": "Qualcomm Atheros QCA8072 Phy",
     "detachableantennas": "-",
     "devicepage": "toh:tp-link:deco_m5",
     "devicetype": "WiFi Router",
@@ -242791,7 +244657,7 @@
       "https://forum.openwrt.org/t/ipq4019-adding-support-for-tp-link-deco-m5/85061/"
     ],
     "outdoor": "No",
-    "packagearchitecture": "arm_cortex-a15_neon-vfpv4",
+    "packagearchitecture": "arm_cortex-a7_neon-vfpv4",
     "phoneports": [
       "-"
     ],
@@ -242832,8 +244698,7 @@
     "wlan600ghz": "-",
     "wlancomments": null,
     "wlanhardware": [
-      "Qualcomm Atheros IPQ4019",
-      "Qualcomm Atheros QCA8072"
+      "Qualcomm Atheros IPQ4019"
     ],
     "wlandriver": [
       "ath10k-ct"
@@ -249527,7 +251392,7 @@
     "comments": null,
     "commentsavports": "-",
     "commentsusbsataports": "-",
-    "commentsnetworkports": null,
+    "commentsnetworkports": "Qualcomm QCA8072 Phy",
     "detachableantennas": "-",
     "devicepage": "toh:tp-link:deco_m5",
     "devicetype": "WiFi Router",
@@ -249570,7 +251435,7 @@
       "https://forum.openwrt.org/t/ipq4019-adding-support-for-tp-link-deco-m5/85061/"
     ],
     "outdoor": "No",
-    "packagearchitecture": "arm_cortex-a15_neon-vfpv4",
+    "packagearchitecture": "arm_cortex-a7_neon-vfpv4",
     "phoneports": [
       "-"
     ],
@@ -249592,7 +251457,7 @@
     "supportedcurrentrel": "snapshot",
     "supportedsincecommit": "https://git.openwrt.org/openwrt/openwrt/commit/?id=c60be6e983d95c971dc5659afb882eaeac9d01ca",
     "supportedsincerel": null,
-    "switch": "MediaTek MT7621AT",
+    "switch": null,
     "target": "ipq40xx",
     "usbports": [
       "-"
@@ -249611,8 +251476,7 @@
     "wlan600ghz": "-",
     "wlancomments": null,
     "wlanhardware": [
-      "Qualcomm Atheros IPQ4019",
-      "Qualcomm Atheros QCA8072"
+      "Qualcomm Atheros IPQ4019"
     ],
     "wlandriver": [
       "ath10k-ct"
@@ -270555,10 +272419,10 @@
     "fccid": null,
     "firmwareoemstockurl": null,
     "firmwareopenwrtinstallurl": [
-      "https://downloads.openwrt.org/releases/24.10.4/targets/imx/cortexa7/openwrt-24.10.4-imx-cortexa7-technexion_imx7d-pico-pi-squashfs-combined.bin"
+      "https://downloads.openwrt.org/releases/25.12.6/targets/imx/cortexa7/openwrt-25.12.6-imx-cortexa7-technexion_imx7d-pico-pi-squashfs-combined.bin"
     ],
     "firmwareopenwrtupgradeurl": [
-      "https://downloads.openwrt.org/releases/24.10.4/targets/imx/cortexa7/openwrt-24.10.4-imx-cortexa7-technexion_imx7d-pico-pi-squashfs-sysupgrade.bin"
+      "https://downloads.openwrt.org/releases/25.12.6/targets/imx/cortexa7/openwrt-25.12.6-imx-cortexa7-technexion_imx7d-pico-pi-squashfs-sysupgrade.bin"
     ],
     "firmwareopenwrtsnapshotinstallurl": [
       "https://downloads.openwrt.org/snapshots/targets/imx/cortexa7/openwrt-imx-cortexa7-technexion_imx7d-pico-pi-squashfs-combined.bin"
@@ -270605,7 +272469,7 @@
     "serialconnectionparameters": "115200 / 8N1",
     "serialconnectionvoltage": "3.3",
     "subtarget": "cortexa7",
-    "supportedcurrentrel": "24.10.4",
+    "supportedcurrentrel": "25.12.6",
     "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=fa26cdacc2eb7924f71ea62c0dfbeec7763b465f",
     "supportedsincerel": "23.05.0",
     "switch": "-",
@@ -270667,10 +272531,10 @@
     "fccid": null,
     "firmwareoemstockurl": null,
     "firmwareopenwrtinstallurl": [
-      "https://downloads.openwrt.org/releases/24.10.4/targets/imx/cortexa9/"
+      "https://downloads.openwrt.org/releases/25.12.6/targets/imx/cortexa9/"
     ],
     "firmwareopenwrtupgradeurl": [
-      "https://downloads.openwrt.org/releases/24.10.4/targets/imx/cortexa9/"
+      "https://downloads.openwrt.org/releases/25.12.6/targets/imx/cortexa9/"
     ],
     "firmwareopenwrtsnapshotinstallurl": [
       "https://downloads.openwrt.org/snapshots/targets/imx/cortexa9/"
@@ -270718,7 +272582,7 @@
     "serialconnectionparameters": "115200 / 8N1",
     "serialconnectionvoltage": "-",
     "subtarget": "cortexa9",
-    "supportedcurrentrel": "24.10.4",
+    "supportedcurrentrel": "25.12.6",
     "supportedsincecommit": null,
     "supportedsincerel": "14.07",
     "switch": "-",
@@ -271100,16 +272964,16 @@
     ],
     "firmwareoemstockurl": "http://www.sitecomlearningcentre.com/download/firmware/2739",
     "firmwareopenwrtinstallurl": [
-      "https://downloads.openwrt.org/releases/25.12.1/targets/ath79/generic/openwrt-25.12.1-ath79-generic-sitecom_wlr-7100-squashfs-factory.dlf"
+      "https://downloads.openwrt.org/releases/25.12.5/targets/ath79/tiny/openwrt-25.12.5-ath79-tiny-sitecom_wlr-7100-squashfs-factory.dlf"
     ],
     "firmwareopenwrtupgradeurl": [
-      "https://downloads.openwrt.org/releases/25.12.1/targets/ath79/generic/openwrt-25.12.1-ath79-generic-sitecom_wlr-7100-squashfs-sysupgrade.bin"
+      "https://downloads.openwrt.org/releases/25.12.5/targets/ath79/tiny/openwrt-25.12.5-ath79-tiny-sitecom_wlr-7100-squashfs-sysupgrade.bin"
     ],
     "firmwareopenwrtsnapshotinstallurl": [
-      "https://downloads.openwrt.org/snapshots/targets/ath79/generic/openwrt-ath79-generic-sitecom_wlr-7100-squashfs-factory.dlf"
+      "https://downloads.openwrt.org/snapshots/targets/ath79/tiny/openwrt-ath79-tiny-sitecom_wlr-7100-squashfs-factory.dlf"
     ],
     "firmwareopenwrtsnapshotupgradeurl": [
-      "https://downloads.openwrt.org/snapshots/targets/ath79/generic/openwrt-ath79-generic-sitecom_wlr-7100-squashfs-sysupgrade.bin"
+      "https://downloads.openwrt.org/snapshots/targets/ath79/tiny/openwrt-ath79-tiny-sitecom_wlr-7100-squashfs-sysupgrade.bin"
     ],
     "flashmb": [
       "8"
@@ -271152,8 +273016,8 @@
     "serial": "Yes",
     "serialconnectionparameters": "115200 / 8N1",
     "serialconnectionvoltage": "3.3",
-    "subtarget": "generic",
-    "supportedcurrentrel": "25.12.1",
+    "subtarget": "tiny",
+    "supportedcurrentrel": "25.12.5",
     "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=1bc921f419df508c57dc07cd3e43cdf0408c17dd",
     "supportedsincerel": "21.02.0",
     "switch": "Qualcomm Atheros QCA8337N",
@@ -281675,10 +283539,10 @@
     "fccid": null,
     "firmwareoemstockurl": "https://www.toradex.com/computer-on-modules/apalis-arm-family/nxp-freescale-imx-6",
     "firmwareopenwrtinstallurl": [
-      "https://downloads.openwrt.org/releases/24.10.4/targets/imx/cortexa9/openwrt-24.10.4-imx-cortexa9-toradex_apalis-squashfs.combined.bin"
+      "https://downloads.openwrt.org/releases/25.12.6/targets/imx/cortexa9/openwrt-25.12.6-imx-cortexa9-toradex_apalis-squashfs.combined.bin"
     ],
     "firmwareopenwrtupgradeurl": [
-      "https://downloads.openwrt.org/releases/24.10.4/targets/imx/cortexa9/openwrt-24.10.4-imx-cortexa9-toradex_apalis-squashfs.sysupgrade.bin"
+      "https://downloads.openwrt.org/releases/25.12.6/targets/imx/cortexa9/openwrt-25.12.6-imx-cortexa9-toradex_apalis-squashfs.sysupgrade.bin"
     ],
     "firmwareopenwrtsnapshotinstallurl": [
       "https://downloads.openwrt.org/snapshots/targets/imx/cortexa9/openwrt-imx-cortexa9-toradex_apalis-squashfs.combined.bin"
@@ -281725,7 +283589,7 @@
     "serialconnectionparameters": null,
     "serialconnectionvoltage": null,
     "subtarget": "cortexa9",
-    "supportedcurrentrel": "24.10.4",
+    "supportedcurrentrel": "25.12.6",
     "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=d23222a96caeca5f83d22ffd55e210da30eaa379",
     "supportedsincerel": "19.07.0",
     "switch": "-",
@@ -281788,10 +283652,10 @@
     "fccid": null,
     "firmwareoemstockurl": "https://www.toradex.com/computer-on-modules/apalis-arm-family/nxp-freescale-imx-6",
     "firmwareopenwrtinstallurl": [
-      "https://downloads.openwrt.org/releases/24.10.4/targets/imx/cortexa9/openwrt-24.10.2-imx-cortexa9-toradex_apalis-squashfs.combined.bin"
+      "https://downloads.openwrt.org/releases/25.12.6/targets/imx/cortexa9/openwrt-25.12.6-imx-cortexa9-toradex_apalis-squashfs.combined.bin"
     ],
     "firmwareopenwrtupgradeurl": [
-      "https://downloads.openwrt.org/releases/24.10.4/targets/imx/cortexa9/openwrt-24.10.4-imx-cortexa9-toradex_apalis-squashfs.sysupgrade.bin"
+      "https://downloads.openwrt.org/releases/25.12.6/targets/imx/cortexa9/openwrt-25.12.6-imx-cortexa9-toradex_apalis-squashfs.sysupgrade.bin"
     ],
     "firmwareopenwrtsnapshotinstallurl": [
       "https://downloads.openwrt.org/snapshots/targets/imx/cortexa9/openwrt-imx-cortexa9-toradex_apalis-squashfs.combined.bin"
@@ -281838,7 +283702,7 @@
     "serialconnectionparameters": null,
     "serialconnectionvoltage": null,
     "subtarget": "cortexa9",
-    "supportedcurrentrel": "24.10.4",
+    "supportedcurrentrel": "25.12.6",
     "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=d23222a96caeca5f83d22ffd55e210da30eaa379",
     "supportedsincerel": "19.07.0",
     "switch": "-",
@@ -281901,10 +283765,10 @@
     "fccid": null,
     "firmwareoemstockurl": "https://www.toradex.com/computer-on-modules/apalis-arm-family/nxp-freescale-imx-6",
     "firmwareopenwrtinstallurl": [
-      "https://downloads.openwrt.org/releases/24.10.4/targets/imx/cortexa9/openwrt-24.10.4-imx-cortexa9-toradex_apalis-squashfs.combined.bin"
+      "https://downloads.openwrt.org/releases/25.12.6/targets/imx/cortexa9/openwrt-25.12.6-imx-cortexa9-toradex_apalis-squashfs.combined.bin"
     ],
     "firmwareopenwrtupgradeurl": [
-      "https://downloads.openwrt.org/releases/24.10.4/targets/imx/cortexa9/openwrt-24.10.4-imx-cortexa9-toradex_apalis-squashfs.sysupgrade.bin"
+      "https://downloads.openwrt.org/releases/25.12.6/targets/imx/cortexa9/openwrt-25.12.6-imx-cortexa9-toradex_apalis-squashfs.sysupgrade.bin"
     ],
     "firmwareopenwrtsnapshotinstallurl": [
       "https://downloads.openwrt.org/snapshots/targets/imx/cortexa9/openwrt-imx-cortexa9-toradex_apalis-squashfs.combined.bin"
@@ -281951,7 +283815,7 @@
     "serialconnectionparameters": null,
     "serialconnectionvoltage": null,
     "subtarget": "cortexa9",
-    "supportedcurrentrel": "24.10.4",
+    "supportedcurrentrel": "25.12.6",
     "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=d23222a96caeca5f83d22ffd55e210da30eaa379",
     "supportedsincerel": "19.07.0",
     "switch": "-",
@@ -282014,10 +283878,10 @@
     "fccid": null,
     "firmwareoemstockurl": "https://www.toradex.com/computer-on-modules/apalis-arm-family/nxp-freescale-imx-6",
     "firmwareopenwrtinstallurl": [
-      "https://downloads.openwrt.org/releases/24.10.4/targets/imx/cortexa9/openwrt-24.10.4-imx-cortexa9-toradex_apalis-squashfs.combined.bin"
+      "https://downloads.openwrt.org/releases/25.12.6/targets/imx/cortexa9/openwrt-25.12.6-imx-cortexa9-toradex_apalis-squashfs.combined.bin"
     ],
     "firmwareopenwrtupgradeurl": [
-      "https://downloads.openwrt.org/releases/24.10.4/targets/imx/cortexa9/openwrt-24.10.4-imx-cortexa9-toradex_apalis-squashfs.sysupgrade.bin"
+      "https://downloads.openwrt.org/releases/25.12.6/targets/imx/cortexa9/openwrt-25.12.6-imx-cortexa9-toradex_apalis-squashfs.sysupgrade.bin"
     ],
     "firmwareopenwrtsnapshotinstallurl": [
       "https://downloads.openwrt.org/snapshots/targets/imx/cortexa9/openwrt-imx-cortexa9-toradex_apalis-squashfs.combined.bin"
@@ -282064,7 +283928,7 @@
     "serialconnectionparameters": null,
     "serialconnectionvoltage": null,
     "subtarget": "cortexa9",
-    "supportedcurrentrel": "24.10.4",
+    "supportedcurrentrel": "25.12.6",
     "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=d23222a96caeca5f83d22ffd55e210da30eaa379",
     "supportedsincerel": "19.07.0",
     "switch": "-",
@@ -282222,10 +284086,10 @@
     "cpumhz": "400",
     "commentinstallation": null,
     "commentrecovery": null,
-    "comments": "This device runs an OpenWrt fork by the manufacturer. Source code available at https://github.com/dragino/openwrt_lede-18.06",
+    "comments": "This device runs an OpenWrt fork by the manufacturer.",
     "commentsavports": null,
     "commentsusbsataports": null,
-    "commentsnetworkports": null,
+    "commentsnetworkports": "Semtech SX1301 LoRa",
     "detachableantennas": "-",
     "devicepage": "toh:dragino:lps8",
     "devicetype": "other",
@@ -282240,8 +284104,12 @@
     "firmwareoemstockurl": "https://www.dragino.com/downloads/index.php?dir=LoRa_Gateway/LPS8/Firmware/Release/",
     "firmwareopenwrtinstallurl": null,
     "firmwareopenwrtupgradeurl": null,
-    "firmwareopenwrtsnapshotinstallurl": null,
-    "firmwareopenwrtsnapshotupgradeurl": null,
+    "firmwareopenwrtsnapshotinstallurl": [
+      "https://downloads.openwrt.org/snapshots/targets/ath79/generic/openwrt-ath79-generic-dragino_lps8-squashfs-sysupgrade.bin"
+    ],
+    "firmwareopenwrtsnapshotupgradeurl": [
+      "https://downloads.openwrt.org/snapshots/targets/ath79/generic/openwrt-ath79-generic-dragino_lps8-squashfs-sysupgrade.bin"
+    ],
     "flashmb": [
       "16"
     ],
@@ -282253,8 +284121,7 @@
       "LPS8"
     ],
     "installationmethods": [
-      "GUI OEM",
-      "Sysupgrade"
+      "see git-commit"
     ],
     "jtag": "No",
     "ledcount": null,
@@ -282273,7 +284140,7 @@
     "powersupply": "5 VDC via USB-C",
     "rammb": "64",
     "recoverymethods": [
-      "unknown"
+      "see git-commit"
     ],
     "sataports": "-",
     "sfp_ports": "-",
@@ -282282,11 +284149,11 @@
     "serialconnectionparameters": "115200 / 8N1",
     "serialconnectionvoltage": null,
     "subtarget": "generic",
-    "supportedcurrentrel": "external image",
-    "supportedsincecommit": null,
+    "supportedcurrentrel": "snapshot",
+    "supportedsincecommit": "https://git.openwrt.org/openwrt/openwrt/commit/?h=master&id=4cd60fe167a3e06abd80bde100bbefe33f551455",
     "supportedsincerel": "external image",
     "switch": "Atheros AR7240/AR9330 built-in switch",
-    "target": "ar71xx",
+    "target": "ath79",
     "usbports": [
       "1x 2.0"
     ],
@@ -282343,8 +284210,12 @@
     "firmwareopenwrtupgradeurl": [
       "https://downloads.openwrt.org/releases/19.07.10/targets/ar71xx/generic/openwrt-19.07.10-ar71xx-generic-dragino2-squashfs-sysupgrade.bin"
     ],
-    "firmwareopenwrtsnapshotinstallurl": null,
-    "firmwareopenwrtsnapshotupgradeurl": null,
+    "firmwareopenwrtsnapshotinstallurl": [
+      "https://downloads.openwrt.org/snapshots/targets/ath79/generic/openwrt-ath79-generic-dragino_ms14-squashfs-sysupgrade.bin"
+    ],
+    "firmwareopenwrtsnapshotupgradeurl": [
+      "https://downloads.openwrt.org/snapshots/targets/ath79/generic/openwrt-ath79-generic-dragino_ms14-squashfs-sysupgrade.bin"
+    ],
     "flashmb": [
       "16"
     ],
@@ -282359,7 +284230,7 @@
       "GUI OEM"
     ],
     "jtag": "Yes",
-    "ledcount": null,
+    "ledcount": "4",
     "model": "MS14",
     "modem": "-",
     "oemdevicehomepageurl": "http://wiki.dragino.com/index.php?title=Main_Page",
@@ -282379,14 +284250,14 @@
     "sfp_ports": "-",
     "sfp_plus_ports": "-",
     "serial": "Yes",
-    "serialconnectionparameters": null,
-    "serialconnectionvoltage": null,
+    "serialconnectionparameters": "115200 / 8N1",
+    "serialconnectionvoltage": "3.3",
     "subtarget": "generic",
-    "supportedcurrentrel": "EOL",
-    "supportedsincecommit": "https://git.lede-project.org/?p=source.git;a=commit;h=f6638a8994a25994288f6227973630e157598f13",
+    "supportedcurrentrel": "snapshot",
+    "supportedsincecommit": "https://git.openwrt.org/openwrt/openwrt/commit/?h=master&id=5f73c4d0990094e55f3a93b0bd6413903345b2cd",
     "supportedsincerel": "15.05",
-    "switch": null,
-    "target": "ar71xx",
+    "switch": "Atheros AR9330",
+    "target": "ar71xx-ath79",
     "usbports": [
       "1x 2.0"
     ],
@@ -311289,6 +313160,111 @@
     ]
   },
   {
+    "deviceid": "mikrotik:mikrotik_powerbox_pro",
+    "audioports": [
+      "-"
+    ],
+    "availability": "Available 2026",
+    "bluetooth": "-",
+    "bootloader": "RouterBOOT",
+    "brand": "MikroTik",
+    "buttoncount": "1",
+    "cpu": "Qualcomm Atheros QCA9557",
+    "cpucores": "1",
+    "cpumhz": "720",
+    "commentinstallation": null,
+    "commentrecovery": null,
+    "comments": null,
+    "commentsavports": "-",
+    "commentsusbsataports": "-",
+    "commentsnetworkports": "1x passive PoE in, 4x 802.3af/at PoE out",
+    "detachableantennas": "-",
+    "devicepage": null,
+    "devicetype": "Router",
+    "ethernet100mports": "-",
+    "ethernet10gports": "-",
+    "ethernet1gports": "5",
+    "ethernet2_5gports": "-",
+    "ethernet5gports": "-",
+    "fccid": null,
+    "firmwareoemstockurl": null,
+    "firmwareopenwrtinstallurl": [
+      "https://downloads.openwrt.org/releases/25.12.5/targets/ath79/mikrotik/openwrt-25.12.5-ath79-mikrotik-mikrotik_routerboard-960pgs-initramfs-kernel.bin"
+    ],
+    "firmwareopenwrtupgradeurl": [
+      "https://downloads.openwrt.org/releases/25.12.5/targets/ath79/mikrotik/openwrt-25.12.5-ath79-mikrotik-mikrotik_routerboard-960pgs-squashfs-sysupgrade.bin"
+    ],
+    "firmwareopenwrtsnapshotinstallurl": [
+      "https://downloads.openwrt.org/snapshots/targets/ath79/mikrotik/openwrt-ath79-mikrotik-mikrotik_routerboard-960pgs-initramfs-kernel.bin"
+    ],
+    "firmwareopenwrtsnapshotupgradeurl": [
+      "https://downloads.openwrt.org/snapshots/targets/ath79/mikrotik/openwrt-ath79-mikrotik-mikrotik_routerboard-960pgs-squashfs-sysupgrade.bin"
+    ],
+    "flashmb": [
+      "16"
+    ],
+    "forumsearch": [
+      "PowerBox Pro"
+    ],
+    "gpios": null,
+    "gitsearch": [
+      "PowerBox Pro"
+    ],
+    "installationmethods": [
+      "see git-commit"
+    ],
+    "jtag": null,
+    "ledcount": null,
+    "model": "PowerBox Pro",
+    "modem": "-",
+    "oemdevicehomepageurl": "https://mikrotik.com/product/RB960PGS-PB",
+    "owrt_forum_topic_url": null,
+    "outdoor": "Yes",
+    "packagearchitecture": "mipsel_24kc",
+    "phoneports": [
+      "-"
+    ],
+    "picture": [
+      "media:example:genericrouter1.png"
+    ],
+    "powersupply": "12-57V via barrel or passive PoE",
+    "rammb": "128",
+    "recoverymethods": [
+      "see git-commit"
+    ],
+    "sataports": "-",
+    "sfp_ports": "1",
+    "sfp_plus_ports": "-",
+    "serial": "Yes",
+    "serialconnectionparameters": "115200 / 8N1",
+    "serialconnectionvoltage": "3.3",
+    "subtarget": "mikrotik",
+    "supportedcurrentrel": "25.12.5",
+    "supportedsincecommit": "https://git.openwrt.org/openwrt/openwrt/commit/?h=master&id=078fab3397924d06699034ca744dc5e5670ce045",
+    "supportedsincerel": null,
+    "switch": "Qualcomm Atheros QCA9557",
+    "target": "ath79",
+    "usbports": [
+      "Yes",
+      "1x 2.0"
+    ],
+    "unsupported_functions": null,
+    "vlan": "Yes",
+    "version": null,
+    "videoports": [
+      "-"
+    ],
+    "wlan24ghz": "-",
+    "wlan50ghz": "-",
+    "wlan60ghz": "-",
+    "wlan600ghz": "-",
+    "wlancomments": null,
+    "wlanhardware": null,
+    "wlandriver": null,
+    "whereavailable": "mikrotik.com",
+    "wikideviurl": null
+  },
+  {
     "deviceid": "mikrotik:mikrotik_sxtsq_5_ac_rbsxtsqg-5acd",
     "audioports": [
       "-"
@@ -312790,6 +314766,111 @@
     "wikideviurl": [
       "https://wikidevi.wi-cat.ru/MikroTik_RouterBOARD_M11_(RBM11G)"
     ]
+  },
+  {
+    "deviceid": "mikrotik:mikrotik_hex_poe",
+    "audioports": [
+      "-"
+    ],
+    "availability": "Available 2026",
+    "bluetooth": "-",
+    "bootloader": "RouterBOOT",
+    "brand": "MikroTik",
+    "buttoncount": "1",
+    "cpu": "Qualcomm Atheros QCA9557",
+    "cpucores": "1",
+    "cpumhz": "720",
+    "commentinstallation": null,
+    "commentrecovery": null,
+    "comments": null,
+    "commentsavports": "-",
+    "commentsusbsataports": "-",
+    "commentsnetworkports": "1x passive PoE in, 4x 802.3af/at PoE out",
+    "detachableantennas": "-",
+    "devicepage": null,
+    "devicetype": "Router",
+    "ethernet100mports": "-",
+    "ethernet10gports": "-",
+    "ethernet1gports": "5",
+    "ethernet2_5gports": "-",
+    "ethernet5gports": "-",
+    "fccid": null,
+    "firmwareoemstockurl": null,
+    "firmwareopenwrtinstallurl": [
+      "https://downloads.openwrt.org/releases/25.12.5/targets/ath79/mikrotik/openwrt-25.12.5-ath79-mikrotik-mikrotik_routerboard-960pgs-initramfs-kernel.bin"
+    ],
+    "firmwareopenwrtupgradeurl": [
+      "https://downloads.openwrt.org/releases/25.12.5/targets/ath79/mikrotik/openwrt-25.12.5-ath79-mikrotik-mikrotik_routerboard-960pgs-squashfs-sysupgrade.bin"
+    ],
+    "firmwareopenwrtsnapshotinstallurl": [
+      "https://downloads.openwrt.org/snapshots/targets/ath79/mikrotik/openwrt-ath79-mikrotik-mikrotik_routerboard-960pgs-initramfs-kernel.bin"
+    ],
+    "firmwareopenwrtsnapshotupgradeurl": [
+      "https://downloads.openwrt.org/snapshots/targets/ath79/mikrotik/openwrt-ath79-mikrotik-mikrotik_routerboard-960pgs-squashfs-sysupgrade.bin"
+    ],
+    "flashmb": [
+      "16"
+    ],
+    "forumsearch": [
+      "hEX PoE"
+    ],
+    "gpios": null,
+    "gitsearch": [
+      "hEX PoE"
+    ],
+    "installationmethods": [
+      "see git-commit"
+    ],
+    "jtag": null,
+    "ledcount": null,
+    "model": "hEX PoE",
+    "modem": "-",
+    "oemdevicehomepageurl": "https://mikrotik.com/product/RB960PGS",
+    "owrt_forum_topic_url": null,
+    "outdoor": "No",
+    "packagearchitecture": "mipsel_24kc",
+    "phoneports": [
+      "-"
+    ],
+    "picture": [
+      "media:example:genericrouter1.png"
+    ],
+    "powersupply": "12-57V via barrel or passive PoE",
+    "rammb": "128",
+    "recoverymethods": [
+      "see git-commit"
+    ],
+    "sataports": "-",
+    "sfp_ports": "1",
+    "sfp_plus_ports": "-",
+    "serial": "Yes",
+    "serialconnectionparameters": "115200 / 8N1",
+    "serialconnectionvoltage": "3.3",
+    "subtarget": "mikrotik",
+    "supportedcurrentrel": "25.12.5",
+    "supportedsincecommit": "https://git.openwrt.org/openwrt/openwrt/commit/?h=master&id=078fab3397924d06699034ca744dc5e5670ce045",
+    "supportedsincerel": null,
+    "switch": "Qualcomm Atheros QCA9557",
+    "target": "ath79",
+    "usbports": [
+      "Yes",
+      "1x 2.0"
+    ],
+    "unsupported_functions": null,
+    "vlan": "Yes",
+    "version": null,
+    "videoports": [
+      "-"
+    ],
+    "wlan24ghz": "-",
+    "wlan50ghz": "-",
+    "wlan60ghz": "-",
+    "wlan600ghz": "-",
+    "wlancomments": null,
+    "wlanhardware": null,
+    "wlandriver": null,
+    "whereavailable": "mikrotik.com",
+    "wikideviurl": null
   },
   {
     "deviceid": "mikrotik:mikrotik_rb750gr3",

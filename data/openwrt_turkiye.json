@@ -3257,43 +3257,41 @@
     "price": "3.610,06 TL",
     "image_url": "https://resim.epey.com/738844/b_mikrotik-hex-poe-lite-1.jpg",
     "epey_url": "https://www.epey.com/router/mikrotik-hex-poe-lite.html",
-    "akakce_search_url": "https://www.akakce.com/arama/?q=MikroTik+RB760iGS+%28hEX+S%29",
+    "akakce_search_url": "https://www.akakce.com/arama/?q=MikroTik+hEX+PoE",
     "brand": "MikroTik",
-    "model": "RB760iGS (hEX S)",
+    "model": "hEX PoE",
     "version": null,
-    "supported_rel": "25.12.3",
-    "cpu": "MediaTek MT7621A",
-    "ram_mb": "256",
-    "flash_mb": "16, microSD",
-    "target": "ramips/mt7621",
+    "supported_rel": "25.12.5",
+    "cpu": "Qualcomm Atheros QCA9557",
+    "ram_mb": "128",
+    "flash_mb": "16",
+    "target": "ath79/mikrotik",
     "ethernet_1g": "5",
     "ethernet_2_5g": "-",
-    "wlan_hardware": [
-      "-"
-    ],
-    "device_page": "https://openwrt.org/toh:mikrotik:rb760igs",
+    "wlan_hardware": null,
+    "device_page": null,
     "category": "router",
     "wlan24ghz": "-",
     "wlan50ghz": "-",
-    "wlan60ghz": null,
+    "wlan60ghz": "-",
     "usbports": [
+      "Yes",
       "1x 2.0"
     ],
     "bootloader": "RouterBOOT",
     "install_url": [
-      "https://downloads.openwrt.org/releases/25.12.3/targets/ramips/mt7621/openwrt-25.12.3-ramips-mt7621-mikrotik_routerboard-760igs-initramfs-kernel.bin"
+      "https://downloads.openwrt.org/releases/25.12.5/targets/ath79/mikrotik/openwrt-25.12.5-ath79-mikrotik-mikrotik_routerboard-960pgs-initramfs-kernel.bin"
     ],
     "upgrade_url": [
-      "https://downloads.openwrt.org/releases/25.12.3/targets/ramips/mt7621/openwrt-25.12.3-ramips-mt7621-mikrotik_routerboard-760igs-squashfs-sysupgrade.bin"
+      "https://downloads.openwrt.org/releases/25.12.5/targets/ath79/mikrotik/openwrt-25.12.5-ath79-mikrotik-mikrotik_routerboard-960pgs-squashfs-sysupgrade.bin"
     ],
     "install_methods": [
-      "Mikrotik TFTP",
       "see git-commit"
     ],
     "comments": null,
     "packagearchitecture": "mipsel_24kc",
     "devicetype": "Router",
-    "switch": "MediaTek MT7621A"
+    "switch": "Qualcomm Atheros QCA9557"
   },
   {
     "market_title": "Mercusys MB230-4G",
@@ -5327,43 +5325,41 @@
     "price": "5.356,80 TL",
     "image_url": "https://resim.epey.com/738845/b_mikrotik-hex-poe-1.jpg",
     "epey_url": "https://www.epey.com/router/mikrotik-hex-poe.html",
-    "akakce_search_url": "https://www.akakce.com/arama/?q=MikroTik+RB760iGS+%28hEX+S%29",
+    "akakce_search_url": "https://www.akakce.com/arama/?q=MikroTik+hEX+PoE",
     "brand": "MikroTik",
-    "model": "RB760iGS (hEX S)",
+    "model": "hEX PoE",
     "version": null,
-    "supported_rel": "25.12.3",
-    "cpu": "MediaTek MT7621A",
-    "ram_mb": "256",
-    "flash_mb": "16, microSD",
-    "target": "ramips/mt7621",
+    "supported_rel": "25.12.5",
+    "cpu": "Qualcomm Atheros QCA9557",
+    "ram_mb": "128",
+    "flash_mb": "16",
+    "target": "ath79/mikrotik",
     "ethernet_1g": "5",
     "ethernet_2_5g": "-",
-    "wlan_hardware": [
-      "-"
-    ],
-    "device_page": "https://openwrt.org/toh:mikrotik:rb760igs",
+    "wlan_hardware": null,
+    "device_page": null,
     "category": "router",
     "wlan24ghz": "-",
     "wlan50ghz": "-",
-    "wlan60ghz": null,
+    "wlan60ghz": "-",
     "usbports": [
+      "Yes",
       "1x 2.0"
     ],
     "bootloader": "RouterBOOT",
     "install_url": [
-      "https://downloads.openwrt.org/releases/25.12.3/targets/ramips/mt7621/openwrt-25.12.3-ramips-mt7621-mikrotik_routerboard-760igs-initramfs-kernel.bin"
+      "https://downloads.openwrt.org/releases/25.12.5/targets/ath79/mikrotik/openwrt-25.12.5-ath79-mikrotik-mikrotik_routerboard-960pgs-initramfs-kernel.bin"
     ],
     "upgrade_url": [
-      "https://downloads.openwrt.org/releases/25.12.3/targets/ramips/mt7621/openwrt-25.12.3-ramips-mt7621-mikrotik_routerboard-760igs-squashfs-sysupgrade.bin"
+      "https://downloads.openwrt.org/releases/25.12.5/targets/ath79/mikrotik/openwrt-25.12.5-ath79-mikrotik-mikrotik_routerboard-960pgs-squashfs-sysupgrade.bin"
     ],
     "install_methods": [
-      "Mikrotik TFTP",
       "see git-commit"
     ],
     "comments": null,
     "packagearchitecture": "mipsel_24kc",
     "devicetype": "Router",
-    "switch": "MediaTek MT7621A"
+    "switch": "Qualcomm Atheros QCA9557"
   },
   {
     "market_title": "Ubiquiti NanoStation NSM2",
@@ -7808,8 +7804,7 @@
     "ethernet_1g": "2",
     "ethernet_2_5g": "-",
     "wlan_hardware": [
-      "Qualcomm Atheros IPQ4019",
-      "Qualcomm Atheros QCA8072"
+      "Qualcomm Atheros IPQ4019"
     ],
     "device_page": "https://openwrt.org/toh:tp-link:deco_m5",
     "category": "router",
@@ -7826,7 +7821,7 @@
       "U-Boot web recovery"
     ],
     "comments": null,
-    "packagearchitecture": "arm_cortex-a15_neon-vfpv4",
+    "packagearchitecture": "arm_cortex-a7_neon-vfpv4",
     "devicetype": "WiFi Router",
     "switch": null
   },
@@ -8017,8 +8012,7 @@
     "ethernet_1g": "2",
     "ethernet_2_5g": "-",
     "wlan_hardware": [
-      "Qualcomm Atheros IPQ4019",
-      "Qualcomm Atheros QCA8072"
+      "Qualcomm Atheros IPQ4019"
     ],
     "device_page": "https://openwrt.org/toh:tp-link:deco_m5",
     "category": "router",
@@ -8035,7 +8029,7 @@
       "U-Boot web recovery"
     ],
     "comments": null,
-    "packagearchitecture": "arm_cortex-a15_neon-vfpv4",
+    "packagearchitecture": "arm_cortex-a7_neon-vfpv4",
     "devicetype": "WiFi Router",
     "switch": null
   },
@@ -8229,8 +8223,7 @@
     "ethernet_1g": "2",
     "ethernet_2_5g": "-",
     "wlan_hardware": [
-      "Qualcomm Atheros IPQ4019",
-      "Qualcomm Atheros QCA8072"
+      "Qualcomm Atheros IPQ4019"
     ],
     "device_page": "https://openwrt.org/toh:tp-link:deco_m5",
     "category": "router",
@@ -8247,7 +8240,7 @@
       "U-Boot web recovery"
     ],
     "comments": null,
-    "packagearchitecture": "arm_cortex-a15_neon-vfpv4",
+    "packagearchitecture": "arm_cortex-a7_neon-vfpv4",
     "devicetype": "WiFi Router",
     "switch": null
   },
@@ -12999,8 +12992,7 @@
     "ethernet_1g": "2",
     "ethernet_2_5g": "-",
     "wlan_hardware": [
-      "Qualcomm Atheros IPQ4019",
-      "Qualcomm Atheros QCA8072"
+      "Qualcomm Atheros IPQ4019"
     ],
     "device_page": "https://openwrt.org/toh:tp-link:deco_m5",
     "category": "router",
@@ -13017,7 +13009,7 @@
       "U-Boot web recovery"
     ],
     "comments": null,
-    "packagearchitecture": "arm_cortex-a15_neon-vfpv4",
+    "packagearchitecture": "arm_cortex-a7_neon-vfpv4",
     "devicetype": "WiFi Router",
     "switch": null
   },
@@ -13961,44 +13953,42 @@
     "market_title": "Mikrotik hEX PoE RB960PGS 5 Port Router",
     "price": "",
     "image_url": "",
-    "epey_url": "https://www.epey.com/arama/?q=MikroTik+RB760iGS+%28hEX+S%29",
+    "epey_url": "https://www.epey.com/arama/?q=MikroTik+hEX+PoE",
     "akakce_search_url": "https://www.akakce.com/router/en-ucuz-mikrotik-hex-poe-rb960pgs-5-port-fiyati,1327952329.html",
     "brand": "MikroTik",
-    "model": "RB760iGS (hEX S)",
+    "model": "hEX PoE",
     "version": null,
-    "supported_rel": "25.12.3",
-    "cpu": "MediaTek MT7621A",
-    "ram_mb": "256",
-    "flash_mb": "16, microSD",
-    "target": "ramips/mt7621",
+    "supported_rel": "25.12.5",
+    "cpu": "Qualcomm Atheros QCA9557",
+    "ram_mb": "128",
+    "flash_mb": "16",
+    "target": "ath79/mikrotik",
     "ethernet_1g": "5",
     "ethernet_2_5g": "-",
-    "wlan_hardware": [
-      "-"
-    ],
-    "device_page": "https://openwrt.org/toh:mikrotik:rb760igs",
+    "wlan_hardware": null,
+    "device_page": null,
     "category": "router",
     "wlan24ghz": "-",
     "wlan50ghz": "-",
-    "wlan60ghz": null,
+    "wlan60ghz": "-",
     "usbports": [
+      "Yes",
       "1x 2.0"
     ],
     "bootloader": "RouterBOOT",
     "install_url": [
-      "https://downloads.openwrt.org/releases/25.12.3/targets/ramips/mt7621/openwrt-25.12.3-ramips-mt7621-mikrotik_routerboard-760igs-initramfs-kernel.bin"
+      "https://downloads.openwrt.org/releases/25.12.5/targets/ath79/mikrotik/openwrt-25.12.5-ath79-mikrotik-mikrotik_routerboard-960pgs-initramfs-kernel.bin"
     ],
     "upgrade_url": [
-      "https://downloads.openwrt.org/releases/25.12.3/targets/ramips/mt7621/openwrt-25.12.3-ramips-mt7621-mikrotik_routerboard-760igs-squashfs-sysupgrade.bin"
+      "https://downloads.openwrt.org/releases/25.12.5/targets/ath79/mikrotik/openwrt-25.12.5-ath79-mikrotik-mikrotik_routerboard-960pgs-squashfs-sysupgrade.bin"
     ],
     "install_methods": [
-      "Mikrotik TFTP",
       "see git-commit"
     ],
     "comments": null,
     "packagearchitecture": "mipsel_24kc",
     "devicetype": "Router",
-    "switch": "MediaTek MT7621A"
+    "switch": "Qualcomm Atheros QCA9557"
   },
   {
     "market_title": "Cudy GP1200 4 Port 1200 Mbps Router",
