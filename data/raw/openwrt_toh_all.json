@@ -435,6 +435,109 @@
     "wikideviurl": null
   },
   {
+    "deviceid": "cudy:cudy_lt700_outdoor",
+    "audioports": [
+      "-"
+    ],
+    "availability": "Available 2026",
+    "bluetooth": "-",
+    "bootloader": "U-Boot",
+    "brand": "Cudy",
+    "buttoncount": "1",
+    "cpu": "MediaTek MT7621AT",
+    "cpucores": "2",
+    "cpumhz": "880",
+    "commentinstallation": null,
+    "commentrecovery": null,
+    "comments": null,
+    "commentsavports": "-",
+    "commentsusbsataports": "-",
+    "commentsnetworkports": "PoE",
+    "detachableantennas": "2",
+    "devicepage": null,
+    "devicetype": "WiFi Router",
+    "ethernet100mports": "-",
+    "ethernet10gports": "-",
+    "ethernet1gports": "1",
+    "ethernet2_5gports": "-",
+    "ethernet5gports": "-",
+    "fccid": null,
+    "firmwareoemstockurl": null,
+    "firmwareopenwrtinstallurl": null,
+    "firmwareopenwrtupgradeurl": null,
+    "firmwareopenwrtsnapshotinstallurl": null,
+    "firmwareopenwrtsnapshotupgradeurl": null,
+    "flashmb": [
+      "16"
+    ],
+    "forumsearch": [
+      "LT700 Outdoor"
+    ],
+    "gpios": "4",
+    "gitsearch": [
+      "LT700 Outdoor"
+    ],
+    "installationmethods": [
+      "U-Boot web recovery"
+    ],
+    "jtag": "Yes",
+    "ledcount": "7",
+    "model": "LT700 Outdoor",
+    "modem": "-",
+    "oemdevicehomepageurl": null,
+    "owrt_forum_topic_url": null,
+    "outdoor": "No",
+    "packagearchitecture": "mipsel_24kc",
+    "phoneports": [
+      "-"
+    ],
+    "picture": [
+      "media:example:genericrouter1.png"
+    ],
+    "powersupply": "12 VDC, 2.5 A",
+    "rammb": "128",
+    "recoverymethods": [
+      "unknown"
+    ],
+    "sataports": "-",
+    "sfp_ports": "-",
+    "sfp_plus_ports": "-",
+    "serial": "Yes",
+    "serialconnectionparameters": "115200 / 8N1",
+    "serialconnectionvoltage": "3.3",
+    "subtarget": "mt7621",
+    "supportedcurrentrel": null,
+    "supportedsincecommit": "https://git.openwrt.org/openwrt/openwrt/commit/?id=3a117c0c53e31756f09067eec46b71e142b7c086",
+    "supportedsincerel": null,
+    "switch": "MediaTek MT7621AT",
+    "target": "ramips",
+    "usbports": [
+      "-"
+    ],
+    "unsupported_functions": null,
+    "vlan": "Yes",
+    "version": [
+      "v1"
+    ],
+    "videoports": [
+      "-"
+    ],
+    "wlan24ghz": "b/g/n/ax",
+    "wlan50ghz": "a/n/ac/ax",
+    "wlan60ghz": "-",
+    "wlan600ghz": "-",
+    "wlancomments": null,
+    "wlanhardware": [
+      "MediaTek MT7975DN",
+      "MediaTek MT7905DAN"
+    ],
+    "wlandriver": [
+      "mt76"
+    ],
+    "whereavailable": "https://geizhals.at/cudy-lt700-outdoor-lt700-outdoor-a3383180.html",
+    "wikideviurl": null
+  },
+  {
     "deviceid": "cudy:cudy_m1800",
     "audioports": [
       "-"
@@ -29157,8 +29260,8 @@
     "videoports": [
       "-"
     ],
-    "wlan24ghz": "b/g/n/ax",
-    "wlan50ghz": "a/n/ac/ax",
+    "wlan24ghz": "b/g/n/ax/be",
+    "wlan50ghz": "a/n/ac/ax/be",
     "wlan60ghz": "ax/be",
     "wlan600ghz": "-",
     "wlancomments": null,
@@ -37412,7 +37515,7 @@
     "serialconnectionparameters": "115200 / 8N1",
     "serialconnectionvoltage": "3.3",
     "subtarget": "filogic",
-    "supportedcurrentrel": "25.12.5",
+    "supportedcurrentrel": "25.12.6",
     "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=c71b68acdd63b6e2760defb334bef5d65776ebea",
     "supportedsincerel": "24.10.0",
     "switch": "MediaTek MT7988AV",
@@ -71110,7 +71213,7 @@
     ],
     "availability": "Discontinued",
     "bluetooth": "-",
-    "bootloader": null,
+    "bootloader": "U-Boot",
     "brand": "Edimax",
     "buttoncount": "1",
     "cpu": "Ralink RT3050",
@@ -71151,7 +71254,7 @@
       "3g-6200nl"
     ],
     "installationmethods": [
-      "unknown"
+      "U-Boot TFTP recovery"
     ],
     "jtag": null,
     "ledcount": "3",
@@ -71170,7 +71273,7 @@
     "powersupply": "5 VDC, 2.0A",
     "rammb": "16",
     "recoverymethods": [
-      "unknown"
+      "U-Boot TFTP recovery"
     ],
     "sataports": "-",
     "sfp_ports": "-",
@@ -89949,6 +90052,121 @@
     "wikideviurl": [
       "https://wikidevi.wi-cat.ru/Ruckus_Wireless_ZoneFlex_7321"
     ]
+  },
+  {
+    "deviceid": "ruckus:ruckus_xi-3",
+    "audioports": [
+      "-"
+    ],
+    "availability": "unknown 2026",
+    "bluetooth": "-",
+    "bootloader": "U-Boot",
+    "brand": "Ruckus",
+    "buttoncount": "1",
+    "cpu": "Qualcomm Atheros QCA9557",
+    "cpucores": "1",
+    "cpumhz": "720",
+    "commentinstallation": null,
+    "commentrecovery": null,
+    "comments": "Identical hardware to Ruckus R500. FCC certified under a change of ID.",
+    "commentsavports": null,
+    "commentsusbsataports": null,
+    "commentsnetworkports": null,
+    "detachableantennas": "-",
+    "devicepage": "inbox:toh:ruckus:r500",
+    "devicetype": "WiFi AP",
+    "ethernet100mports": "-",
+    "ethernet10gports": "-",
+    "ethernet1gports": "2",
+    "ethernet2_5gports": "-",
+    "ethernet5gports": "-",
+    "fccid": [
+      "https://fccid.io/S9GXI3/"
+    ],
+    "firmwareoemstockurl": null,
+    "firmwareopenwrtinstallurl": [
+      "https://downloads.openwrt.org/releases/25.12.6/targets/ath79/generic/openwrt-25.12.6-ath79-generic-ruckus_r500-initramfs-kernel.bin"
+    ],
+    "firmwareopenwrtupgradeurl": [
+      "https://downloads.openwrt.org/releases/25.12.6/targets/ath79/generic/openwrt-25.12.6-ath79-generic-ruckus_r500-squashfs-sysupgrade.bin"
+    ],
+    "firmwareopenwrtsnapshotinstallurl": [
+      "https://downloads.openwrt.org/snapshots/targets/ath79/generic/openwrt-ath79-generic-ruckus_r500-initramfs-kernel.bin"
+    ],
+    "firmwareopenwrtsnapshotupgradeurl": [
+      "https://downloads.openwrt.org/snapshots/targets/ath79/generic/openwrt-ath79-generic-ruckus_r500-squashfs-sysupgrade.bin"
+    ],
+    "flashmb": [
+      "64"
+    ],
+    "forumsearch": [
+      "Xi-3"
+    ],
+    "gpios": null,
+    "gitsearch": [
+      "Xi-3"
+    ],
+    "installationmethods": [
+      "U-Boot TFTP + serial recovery",
+      "see git-commit"
+    ],
+    "jtag": "Yes",
+    "ledcount": "5",
+    "model": "Xi-3",
+    "modem": "-",
+    "oemdevicehomepageurl": null,
+    "owrt_forum_topic_url": null,
+    "outdoor": "No",
+    "packagearchitecture": "mips_24kc",
+    "phoneports": [
+      "-"
+    ],
+    "picture": [
+      "media:r500.webp"
+    ],
+    "powersupply": "12V, 1A via barrel or 802.3af PoE",
+    "rammb": "256",
+    "recoverymethods": [
+      "see git-commit"
+    ],
+    "sataports": "-",
+    "sfp_ports": "-",
+    "sfp_plus_ports": "-",
+    "serial": "Yes",
+    "serialconnectionparameters": "115200 / 8N1",
+    "serialconnectionvoltage": "3.3",
+    "subtarget": "generic",
+    "supportedcurrentrel": "25.12.6",
+    "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=ca7324134dd4fa49266c1917dc18aeb19d95077f",
+    "supportedsincerel": "25.12.0",
+    "switch": "Qualcomm Atheros QCA8337",
+    "target": "ath79",
+    "usbports": [
+      "-"
+    ],
+    "unsupported_functions": [
+      "Beamforming antennas"
+    ],
+    "vlan": "Yes",
+    "version": null,
+    "videoports": [
+      "-"
+    ],
+    "wlan24ghz": "b/g/n",
+    "wlan50ghz": "a/n/ac",
+    "wlan60ghz": "-",
+    "wlan600ghz": "-",
+    "wlancomments": "MIMO 2x2:2 on both bands",
+    "wlanhardware": [
+      "Qualcomm Atheros QCA9557",
+      "Qualcomm Atheros QCA9882"
+    ],
+    "wlandriver": [
+      "ath9k",
+      "ath10k-ct"
+    ],
+    "whereavailable": null,
+    "wikideviurl": null
   },
   {
     "deviceid": "ruckus:ruckus_r500",
@@ -110062,14 +110280,16 @@
     "commentsusbsataports": null,
     "commentsnetworkports": null,
     "detachableantennas": "-",
-    "devicepage": null,
+    "devicepage": "https:openwrt.org:inbox:toh:asus:rt-ac59u_v1",
     "devicetype": "WiFi Router",
     "ethernet100mports": "-",
     "ethernet10gports": "-",
     "ethernet1gports": "5",
     "ethernet2_5gports": "-",
     "ethernet5gports": "-",
-    "fccid": null,
+    "fccid": [
+      "https://fcc.io/MSQ-RTACRH01"
+    ],
     "firmwareoemstockurl": null,
     "firmwareopenwrtinstallurl": [
       "https://downloads.openwrt.org/releases/25.12.2/targets/ath79/generic/openwrt-25.12.2-ath79-generic-asus_rt-ac59u-squashfs-factory.bin"
@@ -110513,14 +110733,16 @@
     "commentsusbsataports": null,
     "commentsnetworkports": null,
     "detachableantennas": "-",
-    "devicepage": null,
+    "devicepage": "https:openwrt.org:inbox:toh:asus:rt-ac59u_v1",
     "devicetype": "WiFi Router",
     "ethernet100mports": "-",
     "ethernet10gports": "-",
     "ethernet1gports": "5",
     "ethernet2_5gports": "-",
     "ethernet5gports": "-",
-    "fccid": null,
+    "fccid": [
+      "https://fcc.io/MSQ-RTACRH01"
+    ],
     "firmwareoemstockurl": null,
     "firmwareopenwrtinstallurl": [
       "https://downloads.openwrt.org/releases/25.12.2/targets/ath79/generic/openwrt-25.12.2-ath79-generic-asus_rt-ac59u-squashfs-factory.bin"
@@ -117412,7 +117634,7 @@
     "commentsusbsataports": null,
     "commentsnetworkports": null,
     "detachableantennas": "-",
-    "devicepage": null,
+    "devicepage": "https:openwrt.org:inbox:toh:asus:rt-ac59u_v1",
     "devicetype": "WiFi Router",
     "ethernet100mports": "-",
     "ethernet10gports": "-",
@@ -117540,10 +117762,10 @@
     ],
     "firmwareoemstockurl": "https://www.asus.com/Networking-IoT-Servers/WiFi-Routers/ASUS-WiFi-Routers/RT-AX53U/HelpDesk_BIOS/",
     "firmwareopenwrtinstallurl": [
-      "https://downloads.openwrt.org/releases/25.12.3/targets/ramips/mt7621/openwrt-25.12.3-ramips-mt7621-asus_rt-ax53u-squashfs-factory.bin"
+      "https://downloads.openwrt.org/releases/25.12.6/targets/ramips/mt7621/openwrt-25.12.6-ramips-mt7621-asus_rt-ax53u-squashfs-factory.bin"
     ],
     "firmwareopenwrtupgradeurl": [
-      "https://downloads.openwrt.org/releases/25.12.3/targets/ramips/mt7621/openwrt-25.12.3-ramips-mt7621-asus_rt-ax53u-squashfs-sysupgrade.bin"
+      "https://downloads.openwrt.org/releases/25.12.6/targets/ramips/mt7621/openwrt-25.12.6-ramips-mt7621-asus_rt-ax53u-squashfs-sysupgrade.bin"
     ],
     "firmwareopenwrtsnapshotinstallurl": [
       "https://downloads.openwrt.org/snapshots/targets/ramips/mt7621/openwrt-ramips-mt7621-asus_rt-ax53u-squashfs-factory.bin"
@@ -117594,7 +117816,7 @@
     "serialconnectionparameters": "115200 / 8N1",
     "serialconnectionvoltage": "3.3",
     "subtarget": "mt7621",
-    "supportedcurrentrel": "25.12.3",
+    "supportedcurrentrel": "25.12.6",
     "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=8c00fd9b4519bf0ef8fb3470a6df421b9f38c03c",
     "supportedsincerel": "22.03.0",
     "switch": "MediaTek MT7621AT",
@@ -121606,6 +121828,120 @@
     ]
   },
   {
+    "deviceid": "linksys:linksys_mx20wh",
+    "audioports": [
+      "-"
+    ],
+    "availability": "Discontinued 2024",
+    "bluetooth": "-",
+    "bootloader": "U-Boot",
+    "brand": "Linksys",
+    "buttoncount": "2",
+    "cpu": "Qualcomm IPQ5018",
+    "cpucores": "2",
+    "cpumhz": "1000",
+    "commentinstallation": null,
+    "commentrecovery": null,
+    "comments": "Identical to MX2000, same FCC ID",
+    "commentsavports": "-",
+    "commentsusbsataports": null,
+    "commentsnetworkports": null,
+    "detachableantennas": "-",
+    "devicepage": null,
+    "devicetype": "WiFi Router",
+    "ethernet100mports": "-",
+    "ethernet10gports": "-",
+    "ethernet1gports": "4",
+    "ethernet2_5gports": "-",
+    "ethernet5gports": "-",
+    "fccid": [
+      "https://fccid.io/2AYRA-08330/"
+    ],
+    "firmwareoemstockurl": null,
+    "firmwareopenwrtinstallurl": [
+      "https://downloads.openwrt.org/releases/25.12.5/targets/qualcommax/ipq50xx/openwrt-25.12.5-qualcommax-ipq50xx-linksys_mx2000-squashfs-factory.bin"
+    ],
+    "firmwareopenwrtupgradeurl": [
+      "https://downloads.openwrt.org/releases/25.12.5/targets/qualcommax/ipq50xx/openwrt-25.12.5-qualcommax-ipq50xx-linksys_mx2000-squashfs-sysupgrade.bin"
+    ],
+    "firmwareopenwrtsnapshotinstallurl": [
+      "https://downloads.openwrt.org/snapshots/targets/qualcommax/ipq50xx/openwrt-qualcommax-ipq50xx-linksys_mx2000-squashfs-factory.bin"
+    ],
+    "firmwareopenwrtsnapshotupgradeurl": [
+      "https://downloads.openwrt.org/snapshots/targets/qualcommax/ipq50xx/openwrt-qualcommax-ipq50xx-linksys_mx2000-squashfs-sysupgrade.bin"
+    ],
+    "flashmb": [
+      "256NAND"
+    ],
+    "forumsearch": [
+      "MX20WH"
+    ],
+    "gpios": null,
+    "gitsearch": [
+      "MX20WH"
+    ],
+    "installationmethods": [
+      "GUI OEM",
+      "see git-commit"
+    ],
+    "jtag": null,
+    "ledcount": "1",
+    "model": "MX20WH",
+    "modem": "-",
+    "oemdevicehomepageurl": null,
+    "owrt_forum_topic_url": [
+      "https://forum.openwrt.org/t/ipq5018-support-for-linksys-mx2000-atlas-6-mx5500-atlas-6-pro/164055"
+    ],
+    "outdoor": "No",
+    "packagearchitecture": "aarch64_cortex-a53",
+    "phoneports": [
+      "-"
+    ],
+    "picture": [
+      "media:linksys:mx4200.png"
+    ],
+    "powersupply": "12 VDC, 1.5A via barrel",
+    "rammb": "512",
+    "recoverymethods": [
+      "see git-commit"
+    ],
+    "sataports": "-",
+    "sfp_ports": "-",
+    "sfp_plus_ports": "-",
+    "serial": "Yes",
+    "serialconnectionparameters": "115200 / 8N1",
+    "serialconnectionvoltage": "3.3",
+    "subtarget": "ipq50xx",
+    "supportedcurrentrel": "25.12.5",
+    "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=398f4a97378e2f645badc1aef3d0e9fd76f6665d",
+    "supportedsincerel": "25.12.0",
+    "switch": "Qualcomm Atheros QCA8337",
+    "target": "qualcommax",
+    "usbports": [
+      "-"
+    ],
+    "unsupported_functions": null,
+    "vlan": "Yes",
+    "version": null,
+    "videoports": [
+      "-"
+    ],
+    "wlan24ghz": "b/g/n/ax",
+    "wlan50ghz": "a/n/ac/ax",
+    "wlan60ghz": "-",
+    "wlan600ghz": "-",
+    "wlancomments": "2.4GHz: 2x2:2 MIMO, 5GHz: 2x2:2 MIMO",
+    "wlanhardware": [
+      "Qualcomm IPQ5018",
+      "Qualcomm QCN6102"
+    ],
+    "wlandriver": [
+      "ath11k"
+    ],
+    "whereavailable": null,
+    "wikideviurl": null
+  },
+  {
     "deviceid": "linksys:linksys_mr7500",
     "audioports": [
       "-"
@@ -122514,6 +122850,122 @@
     ]
   },
   {
+    "deviceid": "linksys:linksys_ea7400",
+    "audioports": [
+      "-"
+    ],
+    "availability": "Available 2026",
+    "bluetooth": "-",
+    "bootloader": "U-Boot",
+    "brand": "Linksys",
+    "buttoncount": "2",
+    "cpu": "Qualcomm Atheros IPQ8064",
+    "cpucores": "2",
+    "cpumhz": "1400",
+    "commentinstallation": "Some devices won't flash via web-gui. In that case, only method u-boot + serial works.",
+    "commentrecovery": null,
+    "comments": "Since OpenWRT version 24.10,  CPU ipq806x has switched to DSA architecture.  Hence upgrading from earlier versions to 24.10.x or later requires *complete reset* of router configuration.",
+    "commentsavports": null,
+    "commentsusbsataports": null,
+    "commentsnetworkports": null,
+    "detachableantennas": "3",
+    "devicepage": "toh:linksys:linksys_ea7500_v1",
+    "devicetype": "WiFi Router",
+    "ethernet100mports": "-",
+    "ethernet10gports": "-",
+    "ethernet1gports": "5",
+    "ethernet2_5gports": "-",
+    "ethernet5gports": "-",
+    "fccid": [
+      "https://fcc.io/Q87/-EA7500"
+    ],
+    "firmwareoemstockurl": null,
+    "firmwareopenwrtinstallurl": [
+      "https://downloads.openwrt.org/releases/25.12.6/targets/ipq806x/generic/openwrt-25.12.6-ipq806x-generic-linksys_ea7500-v1-squashfs-factory.bin"
+    ],
+    "firmwareopenwrtupgradeurl": [
+      "https://downloads.openwrt.org/releases/25.12.6/targets/ipq806x/generic/openwrt-25.12.6-ipq806x-generic-linksys_ea7500-v1-squashfs-sysupgrade.bin"
+    ],
+    "firmwareopenwrtsnapshotinstallurl": [
+      "https://downloads.openwrt.org/snapshots/targets/ipq806x/generic/openwrt-ipq806x-generic-linksys_ea7500-v1-squashfs-factory.bin"
+    ],
+    "firmwareopenwrtsnapshotupgradeurl": [
+      "https://downloads.openwrt.org/snapshots/targets/ipq806x/generic/openwrt-ipq806x-generic-linksys_ea7500-v1-squashfs-sysupgrade.bin"
+    ],
+    "flashmb": [
+      "128NAND"
+    ],
+    "forumsearch": [
+      "EA7400"
+    ],
+    "gpios": "-",
+    "gitsearch": [
+      "EA7400"
+    ],
+    "installationmethods": [
+      "GUI OEM",
+      "U-Boot TFTP + serial recovery",
+      "see git-commit"
+    ],
+    "jtag": "No",
+    "ledcount": "1",
+    "model": "EA7400",
+    "modem": "-",
+    "oemdevicehomepageurl": null,
+    "owrt_forum_topic_url": null,
+    "outdoor": "No",
+    "packagearchitecture": "arm_cortex-a15_neon-vfpv4",
+    "phoneports": [
+      "-"
+    ],
+    "picture": [
+      "media:linksys:linksys_ea7500_v1.png"
+    ],
+    "powersupply": "12 VDC, 3.5 A",
+    "rammb": "256",
+    "recoverymethods": [
+      "U-Boot TFTP + serial recovery"
+    ],
+    "sataports": "-",
+    "sfp_ports": "-",
+    "sfp_plus_ports": "-",
+    "serial": "Yes",
+    "serialconnectionparameters": "115200 / 8N1",
+    "serialconnectionvoltage": "3.3",
+    "subtarget": "generic",
+    "supportedcurrentrel": "25.12.6",
+    "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=20c7abd4b7b9b4203b6858136b2c811b6dbd8dae",
+    "supportedsincerel": "21.02.0",
+    "switch": "Qualcomm Atheros QCA8337",
+    "target": "ipq806x",
+    "usbports": [
+      "1x 2.0",
+      "1x 3.0"
+    ],
+    "unsupported_functions": null,
+    "vlan": "Yes",
+    "version": [
+      "v1"
+    ],
+    "videoports": [
+      "-"
+    ],
+    "wlan24ghz": "b/g/n",
+    "wlan50ghz": "a/n/ac",
+    "wlan60ghz": "-",
+    "wlan600ghz": "-",
+    "wlancomments": null,
+    "wlanhardware": [
+      "Qualcomm Atheros QCA9982",
+      "Qualcomm Atheros QCA9983"
+    ],
+    "wlandriver": [
+      "ath10k"
+    ],
+    "whereavailable": "amazon.com",
+    "wikideviurl": null
+  },
+  {
     "deviceid": "linksys:linksys_re6500",
     "audioports": [
       "Headphone jack"
@@ -122626,6 +123078,125 @@
     "whereavailable": "amazon.com, amazon.de",
     "wikideviurl": [
       "https://wikidevi.wi-cat.ru/Linksys_RE6500"
+    ]
+  },
+  {
+    "deviceid": "linksys:linksys_mx4200c",
+    "audioports": [
+      "-"
+    ],
+    "availability": "unknown 2026",
+    "bluetooth": "BLE",
+    "bootloader": "U-Boot",
+    "brand": "Linksys",
+    "buttoncount": "2",
+    "cpu": "Qualcomm IPQ8174",
+    "cpucores": "4",
+    "cpumhz": "1400",
+    "commentinstallation": null,
+    "commentrecovery": "for u-boot tftp rename stock fw to chiron.img for v1, not sure on v2 but can be seen in u-boot by using command fw_printenv",
+    "comments": "Identical to MX4200 v1, same FCC ID",
+    "commentsavports": null,
+    "commentsusbsataports": null,
+    "commentsnetworkports": null,
+    "detachableantennas": "-",
+    "devicepage": "toh:linksys:mx4200_v1_and_v2",
+    "devicetype": "WiFi Router",
+    "ethernet100mports": "-",
+    "ethernet10gports": "-",
+    "ethernet1gports": "4",
+    "ethernet2_5gports": "-",
+    "ethernet5gports": "-",
+    "fccid": [
+      "https://fccid.io/K7S-03580"
+    ],
+    "firmwareoemstockurl": null,
+    "firmwareopenwrtinstallurl": [
+      "https://downloads.openwrt.org/releases/25.12.6/targets/qualcommax/ipq807x/openwrt-25.12.6-qualcommax-ipq807x-linksys_mx4200v1-squashfs-factory.bin"
+    ],
+    "firmwareopenwrtupgradeurl": [
+      "https://downloads.openwrt.org/releases/25.12.6/targets/qualcommax/ipq807x/openwrt-25.12.6-qualcommax-ipq807x-linksys_mx4200v1-squashfs-sysupgrade.bin"
+    ],
+    "firmwareopenwrtsnapshotinstallurl": [
+      "https://downloads.openwrt.org/snapshots/targets/qualcommax/ipq807x/openwrt-qualcommax-ipq807x-linksys_mx4200v1-squashfs-factory.bin"
+    ],
+    "firmwareopenwrtsnapshotupgradeurl": [
+      "https://downloads.openwrt.org/snapshots/targets/qualcommax/ipq807x/openwrt-qualcommax-ipq807x-linksys_mx4200v1-squashfs-sysupgrade.bin"
+    ],
+    "flashmb": [
+      "512NAND"
+    ],
+    "forumsearch": [
+      "MX4200C"
+    ],
+    "gpios": "-",
+    "gitsearch": [
+      "MX4200C"
+    ],
+    "installationmethods": [
+      "GUI OEM"
+    ],
+    "jtag": "No",
+    "ledcount": "3",
+    "model": "MX4200C",
+    "modem": "-",
+    "oemdevicehomepageurl": "https://support.linksys.com/kb/article/112-en/",
+    "owrt_forum_topic_url": [
+      "https://forum.openwrt.org/t/openwrt-support-for-linksys-mx4200/"
+    ],
+    "outdoor": "No",
+    "packagearchitecture": "aarch64_cortex-a53",
+    "phoneports": [
+      "-"
+    ],
+    "picture": [
+      "media:linksys:mx4200.png;"
+    ],
+    "powersupply": "12 VDC, 3.0A via barrel",
+    "rammb": "512",
+    "recoverymethods": [
+      "U-Boot TFTP recovery"
+    ],
+    "sataports": "-",
+    "sfp_ports": "-",
+    "sfp_plus_ports": "-",
+    "serial": "Yes",
+    "serialconnectionparameters": "115200 / 8N1",
+    "serialconnectionvoltage": "3.3",
+    "subtarget": "ipq807x",
+    "supportedcurrentrel": "25.12.6",
+    "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=46a2490e8f24a1ad47e53b0b4ee875fa3658f2c1",
+    "supportedsincerel": "24.10.0",
+    "switch": "Qualcomm Atheros QCA8075",
+    "target": "qualcommax",
+    "usbports": [
+      "1x 3.0"
+    ],
+    "unsupported_functions": [
+      "WiFi-6 160Mhz Channel"
+    ],
+    "vlan": "Yes",
+    "version": [
+      "v1"
+    ],
+    "videoports": [
+      "-"
+    ],
+    "wlan24ghz": "b/g/n/ax",
+    "wlan50ghz": "a/n/ac/ax",
+    "wlan60ghz": "-",
+    "wlan600ghz": "-",
+    "wlancomments": null,
+    "wlanhardware": [
+      "Qualcomm QCN5024",
+      "2x Qualcomm QCN5054"
+    ],
+    "wlandriver": [
+      "ath11k"
+    ],
+    "whereavailable": null,
+    "wikideviurl": [
+      "https://wikidevi.wi-cat.ru/Linksys_MX4200"
     ]
   },
   {
@@ -126935,6 +127506,124 @@
     ]
   },
   {
+    "deviceid": "linksys:linksys_ea8250",
+    "audioports": [
+      "-"
+    ],
+    "availability": "Discontinued 2021",
+    "bluetooth": "4.1",
+    "bootloader": "U-Boot",
+    "brand": "Linksys",
+    "buttoncount": "2",
+    "cpu": "Qualcomm Atheros IPQ4019",
+    "cpucores": "4",
+    "cpumhz": "717",
+    "commentinstallation": null,
+    "commentrecovery": null,
+    "comments": "Identical to EA8300, same FCC ID",
+    "commentsavports": "-",
+    "commentsusbsataports": null,
+    "commentsnetworkports": null,
+    "detachableantennas": "-",
+    "devicepage": "toh:linksys:ea8300",
+    "devicetype": "WiFi Router",
+    "ethernet100mports": "-",
+    "ethernet10gports": "-",
+    "ethernet1gports": "5",
+    "ethernet2_5gports": "-",
+    "ethernet5gports": "-",
+    "fccid": [
+      "https://fcc.io/Q87/-EA8300"
+    ],
+    "firmwareoemstockurl": null,
+    "firmwareopenwrtinstallurl": [
+      "https://downloads.openwrt.org/releases/25.12.6/targets/ipq40xx/generic/openwrt-25.12.6-ipq40xx-generic-linksys_ea8300-squashfs-factory.bin"
+    ],
+    "firmwareopenwrtupgradeurl": [
+      "https://downloads.openwrt.org/releases/25.12.6/targets/ipq40xx/generic/openwrt-25.12.6-ipq40xx-generic-linksys_ea8300-squashfs-sysupgrade.bin"
+    ],
+    "firmwareopenwrtsnapshotinstallurl": [
+      "https://downloads.openwrt.org/snapshots/targets/ipq40xx/generic/openwrt-ipq40xx-generic-linksys_ea8300-squashfs-factory.bin"
+    ],
+    "firmwareopenwrtsnapshotupgradeurl": [
+      "https://downloads.openwrt.org/snapshots/targets/ipq40xx/generic/openwrt-ipq40xx-generic-linksys_ea8300-squashfs-sysupgrade.bin"
+    ],
+    "flashmb": [
+      "256NAND"
+    ],
+    "forumsearch": [
+      "EA8250"
+    ],
+    "gpios": "-",
+    "gitsearch": [
+      "EA8250"
+    ],
+    "installationmethods": [
+      "GUI OEM",
+      "see git-commit"
+    ],
+    "jtag": null,
+    "ledcount": "4",
+    "model": "EA8250",
+    "modem": "-",
+    "oemdevicehomepageurl": null,
+    "owrt_forum_topic_url": [
+      "https://forum.openwrt.org/t/linksys-ea8300/"
+    ],
+    "outdoor": "No",
+    "packagearchitecture": "arm_cortex-a7_neon-vfpv4",
+    "phoneports": [
+      "-"
+    ],
+    "picture": [
+      "media:linksys:ea8300.jpg"
+    ],
+    "powersupply": "12 VDC, 2.0A via barrel",
+    "rammb": "256",
+    "recoverymethods": [
+      "Linksys TFTP"
+    ],
+    "sataports": "-",
+    "sfp_ports": "-",
+    "sfp_plus_ports": "-",
+    "serial": "Yes",
+    "serialconnectionparameters": "115200 / 8N1",
+    "serialconnectionvoltage": "3.3",
+    "subtarget": "generic",
+    "supportedcurrentrel": "25.12.6",
+    "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=819e7946b0964725dab50c92797f49cf4053d955",
+    "supportedsincerel": "19.07.0",
+    "switch": "Qualcomm Atheros QCA8075",
+    "target": "ipq40xx",
+    "usbports": [
+      "1x 3.0"
+    ],
+    "unsupported_functions": [
+      "Bluetooth"
+    ],
+    "vlan": "Yes",
+    "version": [
+      "v1"
+    ],
+    "videoports": [
+      "-"
+    ],
+    "wlan24ghz": "b/g/n",
+    "wlan50ghz": "a/n/ac",
+    "wlan60ghz": "-",
+    "wlan600ghz": "-",
+    "wlancomments": "MIMO 2x2:2 for 2.4Ghz, 5Ghz1, 5Ghz2; Tri-band",
+    "wlanhardware": [
+      "Qualcomm Atheros IPQ4019",
+      "Qualcomm Atheros QCA9886"
+    ],
+    "wlandriver": [
+      "ath10k-ct"
+    ],
+    "whereavailable": null,
+    "wikideviurl": null
+  },
+  {
     "deviceid": "linksys:linksys_mr9000",
     "audioports": [
       "-"
@@ -128765,6 +129454,120 @@
     "wikideviurl": null
   },
   {
+    "deviceid": "linksys:linksys_mx55wh",
+    "audioports": [
+      "-"
+    ],
+    "availability": "Discontinued 2024",
+    "bluetooth": "-",
+    "bootloader": "U-Boot",
+    "brand": "Linksys",
+    "buttoncount": "2",
+    "cpu": "Qualcomm IPQ5018",
+    "cpucores": "2",
+    "cpumhz": "1000",
+    "commentinstallation": null,
+    "commentrecovery": null,
+    "comments": "Identical to MX5500, same FCC ID",
+    "commentsavports": null,
+    "commentsusbsataports": null,
+    "commentsnetworkports": null,
+    "detachableantennas": "-",
+    "devicepage": null,
+    "devicetype": "WiFi Router",
+    "ethernet100mports": "-",
+    "ethernet10gports": "-",
+    "ethernet1gports": "4",
+    "ethernet2_5gports": "-",
+    "ethernet5gports": "-",
+    "fccid": [
+      "https://fccid.io/2AYRA-03639/"
+    ],
+    "firmwareoemstockurl": null,
+    "firmwareopenwrtinstallurl": [
+      "https://downloads.openwrt.org/releases/25.12.5/targets/qualcommax/ipq50xx/openwrt-25.12.5-qualcommax-ipq50xx-linksys_mx5500-squashfs-factory.bin"
+    ],
+    "firmwareopenwrtupgradeurl": [
+      "https://downloads.openwrt.org/releases/25.12.5/targets/qualcommax/ipq50xx/openwrt-25.12.5-qualcommax-ipq50xx-linksys_mx5500-squashfs-sysupgrade.bin"
+    ],
+    "firmwareopenwrtsnapshotinstallurl": [
+      "https://downloads.openwrt.org/snapshots/targets/qualcommax/ipq50xx/openwrt-qualcommax-ipq50xx-linksys_mx5500-squashfs-factory.bin"
+    ],
+    "firmwareopenwrtsnapshotupgradeurl": [
+      "https://downloads.openwrt.org/snapshots/targets/qualcommax/ipq50xx/openwrt-qualcommax-ipq50xx-linksys_mx5500-squashfs-sysupgrade.bin"
+    ],
+    "flashmb": [
+      "256NAND"
+    ],
+    "forumsearch": [
+      "MX55WH"
+    ],
+    "gpios": null,
+    "gitsearch": [
+      "MX55WH"
+    ],
+    "installationmethods": [
+      "GUI OEM",
+      "see git-commit"
+    ],
+    "jtag": null,
+    "ledcount": "1",
+    "model": "MX55WH",
+    "modem": "-",
+    "oemdevicehomepageurl": null,
+    "owrt_forum_topic_url": [
+      "https://forum.openwrt.org/t/ipq5018-support-for-linksys-mx2000-atlas-6-mx5500-atlas-6-pro/164055"
+    ],
+    "outdoor": "No",
+    "packagearchitecture": "aarch64_cortex-a53",
+    "phoneports": [
+      "-"
+    ],
+    "picture": [
+      "media:linksys:mx4200.png"
+    ],
+    "powersupply": "12 VDC, 1.5A via barrel",
+    "rammb": "512",
+    "recoverymethods": [
+      "see git-commit"
+    ],
+    "sataports": "-",
+    "sfp_ports": "-",
+    "sfp_plus_ports": "-",
+    "serial": "Yes",
+    "serialconnectionparameters": "115200 / 8N1",
+    "serialconnectionvoltage": null,
+    "subtarget": "ipq50xx",
+    "supportedcurrentrel": "25.12.5",
+    "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=398f4a97378e2f645badc1aef3d0e9fd76f6665d",
+    "supportedsincerel": "25.12.0",
+    "switch": "Qualcomm Atheros QCA8337",
+    "target": "qualcommax",
+    "usbports": [
+      "-"
+    ],
+    "unsupported_functions": null,
+    "vlan": "Yes",
+    "version": null,
+    "videoports": [
+      "-"
+    ],
+    "wlan24ghz": "b/g/n/ax",
+    "wlan50ghz": "a/n/ac/ax",
+    "wlan60ghz": "-",
+    "wlan600ghz": "-",
+    "wlancomments": "2.4GHz MIMO 2x2, 5GHz MU-MIMO 4x4",
+    "wlanhardware": [
+      "Qualcomm IPQ5018",
+      "Qualcomm QCN9024"
+    ],
+    "wlandriver": [
+      "ath11k"
+    ],
+    "whereavailable": null,
+    "wikideviurl": null
+  },
+  {
     "deviceid": "linksys:linksys_mx55ec",
     "audioports": [
       "-"
@@ -128818,6 +129621,7 @@
       "MX55EC"
     ],
     "installationmethods": [
+      "GUI OEM",
       "see git-commit"
     ],
     "jtag": null,
@@ -131904,7 +132708,7 @@
     "audioports": [
       "-"
     ],
-    "availability": "Available 2019",
+    "availability": "Discontinued 2023",
     "bluetooth": "4.1",
     "bootloader": "U-Boot",
     "brand": "Linksys",
@@ -132934,10 +133738,10 @@
     ],
     "firmwareoemstockurl": "https://store.linksys.com/support-article?articleNum=48718",
     "firmwareopenwrtinstallurl": [
-      "https://downloads.openwrt.org/releases/25.12.2/targets/ramips/mt7621/openwrt-25.12.2-ramips-mt7621-linksys_ea6350-v4-squashfs-factory.bin"
+      "https://downloads.openwrt.org/releases/25.12.6/targets/ramips/mt7621/openwrt-25.12.6-ramips-mt7621-linksys_ea6350-v4-squashfs-factory.bin"
     ],
     "firmwareopenwrtupgradeurl": [
-      "https://downloads.openwrt.org/releases/25.12.2/targets/ramips/mt7621/openwrt-25.12.2-ramips-mt7621-linksys_ea6350-v4-squashfs-sysupgrade.bin"
+      "https://downloads.openwrt.org/releases/25.12.6/targets/ramips/mt7621/openwrt-25.12.6-ramips-mt7621-linksys_ea6350-v4-squashfs-sysupgrade.bin"
     ],
     "firmwareopenwrtsnapshotinstallurl": [
       "https://downloads.openwrt.org/snapshots/targets/ramips/mt7621/openwrt-ramips-mt7621-linksys_ea6350-v4-squashfs-factory.bin"
@@ -132960,7 +133764,7 @@
       "see git-commit"
     ],
     "jtag": null,
-    "ledcount": null,
+    "ledcount": "5",
     "model": "EA6350",
     "modem": "-",
     "oemdevicehomepageurl": "https://store.linksys.com/support-search?search=EA6350",
@@ -132985,7 +133789,7 @@
     "serialconnectionparameters": null,
     "serialconnectionvoltage": null,
     "subtarget": "mt7621",
-    "supportedcurrentrel": "25.12.2",
+    "supportedcurrentrel": "25.12.6",
     "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=e0a574d4b73b6444d493866128cf3be3fae10892",
     "supportedsincerel": "22.03.0",
     "switch": "MediaTek MT7621DAT",
@@ -135302,6 +136106,120 @@
     "wikideviurl": null
   },
   {
+    "deviceid": "linksys:linksys_mx20ms",
+    "audioports": [
+      "-"
+    ],
+    "availability": "Discontinued 2024",
+    "bluetooth": "-",
+    "bootloader": "U-Boot",
+    "brand": "Linksys",
+    "buttoncount": "2",
+    "cpu": "Qualcomm IPQ5018",
+    "cpucores": "2",
+    "cpumhz": "1000",
+    "commentinstallation": null,
+    "commentrecovery": null,
+    "comments": "Identical to MX2000, same FCC ID",
+    "commentsavports": "-",
+    "commentsusbsataports": null,
+    "commentsnetworkports": null,
+    "detachableantennas": "-",
+    "devicepage": null,
+    "devicetype": "WiFi Router",
+    "ethernet100mports": "-",
+    "ethernet10gports": "-",
+    "ethernet1gports": "4",
+    "ethernet2_5gports": "-",
+    "ethernet5gports": "-",
+    "fccid": [
+      "https://fccid.io/2AYRA-08330/"
+    ],
+    "firmwareoemstockurl": null,
+    "firmwareopenwrtinstallurl": [
+      "https://downloads.openwrt.org/releases/25.12.5/targets/qualcommax/ipq50xx/openwrt-25.12.5-qualcommax-ipq50xx-linksys_mx2000-squashfs-factory.bin"
+    ],
+    "firmwareopenwrtupgradeurl": [
+      "https://downloads.openwrt.org/releases/25.12.5/targets/qualcommax/ipq50xx/openwrt-25.12.5-qualcommax-ipq50xx-linksys_mx2000-squashfs-sysupgrade.bin"
+    ],
+    "firmwareopenwrtsnapshotinstallurl": [
+      "https://downloads.openwrt.org/snapshots/targets/qualcommax/ipq50xx/openwrt-qualcommax-ipq50xx-linksys_mx2000-squashfs-factory.bin"
+    ],
+    "firmwareopenwrtsnapshotupgradeurl": [
+      "https://downloads.openwrt.org/snapshots/targets/qualcommax/ipq50xx/openwrt-qualcommax-ipq50xx-linksys_mx2000-squashfs-sysupgrade.bin"
+    ],
+    "flashmb": [
+      "256NAND"
+    ],
+    "forumsearch": [
+      "MX20MS"
+    ],
+    "gpios": null,
+    "gitsearch": [
+      "MX20MS"
+    ],
+    "installationmethods": [
+      "GUI OEM",
+      "see git-commit"
+    ],
+    "jtag": null,
+    "ledcount": "1",
+    "model": "MX20MS",
+    "modem": "-",
+    "oemdevicehomepageurl": null,
+    "owrt_forum_topic_url": [
+      "https://forum.openwrt.org/t/ipq5018-support-for-linksys-mx2000-atlas-6-mx5500-atlas-6-pro/164055"
+    ],
+    "outdoor": "No",
+    "packagearchitecture": "aarch64_cortex-a53",
+    "phoneports": [
+      "-"
+    ],
+    "picture": [
+      "media:linksys:mx4200.png"
+    ],
+    "powersupply": "12 VDC, 1.5A via barrel",
+    "rammb": "512",
+    "recoverymethods": [
+      "see git-commit"
+    ],
+    "sataports": "-",
+    "sfp_ports": "-",
+    "sfp_plus_ports": "-",
+    "serial": "Yes",
+    "serialconnectionparameters": "115200 / 8N1",
+    "serialconnectionvoltage": "3.3",
+    "subtarget": "ipq50xx",
+    "supportedcurrentrel": "25.12.5",
+    "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=398f4a97378e2f645badc1aef3d0e9fd76f6665d",
+    "supportedsincerel": "25.12.0",
+    "switch": "Qualcomm Atheros QCA8337",
+    "target": "qualcommax",
+    "usbports": [
+      "-"
+    ],
+    "unsupported_functions": null,
+    "vlan": "Yes",
+    "version": null,
+    "videoports": [
+      "-"
+    ],
+    "wlan24ghz": "b/g/n/ax",
+    "wlan50ghz": "a/n/ac/ax",
+    "wlan60ghz": "-",
+    "wlan600ghz": "-",
+    "wlancomments": "2.4GHz: 2x2:2 MIMO, 5GHz: 2x2:2 MIMO",
+    "wlanhardware": [
+      "Qualcomm IPQ5018",
+      "Qualcomm QCN6102"
+    ],
+    "wlandriver": [
+      "ath11k"
+    ],
+    "whereavailable": null,
+    "wikideviurl": null
+  },
+  {
     "deviceid": "linksys:linksys_wrt310n_v2",
     "audioports": [
       "-"
@@ -135518,6 +136436,120 @@
     "wikideviurl": [
       "https://wikidevi.wi-cat.ru/Linksys_WRV54G_v1"
     ]
+  },
+  {
+    "deviceid": "linksys:linksys_mx20ec",
+    "audioports": [
+      "-"
+    ],
+    "availability": "Discontinued 2024",
+    "bluetooth": "-",
+    "bootloader": "U-Boot",
+    "brand": "Linksys",
+    "buttoncount": "2",
+    "cpu": "Qualcomm IPQ5018",
+    "cpucores": "2",
+    "cpumhz": "1000",
+    "commentinstallation": null,
+    "commentrecovery": null,
+    "comments": "Identical to MX2000, same FCC ID",
+    "commentsavports": "-",
+    "commentsusbsataports": null,
+    "commentsnetworkports": null,
+    "detachableantennas": "-",
+    "devicepage": null,
+    "devicetype": "WiFi Router",
+    "ethernet100mports": "-",
+    "ethernet10gports": "-",
+    "ethernet1gports": "4",
+    "ethernet2_5gports": "-",
+    "ethernet5gports": "-",
+    "fccid": [
+      "https://fccid.io/2AYRA-08330/"
+    ],
+    "firmwareoemstockurl": null,
+    "firmwareopenwrtinstallurl": [
+      "https://downloads.openwrt.org/releases/25.12.5/targets/qualcommax/ipq50xx/openwrt-25.12.5-qualcommax-ipq50xx-linksys_mx2000-squashfs-factory.bin"
+    ],
+    "firmwareopenwrtupgradeurl": [
+      "https://downloads.openwrt.org/releases/25.12.5/targets/qualcommax/ipq50xx/openwrt-25.12.5-qualcommax-ipq50xx-linksys_mx2000-squashfs-sysupgrade.bin"
+    ],
+    "firmwareopenwrtsnapshotinstallurl": [
+      "https://downloads.openwrt.org/snapshots/targets/qualcommax/ipq50xx/openwrt-qualcommax-ipq50xx-linksys_mx2000-squashfs-factory.bin"
+    ],
+    "firmwareopenwrtsnapshotupgradeurl": [
+      "https://downloads.openwrt.org/snapshots/targets/qualcommax/ipq50xx/openwrt-qualcommax-ipq50xx-linksys_mx2000-squashfs-sysupgrade.bin"
+    ],
+    "flashmb": [
+      "256NAND"
+    ],
+    "forumsearch": [
+      "MX20EC"
+    ],
+    "gpios": null,
+    "gitsearch": [
+      "MX20EC"
+    ],
+    "installationmethods": [
+      "GUI OEM",
+      "see git-commit"
+    ],
+    "jtag": null,
+    "ledcount": "1",
+    "model": "MX20EC",
+    "modem": "-",
+    "oemdevicehomepageurl": null,
+    "owrt_forum_topic_url": [
+      "https://forum.openwrt.org/t/ipq5018-support-for-linksys-mx2000-atlas-6-mx5500-atlas-6-pro/164055"
+    ],
+    "outdoor": "No",
+    "packagearchitecture": "aarch64_cortex-a53",
+    "phoneports": [
+      "-"
+    ],
+    "picture": [
+      "media:linksys:mx4200.png"
+    ],
+    "powersupply": "12 VDC, 1.5A via barrel",
+    "rammb": "512",
+    "recoverymethods": [
+      "see git-commit"
+    ],
+    "sataports": "-",
+    "sfp_ports": "-",
+    "sfp_plus_ports": "-",
+    "serial": "Yes",
+    "serialconnectionparameters": "115200 / 8N1",
+    "serialconnectionvoltage": "3.3",
+    "subtarget": "ipq50xx",
+    "supportedcurrentrel": "25.12.5",
+    "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=398f4a97378e2f645badc1aef3d0e9fd76f6665d",
+    "supportedsincerel": "25.12.0",
+    "switch": "Qualcomm Atheros QCA8337",
+    "target": "qualcommax",
+    "usbports": [
+      "-"
+    ],
+    "unsupported_functions": null,
+    "vlan": "Yes",
+    "version": null,
+    "videoports": [
+      "-"
+    ],
+    "wlan24ghz": "b/g/n/ax",
+    "wlan50ghz": "a/n/ac/ax",
+    "wlan60ghz": "-",
+    "wlan600ghz": "-",
+    "wlancomments": "2.4GHz: 2x2:2 MIMO, 5GHz: 2x2:2 MIMO",
+    "wlanhardware": [
+      "Qualcomm IPQ5018",
+      "Qualcomm QCN6102"
+    ],
+    "wlandriver": [
+      "ath11k"
+    ],
+    "whereavailable": null,
+    "wikideviurl": null
   },
   {
     "deviceid": "linksys:linksys_e3000_v1",
@@ -204834,7 +205866,7 @@
     "cpumhz": "1300",
     "commentinstallation": null,
     "commentrecovery": null,
-    "comments": null,
+    "comments": "There are 2 versions of RAM: 256 MiB and 512 MiB",
     "commentsavports": null,
     "commentsusbsataports": null,
     "commentsnetworkports": null,
@@ -204843,7 +205875,7 @@
     "devicetype": "WiFi Router",
     "ethernet100mports": "-",
     "ethernet10gports": "-",
-    "ethernet1gports": "4",
+    "ethernet1gports": "5",
     "ethernet2_5gports": "-",
     "ethernet5gports": "-",
     "fccid": null,
@@ -204905,7 +205937,7 @@
     "switch": "MediaTek MT7531",
     "target": "mediatek",
     "usbports": [
-      "-"
+      "1x 3.0"
     ],
     "unsupported_functions": null,
     "vlan": "Yes",
@@ -217320,10 +218352,10 @@
     "fccid": null,
     "firmwareoemstockurl": "http://dl.ubnt.com/firmwares/edgemax/v1.7.0/ER-e100.v1.7.0.4783374.tar",
     "firmwareopenwrtinstallurl": [
-      "https://downloads.openwrt.org/releases/24.10.5/targets/octeon/generic/openwrt-24.10.5-octeon-generic-ubnt_edgerouter-lite-initramfs-kernel.bin"
+      "https://downloads.openwrt.org/releases/25.12.6/targets/octeon/generic/openwrt-25.12.6-octeon-generic-ubnt_edgerouter-lite-initramfs-kernel.bin"
     ],
     "firmwareopenwrtupgradeurl": [
-      "https://downloads.openwrt.org/releases/24.10.5/targets/octeon/generic/openwrt-24.10.5-octeon-generic-ubnt_edgerouter-lite-squashfs-sysupgrade.tar"
+      "https://downloads.openwrt.org/releases/25.12.6/targets/octeon/generic/openwrt-25.12.6-octeon-generic-ubnt_edgerouter-lite-squashfs-sysupgrade.tar"
     ],
     "firmwareopenwrtsnapshotinstallurl": [
       "https://downloads.openwrt.org/snapshots/targets/octeon/generic/openwrt-octeon-generic-ubnt_edgerouter-lite-initramfs-kernel.bin"
@@ -217374,7 +218406,7 @@
     "serialconnectionparameters": "115200 / 8N1",
     "serialconnectionvoltage": null,
     "subtarget": "generic",
-    "supportedcurrentrel": "24.10.5",
+    "supportedcurrentrel": "25.12.6",
     "supportedsincecommit": "https://git.lede-project.org/?p=source.git;a=commit;h=3a2040ffee99053070cd3f0424f40f64ba6403c9",
     "supportedsincerel": "14.07",
     "switch": "-",
@@ -220319,10 +221351,10 @@
     "fccid": null,
     "firmwareoemstockurl": "https://www.ui.com/download/edgemax/edgerouter-4",
     "firmwareopenwrtinstallurl": [
-      "https://downloads.openwrt.org/releases/24.10.5/targets/octeon/generic/openwrt-24.10.5-octeon-generic-ubnt_edgerouter-4-initramfs-kernel.bin"
+      "https://downloads.openwrt.org/releases/25.12.6/targets/octeon/generic/openwrt-25.12.6-octeon-generic-ubnt_edgerouter-4-initramfs-kernel.bin"
     ],
     "firmwareopenwrtupgradeurl": [
-      "https://downloads.openwrt.org/releases/24.10.5/targets/octeon/generic/openwrt-24.10.5-octeon-generic-ubnt_edgerouter-4-squashfs-sysupgrade.tar"
+      "https://downloads.openwrt.org/releases/25.12.6/targets/octeon/generic/openwrt-25.12.6-octeon-generic-ubnt_edgerouter-4-squashfs-sysupgrade.tar"
     ],
     "firmwareopenwrtsnapshotinstallurl": [
       "https://downloads.openwrt.org/snapshots/targets/octeon/generic/openwrt-octeon-generic-ubnt_edgerouter-4-initramfs-kernel.bin"
@@ -220370,7 +221402,7 @@
     "serialconnectionparameters": "115200 / 8N1",
     "serialconnectionvoltage": "3.3",
     "subtarget": "generic",
-    "supportedcurrentrel": "24.10.5",
+    "supportedcurrentrel": "25.12.6",
     "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=dd651e54cc5eadba480a56a7d2c18471e560f491",
     "supportedsincerel": "21.02.0",
     "switch": "Qualcomm Atheros QCA8337N",
@@ -236401,7 +237433,7 @@
     "commentsusbsataports": "-",
     "commentsnetworkports": null,
     "detachableantennas": "-",
-    "devicepage": null,
+    "devicepage": "inbox:toh:tp-link:deco_x50-poe_2.0",
     "devicetype": "Router",
     "ethernet100mports": "-",
     "ethernet10gports": "-",
@@ -241708,6 +242740,121 @@
     "whereavailable": "amazon.com, aliexpress.com",
     "wikideviurl": [
       "https://wikidevi.wi-cat.ru/TP-LINK_TL-ST1008F_v2"
+    ]
+  },
+  {
+    "deviceid": "tp-link:tp-link_er706w_v1",
+    "audioports": [
+      "-"
+    ],
+    "availability": "Available 2026",
+    "bluetooth": "-",
+    "bootloader": "U-Boot",
+    "brand": "TP-Link",
+    "buttoncount": "1",
+    "cpu": "MediaTek MT7981BA",
+    "cpucores": "2",
+    "cpumhz": "1300",
+    "commentinstallation": null,
+    "commentrecovery": null,
+    "comments": "Identical hardware to FR365 v1. FR365 was FCC certified under a change of ID of this model.",
+    "commentsavports": null,
+    "commentsusbsataports": null,
+    "commentsnetworkports": null,
+    "detachableantennas": "3",
+    "devicepage": "toh:tp-link:fr365_v1",
+    "devicetype": "WiFi Router",
+    "ethernet100mports": "-",
+    "ethernet10gports": "-",
+    "ethernet1gports": "5",
+    "ethernet2_5gports": "-",
+    "ethernet5gports": "-",
+    "fccid": [
+      "https://fccid.io/2AXJ4ER706W"
+    ],
+    "firmwareoemstockurl": "https://support.omadanetworks.com/us/product/er706w/",
+    "firmwareopenwrtinstallurl": [
+      "https://downloads.openwrt.org/releases/25.12.6/targets/mediatek/filogic/openwrt-25.12.6-mediatek-filogic-tplink_fr365-v1-squashfs-factory.bin"
+    ],
+    "firmwareopenwrtupgradeurl": [
+      "https://downloads.openwrt.org/releases/25.12.6/targets/mediatek/filogic/openwrt-25.12.6-mediatek-filogic-tplink_fr365-v1-squashfs-sysupgrade.bin"
+    ],
+    "firmwareopenwrtsnapshotinstallurl": [
+      "https://downloads.openwrt.org/snapshots//targets/mediatek/filogic/openwrt-mediatek-filogic-tplink_fr365-v1-squashfs-factory.bin"
+    ],
+    "firmwareopenwrtsnapshotupgradeurl": [
+      "https://downloads.openwrt.org/snapshots//targets/mediatek/filogic/openwrt-mediatek-filogic-tplink_fr365-v1-squashfs-sysupgrade.bin"
+    ],
+    "flashmb": [
+      "128NAND"
+    ],
+    "forumsearch": [
+      "ER706W"
+    ],
+    "gpios": null,
+    "gitsearch": [
+      "ER706W"
+    ],
+    "installationmethods": [
+      "U-Boot TFTP + serial recovery"
+    ],
+    "jtag": null,
+    "ledcount": "4",
+    "model": "ER706W",
+    "modem": "-",
+    "oemdevicehomepageurl": "https://www.omadanetworks.com/us/business-networking/omada-router-wifi-router/er706w/v1.30/",
+    "owrt_forum_topic_url": null,
+    "outdoor": "No",
+    "packagearchitecture": "aarch64_cortex-a53",
+    "phoneports": [
+      "-"
+    ],
+    "picture": [
+      "media:example:genericrouter1.png"
+    ],
+    "powersupply": "12 VDC, 2A via barrel",
+    "rammb": "512",
+    "recoverymethods": [
+      "U-Boot TFTP + serial recovery"
+    ],
+    "sataports": "-",
+    "sfp_ports": "1",
+    "sfp_plus_ports": "-",
+    "serial": "Yes",
+    "serialconnectionparameters": "115200 / 8N1",
+    "serialconnectionvoltage": "3.3",
+    "subtarget": "filogic",
+    "supportedcurrentrel": "25.12.6",
+    "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=e507398b88322a69417de47b94942ab53dae4603",
+    "supportedsincerel": "25.12.0",
+    "switch": "MediaTek MT7531AE",
+    "target": "mediatek",
+    "usbports": [
+      "1x 3.0"
+    ],
+    "unsupported_functions": null,
+    "vlan": "Yes",
+    "version": [
+      "v1.3"
+    ],
+    "videoports": [
+      "-"
+    ],
+    "wlan24ghz": "b/g/n/ax",
+    "wlan50ghz": "a/n/ac/ax",
+    "wlan60ghz": "-",
+    "wlan600ghz": "-",
+    "wlancomments": "MIMO 2x2:2 on both bands",
+    "wlanhardware": [
+      "MediaTek MT7981BA",
+      "MediaTek MT7976DAN"
+    ],
+    "wlandriver": [
+      "mt76"
+    ],
+    "whereavailable": "amazon.com, newegg.com, bhphotovideo.com, walmart.com",
+    "wikideviurl": [
+      "https://wikidevi.wi-cat.ru/TP-LINK_Omada_ER706W"
     ]
   },
   {
@@ -252634,16 +253781,16 @@
     ],
     "firmwareoemstockurl": "https://www.tp-link.com/us/support/download/archer-ax21/v4.60/\\",
     "firmwareopenwrtinstallurl": [
-      "http://https://downloads.openwrt.org/releases/25.12.5/targets/ramips/mt7621/openwrt-25.12.5-ramips-mt7621-tplink_archer-ax21-v4-squashfs-factory.bin"
+      "https://downloads.openwrt.org/releases/25.12.6/targets/ramips/mt7621/openwrt-25.12.6-ramips-mt7621-tplink_archer-ax21-v4-squashfs-factory.bin"
     ],
     "firmwareopenwrtupgradeurl": [
-      "http://https://downloads.openwrt.org/releases/25.12.5/targets/ramips/mt7621/openwrt-25.12.5-ramips-mt7621-tplink_archer-ax21-v4-squashfs-sysupgrade.bin"
+      "https://downloads.openwrt.org/releases/25.12.6/targets/ramips/mt7621/openwrt-25.12.6-ramips-mt7621-tplink_archer-ax21-v4-squashfs-sysupgrade.bin"
     ],
     "firmwareopenwrtsnapshotinstallurl": [
-      "http://https://downloads.openwrt.org/snapshots/targets/ramips/mt7621/openwrt-ramips-mt7621-tplink_archer-ax21-v4-squashfs-factory.bin"
+      "https://downloads.openwrt.org/snapshots/targets/ramips/mt7621/openwrt-ramips-mt7621-tplink_archer-ax21-v4-squashfs-factory.bin"
     ],
     "firmwareopenwrtsnapshotupgradeurl": [
-      "http://https://downloads.openwrt.org/snapshots/targets/ramips/mt7621/openwrt-ramips-mt7621-tplink_archer-ax21-v4-squashfs-sysupgrade.bin"
+      "https://downloads.openwrt.org/snapshots/targets/ramips/mt7621/openwrt-ramips-mt7621-tplink_archer-ax21-v4-squashfs-sysupgrade.bin"
     ],
     "flashmb": [
       "16"
@@ -252685,7 +253832,7 @@
     "serialconnectionparameters": "115200 / 8N1",
     "serialconnectionvoltage": "3.3",
     "subtarget": "mt7621",
-    "supportedcurrentrel": "25.12.5",
+    "supportedcurrentrel": "25.12.6",
     "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=e11e1c18eea933dc614ed1dbbec275ae03a8328e",
     "supportedsincerel": null,
     "switch": "MediaTek MT7621DAT",
@@ -296628,7 +297775,7 @@
     "audioports": [
       "-"
     ],
-    "availability": "Available 2025",
+    "availability": "Available 2023",
     "bluetooth": "-",
     "bootloader": "U-Boot",
     "brand": "ZyXEL",
@@ -296638,7 +297785,7 @@
     "cpumhz": "880",
     "commentinstallation": null,
     "commentrecovery": null,
-    "comments": null,
+    "comments": "OEM Firmware/DFOTA can now only be downloaded and updated via OEM GUI",
     "commentsavports": null,
     "commentsusbsataports": null,
     "commentsnetworkports": "LTE/3G: Quectel EG18-EA LTE-A Cat. 18",
@@ -296651,12 +297798,12 @@
     "ethernet2_5gports": "-",
     "ethernet5gports": "-",
     "fccid": null,
-    "firmwareoemstockurl": "https://www.zyxel.com/global/en/support/download?model=lte5398-m904",
+    "firmwareoemstockurl": null,
     "firmwareopenwrtinstallurl": [
-      "https://downloads.openwrt.org/releases/25.12.2/targets/ramips/mt7621/openwrt-25.12.2-ramips-mt7621-zyxel_lte5398-m904-initramfs-recovery.bin"
+      "https://downloads.openwrt.org/releases/25.12.6/targets/ramips/mt7621/openwrt-25.12.6-ramips-mt7621-zyxel_lte5398-m904-initramfs-recovery.bin"
     ],
     "firmwareopenwrtupgradeurl": [
-      "https://downloads.openwrt.org/releases/25.12.2/targets/ramips/mt7621/openwrt-25.12.2-ramips-mt7621-zyxel_lte5398-m904-squashfs-sysupgrade.bin"
+      "https://downloads.openwrt.org/releases/25.12.6/targets/ramips/mt7621/openwrt-25.12.6-ramips-mt7621-zyxel_lte5398-m904-squashfs-sysupgrade.bin"
     ],
     "firmwareopenwrtsnapshotinstallurl": [
       "https://downloads.openwrt.org/snapshots/targets/ramips/mt7621/openwrt-ramips-mt7621-zyxel_lte5398-m904-initramfs-recovery.bin"
@@ -296675,6 +297822,7 @@
       "LTE5398-M904"
     ],
     "installationmethods": [
+      "GUI OEM",
       "U-Boot TFTP + serial recovery",
       "see devicepage",
       "see git-commit"
@@ -296683,7 +297831,7 @@
     "ledcount": "8",
     "model": "LTE5398-M904",
     "modem": "LTE",
-    "oemdevicehomepageurl": "https://www.zyxel.com/global/en/products/mobile-broadband/4g-lte-a-pro-indoor-iad-lte5398-m904",
+    "oemdevicehomepageurl": "https://www.zyxel.com/global/en/products/fixed-wireless-access/lte5398-m904",
     "owrt_forum_topic_url": [
       "https://forum.openwrt.org/t/openwrt-support-for-zyxel-lte5398-m904/140157"
     ],
@@ -296708,7 +297856,7 @@
     "serialconnectionparameters": "57600 / 8N1",
     "serialconnectionvoltage": "3.3",
     "subtarget": "mt7621",
-    "supportedcurrentrel": "25.12.2",
+    "supportedcurrentrel": "25.12.6",
     "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=17465fc77ec0dbe40310548ee16352b09e2712aa",
     "supportedsincerel": "24.10.0",
     "switch": "MediaTek MT7530",
@@ -320182,7 +321330,9 @@
       "https://downloads.openwrt.org/releases/19.07.10/targets/ar71xx/mikrotik/openwrt-19.07.10-ar71xx-mikrotik-nand-large-squashfs-sysupgrade.bin"
     ],
     "firmwareopenwrtsnapshotinstallurl": null,
-    "firmwareopenwrtsnapshotupgradeurl": null,
+    "firmwareopenwrtsnapshotupgradeurl": [
+      "https://github.com/openwrt/openwrt/pull/25014"
+    ],
     "flashmb": [
       "512NAND"
     ],
@@ -320221,7 +321371,7 @@
     "serialconnectionparameters": "115200 / 8N1",
     "serialconnectionvoltage": null,
     "subtarget": "mikrotik",
-    "supportedcurrentrel": "EOL",
+    "supportedcurrentrel": "snapshot",
     "supportedsincecommit": null,
     "supportedsincerel": "14.07",
     "switch": "Atheros AR8316",
